@@ -29,7 +29,9 @@ jobs:
       #    pod --version
       #    pod install
       - name: test fastlane
-        run: fastlane build_dependencies
+        run: |
+          bundle install
+          fastlane build_dependencies
       #  env:
       #    MATCH_PASSWORD: ${{ secrets.MATCH_PASSWORD }}
       # Runs a set of commands using the runners shell
