@@ -15,20 +15,17 @@ Install _fastlane_ using
 or alternatively using `brew install fastlane`
 
 # Available Actions
-### build_dependencies
-```
-fastlane build_dependencies
-```
-
-
-----
-
 ## iOS
-### ios custom_lane
+### ios build_dependencies
 ```
-fastlane ios custom_lane
+fastlane ios build_dependencies
 ```
-Description of what the lane does
+Pulls dependencies
+### ios push_cocoapods
+```
+fastlane ios push_cocoapods
+```
+Push version to cocoapods
 
 ----
 
