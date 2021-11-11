@@ -23,7 +23,7 @@ platform :ios do
 
   desc "Push version to cocoapods"
   lane :push_cocoapods do
-    pod_push
+    pod_push(allow_warnings: true)
   end
 end
 
