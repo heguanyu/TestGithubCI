@@ -20,13 +20,6 @@ Pod::Spec.new do |spec|
     :git => "https://github.com/heguanyu/TestGithubCI.git",
     :tag => "main"
   }
-
+  spec.source_files      = "TestStaticLib/TestStaticLib.swift"
   spec.requires_arc      = true
-  spec.default_subspecs  = "sdk"
-
-  spec.subspec "sdk" do |sdk|
-    sdk.source_files         = "TestGithubCI/**/*.{h,m,swift}"
-    sdk.public_header_files  = "TestGithubCI/**/*.h"
-    sdk.weak_frameworks      = "WebKit"
-  end
 end

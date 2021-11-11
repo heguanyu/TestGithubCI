@@ -1,3 +1,3 @@
-target 'TestGithubCI' do
+target 'TestStaticLib' do
   use_frameworks!
 end

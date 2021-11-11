@@ -20,7 +20,7 @@ platform :ios do
   lane :build_dependencies do
     cocoapods
   end
-  
+
   desc "Push version to cocoapods"
   lane :push_cocoapods do
     pod_push

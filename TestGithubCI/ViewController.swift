@@ -6,14 +6,18 @@
 //
 
 import UIKit
+import TestStaticLib
 
 class ViewController: UIViewController {
 
     override func viewDidLoad() {
-        super.viewDidLoad()
-        // Do any additional setup after loading the view.
+        view = UIView()
+        view.backgroundColor = .white
+
+        let lib: TestStaticLib = TestStaticLib()
+        title = TestStaticLib.someStaticFunction()
+        print(TestStaticLib.someStaticFunction())
+        print(lib.someNonStaticFunction())
     }
-
-
 }
 
