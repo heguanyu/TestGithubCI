@@ -23,6 +23,7 @@ platform :ios do
 
   desc "Push version to cocoapods"
   lane :push_cocoapods do
+    version_bump_podspec(path: "TestGithubCI.podspec", bump_type: "patch")
     pod_push(allow_warnings: true)
   end
 end
