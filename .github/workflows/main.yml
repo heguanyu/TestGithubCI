@@ -29,6 +29,8 @@ jobs:
       #    pod --version
       #    pod install
       - name: test fastlane
+        env:
+          COCOAPODS_TRUNK_TOKEN: ${{ secrets.COCOAPODS_TRUNK_TOKEN }}
         run: |
           bundle install
           fastlane build_dependencies
