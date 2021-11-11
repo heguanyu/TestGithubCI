@@ -18,7 +18,7 @@ Pod::Spec.new do |spec|
 
   spec.source            = {
     :git => "https://github.com/heguanyu/TestGithubCI.git",
-    :tag => "main"
+    :tag => spec.version
   }
   spec.source_files      = "TestStaticLib/TestStaticLib.swift"
   spec.requires_arc      = true
