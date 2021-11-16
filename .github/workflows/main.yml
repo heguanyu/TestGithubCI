@@ -29,7 +29,13 @@ jobs:
           bundle install
           fastlane build_dependencies
 
-      # Build and push to cocoapods
+      # Unit tests
+      - name: unit tests and coverage repor
+        run: |
+          fastlane tests
+
+
+      # Push to cocoapods
       - name: Build and publish to cocoapods
         env:
           COCOAPODS_TRUNK_TOKEN: ${{ secrets.COCOAPODS_TRUNK_TOKEN }}
