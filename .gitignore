@@ -3,3 +3,4 @@ Pods/
 build/
 fastlane/report.xml
 derived_data/*
+xcov_output/*

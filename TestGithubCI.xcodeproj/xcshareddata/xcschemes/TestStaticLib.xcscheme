@@ -14,9 +14,9 @@
             buildForAnalyzing = "YES">
             <BuildableReference
                BuildableIdentifier = "primary"
-               BlueprintIdentifier = "F6071A002739984B00CE56BA"
-               BuildableName = "TestGithubCI.app"
-               BlueprintName = "TestGithubCI"
+               BlueprintIdentifier = "F6071A49273CB4DE00CE56BA"
+               BuildableName = "libTestStaticLib.a"
+               BlueprintName = "TestStaticLib"
                ReferencedContainer = "container:TestGithubCI.xcodeproj">
             </BuildableReference>
          </BuildActionEntry>
@@ -26,19 +26,8 @@
       buildConfiguration = "Debug"
       selectedDebuggerIdentifier = "Xcode.DebuggerFoundation.Debugger.LLDB"
       selectedLauncherIdentifier = "Xcode.DebuggerFoundation.Launcher.LLDB"
-      shouldUseLaunchSchemeArgsEnv = "YES"
-      codeCoverageEnabled = "YES">
+      shouldUseLaunchSchemeArgsEnv = "YES">
       <Testables>
-         <TestableReference
-            skipped = "NO">
-            <BuildableReference
-               BuildableIdentifier = "primary"
-               BlueprintIdentifier = "F6071A162739984E00CE56BA"
-               BuildableName = "TestGithubCITests.xctest"
-               BlueprintName = "TestGithubCITests"
-               ReferencedContainer = "container:TestGithubCI.xcodeproj">
-            </BuildableReference>
-         </TestableReference>
       </Testables>
    </TestAction>
    <LaunchAction
@@ -51,16 +40,6 @@
       debugDocumentVersioning = "YES"
       debugServiceExtension = "internal"
       allowLocationSimulation = "YES">
-      <BuildableProductRunnable
-         runnableDebuggingMode = "0">
-         <BuildableReference
-            BuildableIdentifier = "primary"
-            BlueprintIdentifier = "F6071A002739984B00CE56BA"
-            BuildableName = "TestGithubCI.app"
-            BlueprintName = "TestGithubCI"
-            ReferencedContainer = "container:TestGithubCI.xcodeproj">
-         </BuildableReference>
-      </BuildableProductRunnable>
    </LaunchAction>
    <ProfileAction
       buildConfiguration = "Release"
@@ -68,16 +47,15 @@
       savedToolIdentifier = ""
       useCustomWorkingDirectory = "NO"
       debugDocumentVersioning = "YES">
-      <BuildableProductRunnable
-         runnableDebuggingMode = "0">
+      <MacroExpansion>
          <BuildableReference
             BuildableIdentifier = "primary"
-            BlueprintIdentifier = "F6071A002739984B00CE56BA"
-            BuildableName = "TestGithubCI.app"
-            BlueprintName = "TestGithubCI"
+            BlueprintIdentifier = "F6071A49273CB4DE00CE56BA"
+            BuildableName = "libTestStaticLib.a"
+            BlueprintName = "TestStaticLib"
             ReferencedContainer = "container:TestGithubCI.xcodeproj">
          </BuildableReference>
-      </BuildableProductRunnable>
+      </MacroExpansion>
    </ProfileAction>
    <AnalyzeAction
       buildConfiguration = "Debug">
