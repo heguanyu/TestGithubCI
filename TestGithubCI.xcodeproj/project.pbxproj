@@ -12,8 +12,6 @@
 		F6071A0E2739984E00CE56BA /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F6071A0D2739984E00CE56BA /* Assets.xcassets */; };
 		F6071A112739984E00CE56BA /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F6071A0F2739984E00CE56BA /* LaunchScreen.storyboard */; };
 		F6071A1C2739984E00CE56BA /* TestGithubCITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = F6071A1B2739984E00CE56BA /* TestGithubCITests.swift */; };
-		F6071A262739984F00CE56BA /* TestGithubCIUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = F6071A252739984F00CE56BA /* TestGithubCIUITests.swift */; };
-		F6071A282739984F00CE56BA /* TestGithubCIUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = F6071A272739984F00CE56BA /* TestGithubCIUITestsLaunchTests.swift */; };
 		F6071A4D273CB4DE00CE56BA /* TestStaticLib.swift in Sources */ = {isa = PBXBuildFile; fileRef = F6071A4C273CB4DE00CE56BA /* TestStaticLib.swift */; };
 		F6071A51273CB65C00CE56BA /* TestStaticLib.swift in Sources */ = {isa = PBXBuildFile; fileRef = F6071A4C273CB4DE00CE56BA /* TestStaticLib.swift */; };
 		F6071A52273CB66800CE56BA /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F6071A082739984B00CE56BA /* ViewController.swift */; };
@@ -67,8 +65,6 @@
 		F6071A172739984E00CE56BA /* TestGithubCITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = TestGithubCITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		F6071A1B2739984E00CE56BA /* TestGithubCITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestGithubCITests.swift; sourceTree = "<group>"; };
 		F6071A212739984E00CE56BA /* TestGithubCIUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = TestGithubCIUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		F6071A252739984F00CE56BA /* TestGithubCIUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestGithubCIUITests.swift; sourceTree = "<group>"; };
-		F6071A272739984F00CE56BA /* TestGithubCIUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestGithubCIUITestsLaunchTests.swift; sourceTree = "<group>"; };
 		F6071A38273CB41500CE56BA /* TestBuildBundle.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TestBuildBundle.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		F6071A4A273CB4DE00CE56BA /* libTestStaticLib.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libTestStaticLib.a; sourceTree = BUILT_PRODUCTS_DIR; };
 		F6071A4C273CB4DE00CE56BA /* TestStaticLib.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestStaticLib.swift; sourceTree = "<group>"; };
@@ -134,7 +130,6 @@
 			children = (
 				F6071A032739984B00CE56BA /* TestGithubCI */,
 				F6071A1A2739984E00CE56BA /* TestGithubCITests */,
-				F6071A242739984F00CE56BA /* TestGithubCIUITests */,
 				F6071A4B273CB4DE00CE56BA /* TestStaticLib */,
 				F6071A022739984B00CE56BA /* Products */,
 				927BB6ED4E659DAFC34256BC /* Pods */,
@@ -172,15 +167,6 @@
 				F6071A1B2739984E00CE56BA /* TestGithubCITests.swift */,
 			);
 			path = TestGithubCITests;
-			sourceTree = "<group>";
-		};
-		F6071A242739984F00CE56BA /* TestGithubCIUITests */ = {
-			isa = PBXGroup;
-			children = (
-				F6071A252739984F00CE56BA /* TestGithubCIUITests.swift */,
-				F6071A272739984F00CE56BA /* TestGithubCIUITestsLaunchTests.swift */,
-			);
-			path = TestGithubCIUITests;
 			sourceTree = "<group>";
 		};
 		F6071A4B273CB4DE00CE56BA /* TestStaticLib */ = {
@@ -415,8 +401,6 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				F6071A262739984F00CE56BA /* TestGithubCIUITests.swift in Sources */,
-				F6071A282739984F00CE56BA /* TestGithubCIUITestsLaunchTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
