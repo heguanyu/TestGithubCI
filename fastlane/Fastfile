@@ -23,6 +23,33 @@ platform :ios do
     cocoapods
   end
 
+  desc "Generate Apple doc"
+  lane :gen_apple_doc do
+    appledoc(
+      project_name: "TestGithubCI",
+      project_company: "LinkedIn, Inc",
+      input: [
+        "TestStaticLib/*.swift"
+      ],
+      options: "--keep-intermediate-files --search-undocumented-doc",
+      warnings: "--warn-missing-output-path --warn-missing-company-id"
+    )
+  end
+
+  lane :tests do
+    scan(
+      scheme: "TestGithubCI",
+      derived_data_path: "derived_data"
+    )
+    xcov(
+      workspace: "TestGithubCI.xcworkspace",
+      scheme: "TestGithubCI",
+      output_directory: "xcov_output",
+      skip_slack: true,
+      derived_data_path: "derived_data"
+    )
+  end
+
   desc "Push version to cocoapods"
   lane :push_cocoapods do
     newVersion = version_bump_podspec(

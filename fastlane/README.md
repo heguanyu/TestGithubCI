@@ -21,6 +21,16 @@ or alternatively using `brew install fastlane`
 fastlane ios build_dependencies
 ```
 Pulls dependencies
+### ios gen_apple_doc
+```
+fastlane ios gen_apple_doc
+```
+Generate Apple doc
+### ios tests
+```
+fastlane ios tests
+```
+
 ### ios push_cocoapods
 ```
 fastlane ios push_cocoapods

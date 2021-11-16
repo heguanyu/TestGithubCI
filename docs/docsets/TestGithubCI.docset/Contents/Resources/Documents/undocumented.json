@@ -1,0 +1,33 @@
+{
+  "warnings": [
+    {
+      "file": "/Users/ghe/projects/TestGithubCI/TestStaticLib/TestStaticLib.swift",
+      "line": 8,
+      "symbol": "TestStaticLib",
+      "symbol_kind": "source.lang.swift.decl.class",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/ghe/projects/TestGithubCI/TestStaticLib/TestStaticLib.swift",
+      "line": 9,
+      "symbol": "TestStaticLib.init()",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/ghe/projects/TestGithubCI/TestStaticLib/TestStaticLib.swift",
+      "line": 11,
+      "symbol": "TestStaticLib.someStaticFunction()",
+      "symbol_kind": "source.lang.swift.decl.function.method.static",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/ghe/projects/TestGithubCI/TestStaticLib/TestStaticLib.swift",
+      "line": 14,
+      "symbol": "TestStaticLib.someNonStaticFunction()",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    }
+  ],
+  "source_directory": "/Users/ghe/projects/TestGithubCI"
+}

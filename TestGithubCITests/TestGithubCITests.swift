@@ -10,7 +10,10 @@ import XCTest
 
 class TestGithubCITests: XCTestCase {
 
+    private var mockInstance: TestStaticLib!
+
     override func setUpWithError() throws {
+        mockInstance = TestStaticLib()
         // Put setup code here. This method is called before the invocation of each test method in the class.
     }
 
@@ -21,6 +24,8 @@ class TestGithubCITests: XCTestCase {
     func testExample() throws {
         // This is an example of a functional test case.
         // Use XCTAssert and related functions to verify your tests produce the correct results.
+        XCTAssertEqual(TestStaticLib.someStaticFunction(), "Hello IOS CI world!")
+        XCTAssertEqual(mockInstance.someNonStaticFunction(), "Hello bar!")
     }
 
     func testPerformanceExample() throws {
