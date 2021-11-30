@@ -1,7 +1,7 @@
 Pod::Spec.new do |spec|
   spec.name              = "TestGithubCI"
-  spec.version           = "0.0.3"
-  spec.summary           = "Testing Github actions for IOS SDK build and deployment features."
+  spec.version           = "0.0.4"
+  spec.summary           = "Testing Github actions for IOS SDK build and deployment features"
 
   spec.description       = <<-DESC
     Testing Github actions for IOS SDK build and deployment features. Includes a XCFramework and a sample app that calls function in it.
