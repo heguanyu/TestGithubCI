@@ -26,6 +26,11 @@ Pulls dependencies
 fastlane ios gen_apple_doc
 ```
 Generate Apple doc
+### ios lints
+```
+fastlane ios lints
+```
+
 ### ios tests
 ```
 fastlane ios tests

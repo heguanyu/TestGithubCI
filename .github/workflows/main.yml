@@ -30,8 +30,9 @@ jobs:
           fastlane build_dependencies
 
       # Unit tests
-      - name: unit tests and coverage repor
+      - name: lints, unit tests and coverage report
         run: |
+          fastlane lints
           fastlane tests
 
 

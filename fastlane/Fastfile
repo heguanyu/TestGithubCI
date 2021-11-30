@@ -36,11 +36,26 @@ platform :ios do
     )
   end
 
+  lane :lints do
+    sh "pwd"
+    subdirs = ["TestXCFramework", "TestXCFrameworkTests"]
+    files = []
+    Dir.chdir("..") do
+      files = subdirs.map { |dir| Dir.glob("#{dir}/**/*.swift")}.flatten(1)
+    end
+    swiftlint(
+      mode: :lint,
+      files: files,
+      executable: "Pods/SwiftLint/swiftlint"
+    )
+  end
+
   lane :tests do
     scan(
       scheme: "TestGithubCI",
       derived_data_path: "derived_data"
     )
+    system "rm -r ../xcov_output/*"
     xcov(
       workspace: "TestGithubCI.xcworkspace",
       scheme: "TestGithubCI",
@@ -48,6 +63,7 @@ platform :ios do
       skip_slack: true,
       derived_data_path: "derived_data"
     )
+#    pod_lib_lint
   end
 
   desc "Push version to cocoapods"

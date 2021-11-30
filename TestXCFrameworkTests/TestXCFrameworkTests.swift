@@ -1,15 +1,14 @@
 //
-//  TestGithubCITests.swift
-//  TestGithubCITests
+//  TestXCFrameworkTests.swift
+//  TestXCFrameworkTests
 //
-//  Created by Guanyu He on 11/8/21.
+//  Created by Guanyu He on 11/18/21.
 //
 
 import XCTest
-import TestXCFramework
-@testable import TestGithubCI
+@testable import TestXCFramework
 
-class TestGithubCITests: XCTestCase {
+class TestXCFrameworkTests: XCTestCase {
 
     private var mockInstance: TestLibWithXCFramework!
 

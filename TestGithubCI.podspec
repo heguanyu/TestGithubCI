@@ -1,10 +1,10 @@
 Pod::Spec.new do |spec|
   spec.name              = "TestGithubCI"
   spec.version           = "0.0.3"
-  spec.summary           = "Testing Github actions for IOS SDK build and deployment features"
+  spec.summary           = "Testing Github actions for IOS SDK build and deployment features."
 
   spec.description       = <<-DESC
-    Testing Github actions for IOS SDK build and deployment features
+    Testing Github actions for IOS SDK build and deployment features. Includes a XCFramework and a sample app that calls function in it.
   DESC
   spec.homepage          = "https://github.com/heguanyu/TestGithubCI"
   spec.documentation_url = "https://github.com/heguanyu/TestGithubCI/blob/main/README.md"
@@ -20,6 +20,6 @@ Pod::Spec.new do |spec|
     :git => "https://github.com/heguanyu/TestGithubCI.git",
     :tag => spec.version
   }
-  spec.source_files      = "TestStaticLib/TestStaticLib.swift"
+  spec.source_files      = "TestXCFramework/**/*.swift"
   spec.requires_arc      = true
 end

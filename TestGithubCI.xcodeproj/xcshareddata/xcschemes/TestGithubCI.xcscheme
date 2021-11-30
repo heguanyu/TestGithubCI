@@ -39,6 +39,16 @@
                ReferencedContainer = "container:TestGithubCI.xcodeproj">
             </BuildableReference>
          </TestableReference>
+         <TestableReference
+            skipped = "NO">
+            <BuildableReference
+               BuildableIdentifier = "primary"
+               BlueprintIdentifier = "F63E1C5F2746F6BA0077B678"
+               BuildableName = "TestXCFrameworkTests.xctest"
+               BlueprintName = "TestXCFrameworkTests"
+               ReferencedContainer = "container:TestGithubCI.xcodeproj">
+            </BuildableReference>
+         </TestableReference>
       </Testables>
    </TestAction>
    <LaunchAction

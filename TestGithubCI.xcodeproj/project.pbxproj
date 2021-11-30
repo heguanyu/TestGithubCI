@@ -7,14 +7,19 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		C4F6B1311CB316779DD43AFE /* Pods_TestXCFramework.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B4CDC143C5F16072EE147D53 /* Pods_TestXCFramework.framework */; };
 		F6071A052739984B00CE56BA /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F6071A042739984B00CE56BA /* AppDelegate.swift */; };
 		F6071A092739984B00CE56BA /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F6071A082739984B00CE56BA /* ViewController.swift */; };
 		F6071A0E2739984E00CE56BA /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F6071A0D2739984E00CE56BA /* Assets.xcassets */; };
 		F6071A112739984E00CE56BA /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F6071A0F2739984E00CE56BA /* LaunchScreen.storyboard */; };
 		F6071A1C2739984E00CE56BA /* TestGithubCITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = F6071A1B2739984E00CE56BA /* TestGithubCITests.swift */; };
-		F6071A4D273CB4DE00CE56BA /* TestStaticLib.swift in Sources */ = {isa = PBXBuildFile; fileRef = F6071A4C273CB4DE00CE56BA /* TestStaticLib.swift */; };
-		F6071A51273CB65C00CE56BA /* TestStaticLib.swift in Sources */ = {isa = PBXBuildFile; fileRef = F6071A4C273CB4DE00CE56BA /* TestStaticLib.swift */; };
-		F6071A52273CB66800CE56BA /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F6071A082739984B00CE56BA /* ViewController.swift */; };
+		F63E1C5B2746F6BA0077B678 /* TestXCFramework.docc in Sources */ = {isa = PBXBuildFile; fileRef = F63E1C5A2746F6BA0077B678 /* TestXCFramework.docc */; };
+		F63E1C612746F6BA0077B678 /* TestXCFramework.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F63E1C572746F6BA0077B678 /* TestXCFramework.framework */; };
+		F63E1C682746F6BA0077B678 /* TestXCFrameworkTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = F63E1C672746F6BA0077B678 /* TestXCFrameworkTests.swift */; };
+		F63E1C692746F6BA0077B678 /* TestXCFramework.h in Headers */ = {isa = PBXBuildFile; fileRef = F63E1C592746F6BA0077B678 /* TestXCFramework.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		F63E1C6C2746F6BA0077B678 /* TestXCFramework.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F63E1C572746F6BA0077B678 /* TestXCFramework.framework */; };
+		F63E1C6D2746F6BA0077B678 /* TestXCFramework.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = F63E1C572746F6BA0077B678 /* TestXCFramework.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		F63E1C762746F6DA0077B678 /* TestLibWithXCFramework.swift in Sources */ = {isa = PBXBuildFile; fileRef = F63E1C752746F6DA0077B678 /* TestLibWithXCFramework.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -25,37 +30,47 @@
 			remoteGlobalIDString = F6071A002739984B00CE56BA;
 			remoteInfo = TestGithubCI;
 		};
-		F6071A222739984E00CE56BA /* PBXContainerItemProxy */ = {
+		F63E1C622746F6BA0077B678 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = F60719F92739984B00CE56BA /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = F63E1C562746F6BA0077B678;
+			remoteInfo = TestXCFramework;
+		};
+		F63E1C642746F6BA0077B678 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = F60719F92739984B00CE56BA /* Project object */;
 			proxyType = 1;
 			remoteGlobalIDString = F6071A002739984B00CE56BA;
 			remoteInfo = TestGithubCI;
 		};
-		F6071A53273CB6BB00CE56BA /* PBXContainerItemProxy */ = {
+		F63E1C6A2746F6BA0077B678 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = F60719F92739984B00CE56BA /* Project object */;
 			proxyType = 1;
-			remoteGlobalIDString = F6071A49273CB4DE00CE56BA;
-			remoteInfo = TestStaticLib;
+			remoteGlobalIDString = F63E1C562746F6BA0077B678;
+			remoteInfo = TestXCFramework;
 		};
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXCopyFilesBuildPhase section */
-		F6071A48273CB4DE00CE56BA /* CopyFiles */ = {
+		F63E1C6E2746F6BA0077B678 /* Embed Frameworks */ = {
 			isa = PBXCopyFilesBuildPhase;
 			buildActionMask = 2147483647;
-			dstPath = "include/$(PRODUCT_NAME)";
-			dstSubfolderSpec = 16;
+			dstPath = "";
+			dstSubfolderSpec = 10;
 			files = (
+				F63E1C6D2746F6BA0077B678 /* TestXCFramework.framework in Embed Frameworks */,
 			);
+			name = "Embed Frameworks";
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
-		5E9861352AED49A2BAED4B0A /* Pods-TestGithubCI.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TestGithubCI.release.xcconfig"; path = "Target Support Files/Pods-TestGithubCI/Pods-TestGithubCI.release.xcconfig"; sourceTree = "<group>"; };
-		AD09D1BD8B49A34DE6308413 /* Pods-TestGithubCI.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TestGithubCI.debug.xcconfig"; path = "Target Support Files/Pods-TestGithubCI/Pods-TestGithubCI.debug.xcconfig"; sourceTree = "<group>"; };
+		121549C4FBE2914160586DAF /* Pods-TestXCFramework.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TestXCFramework.release.xcconfig"; path = "Target Support Files/Pods-TestXCFramework/Pods-TestXCFramework.release.xcconfig"; sourceTree = "<group>"; };
+		B4CDC143C5F16072EE147D53 /* Pods_TestXCFramework.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_TestXCFramework.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		C1D413015ACCCCC1F3D863FA /* Pods-TestXCFramework.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TestXCFramework.debug.xcconfig"; path = "Target Support Files/Pods-TestXCFramework/Pods-TestXCFramework.debug.xcconfig"; sourceTree = "<group>"; };
 		F6071A012739984B00CE56BA /* TestGithubCI.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TestGithubCI.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		F6071A042739984B00CE56BA /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		F6071A082739984B00CE56BA /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -65,8 +80,12 @@
 		F6071A172739984E00CE56BA /* TestGithubCITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = TestGithubCITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		F6071A1B2739984E00CE56BA /* TestGithubCITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestGithubCITests.swift; sourceTree = "<group>"; };
 		F6071A38273CB41500CE56BA /* TestBuildBundle.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TestBuildBundle.app; sourceTree = BUILT_PRODUCTS_DIR; };
-		F6071A4A273CB4DE00CE56BA /* libTestStaticLib.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libTestStaticLib.a; sourceTree = BUILT_PRODUCTS_DIR; };
-		F6071A4C273CB4DE00CE56BA /* TestStaticLib.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestStaticLib.swift; sourceTree = "<group>"; };
+		F63E1C572746F6BA0077B678 /* TestXCFramework.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = TestXCFramework.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		F63E1C592746F6BA0077B678 /* TestXCFramework.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TestXCFramework.h; sourceTree = "<group>"; };
+		F63E1C5A2746F6BA0077B678 /* TestXCFramework.docc */ = {isa = PBXFileReference; lastKnownFileType = folder.documentationcatalog; path = TestXCFramework.docc; sourceTree = "<group>"; };
+		F63E1C602746F6BA0077B678 /* TestXCFrameworkTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = TestXCFrameworkTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		F63E1C672746F6BA0077B678 /* TestXCFrameworkTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestXCFrameworkTests.swift; sourceTree = "<group>"; };
+		F63E1C752746F6DA0077B678 /* TestLibWithXCFramework.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestLibWithXCFramework.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -74,17 +93,11 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				F63E1C6C2746F6BA0077B678 /* TestXCFramework.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 		F6071A142739984E00CE56BA /* Frameworks */ = {
-			isa = PBXFrameworksBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		F6071A1E2739984E00CE56BA /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -98,10 +111,19 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		F6071A47273CB4DE00CE56BA /* Frameworks */ = {
+		F63E1C542746F6BA0077B678 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				C4F6B1311CB316779DD43AFE /* Pods_TestXCFramework.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		F63E1C5D2746F6BA0077B678 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				F63E1C612746F6BA0077B678 /* TestXCFramework.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -111,8 +133,8 @@
 		927BB6ED4E659DAFC34256BC /* Pods */ = {
 			isa = PBXGroup;
 			children = (
-				AD09D1BD8B49A34DE6308413 /* Pods-TestGithubCI.debug.xcconfig */,
-				5E9861352AED49A2BAED4B0A /* Pods-TestGithubCI.release.xcconfig */,
+				C1D413015ACCCCC1F3D863FA /* Pods-TestXCFramework.debug.xcconfig */,
+				121549C4FBE2914160586DAF /* Pods-TestXCFramework.release.xcconfig */,
 			);
 			path = Pods;
 			sourceTree = "<group>";
@@ -120,6 +142,7 @@
 		BDA2107930E7E9D2FA31D965 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				B4CDC143C5F16072EE147D53 /* Pods_TestXCFramework.framework */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -129,7 +152,8 @@
 			children = (
 				F6071A032739984B00CE56BA /* TestGithubCI */,
 				F6071A1A2739984E00CE56BA /* TestGithubCITests */,
-				F6071A4B273CB4DE00CE56BA /* TestStaticLib */,
+				F63E1C582746F6BA0077B678 /* TestXCFramework */,
+				F63E1C662746F6BA0077B678 /* TestXCFrameworkTests */,
 				F6071A022739984B00CE56BA /* Products */,
 				927BB6ED4E659DAFC34256BC /* Pods */,
 				BDA2107930E7E9D2FA31D965 /* Frameworks */,
@@ -142,7 +166,8 @@
 				F6071A012739984B00CE56BA /* TestGithubCI.app */,
 				F6071A172739984E00CE56BA /* TestGithubCITests.xctest */,
 				F6071A38273CB41500CE56BA /* TestBuildBundle.app */,
-				F6071A4A273CB4DE00CE56BA /* libTestStaticLib.a */,
+				F63E1C572746F6BA0077B678 /* TestXCFramework.framework */,
+				F63E1C602746F6BA0077B678 /* TestXCFrameworkTests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -167,30 +192,51 @@
 			path = TestGithubCITests;
 			sourceTree = "<group>";
 		};
-		F6071A4B273CB4DE00CE56BA /* TestStaticLib */ = {
+		F63E1C582746F6BA0077B678 /* TestXCFramework */ = {
 			isa = PBXGroup;
 			children = (
-				F6071A4C273CB4DE00CE56BA /* TestStaticLib.swift */,
+				F63E1C592746F6BA0077B678 /* TestXCFramework.h */,
+				F63E1C5A2746F6BA0077B678 /* TestXCFramework.docc */,
+				F63E1C752746F6DA0077B678 /* TestLibWithXCFramework.swift */,
 			);
-			path = TestStaticLib;
+			path = TestXCFramework;
+			sourceTree = "<group>";
+		};
+		F63E1C662746F6BA0077B678 /* TestXCFrameworkTests */ = {
+			isa = PBXGroup;
+			children = (
+				F63E1C672746F6BA0077B678 /* TestXCFrameworkTests.swift */,
+			);
+			path = TestXCFrameworkTests;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
+
+/* Begin PBXHeadersBuildPhase section */
+		F63E1C522746F6BA0077B678 /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				F63E1C692746F6BA0077B678 /* TestXCFramework.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXHeadersBuildPhase section */
 
 /* Begin PBXNativeTarget section */
 		F6071A002739984B00CE56BA /* TestGithubCI */ = {
 			isa = PBXNativeTarget;
 			buildConfigurationList = F6071A2B2739984F00CE56BA /* Build configuration list for PBXNativeTarget "TestGithubCI" */;
 			buildPhases = (
-				8EC9340B155F6470C4E2E78F /* [CP] Check Pods Manifest.lock */,
 				F60719FD2739984B00CE56BA /* Sources */,
 				F60719FE2739984B00CE56BA /* Frameworks */,
 				F60719FF2739984B00CE56BA /* Resources */,
+				F63E1C6E2746F6BA0077B678 /* Embed Frameworks */,
 			);
 			buildRules = (
 			);
 			dependencies = (
-				F6071A54273CB6BB00CE56BA /* PBXTargetDependency */,
+				F63E1C6B2746F6BA0077B678 /* PBXTargetDependency */,
 			);
 			name = TestGithubCI;
 			productName = TestGithubCI;
@@ -232,22 +278,43 @@
 			productReference = F6071A38273CB41500CE56BA /* TestBuildBundle.app */;
 			productType = "com.apple.product-type.application";
 		};
-		F6071A49273CB4DE00CE56BA /* TestStaticLib */ = {
+		F63E1C562746F6BA0077B678 /* TestXCFramework */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = F6071A4E273CB4DE00CE56BA /* Build configuration list for PBXNativeTarget "TestStaticLib" */;
+			buildConfigurationList = F63E1C732746F6BA0077B678 /* Build configuration list for PBXNativeTarget "TestXCFramework" */;
 			buildPhases = (
-				F6071A46273CB4DE00CE56BA /* Sources */,
-				F6071A47273CB4DE00CE56BA /* Frameworks */,
-				F6071A48273CB4DE00CE56BA /* CopyFiles */,
+				096C5640616833B940ADC7EC /* [CP] Check Pods Manifest.lock */,
+				F63E1C522746F6BA0077B678 /* Headers */,
+				F63E1C532746F6BA0077B678 /* Sources */,
+				F63E1C542746F6BA0077B678 /* Frameworks */,
+				F63E1C552746F6BA0077B678 /* Resources */,
 			);
 			buildRules = (
 			);
 			dependencies = (
 			);
-			name = TestStaticLib;
-			productName = TestStaticLib;
-			productReference = F6071A4A273CB4DE00CE56BA /* libTestStaticLib.a */;
-			productType = "com.apple.product-type.library.static";
+			name = TestXCFramework;
+			productName = TestXCFramework;
+			productReference = F63E1C572746F6BA0077B678 /* TestXCFramework.framework */;
+			productType = "com.apple.product-type.framework";
+		};
+		F63E1C5F2746F6BA0077B678 /* TestXCFrameworkTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = F63E1C742746F6BA0077B678 /* Build configuration list for PBXNativeTarget "TestXCFrameworkTests" */;
+			buildPhases = (
+				F63E1C5C2746F6BA0077B678 /* Sources */,
+				F63E1C5D2746F6BA0077B678 /* Frameworks */,
+				F63E1C5E2746F6BA0077B678 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				F63E1C632746F6BA0077B678 /* PBXTargetDependency */,
+				F63E1C652746F6BA0077B678 /* PBXTargetDependency */,
+			);
+			name = TestXCFrameworkTests;
+			productName = TestXCFrameworkTests;
+			productReference = F63E1C602746F6BA0077B678 /* TestXCFrameworkTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
 		};
 /* End PBXNativeTarget section */
 
@@ -266,15 +333,15 @@
 						CreatedOnToolsVersion = 13.1;
 						TestTargetID = F6071A002739984B00CE56BA;
 					};
-					F6071A202739984E00CE56BA = {
-						CreatedOnToolsVersion = 13.1;
-						TestTargetID = F6071A002739984B00CE56BA;
-					};
 					F6071A37273CB41500CE56BA = {
 						CreatedOnToolsVersion = 13.1;
 					};
-					F6071A49273CB4DE00CE56BA = {
+					F63E1C562746F6BA0077B678 = {
 						CreatedOnToolsVersion = 13.1;
+					};
+					F63E1C5F2746F6BA0077B678 = {
+						CreatedOnToolsVersion = 13.1;
+						TestTargetID = F6071A002739984B00CE56BA;
 					};
 				};
 			};
@@ -294,7 +361,8 @@
 				F6071A002739984B00CE56BA /* TestGithubCI */,
 				F6071A162739984E00CE56BA /* TestGithubCITests */,
 				F6071A37273CB41500CE56BA /* TestBuildBundle */,
-				F6071A49273CB4DE00CE56BA /* TestStaticLib */,
+				F63E1C562746F6BA0077B678 /* TestXCFramework */,
+				F63E1C5F2746F6BA0077B678 /* TestXCFrameworkTests */,
 			);
 		};
 /* End PBXProject section */
@@ -316,14 +384,21 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		F6071A1F2739984E00CE56BA /* Resources */ = {
+		F6071A36273CB41500CE56BA /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		F6071A36273CB41500CE56BA /* Resources */ = {
+		F63E1C552746F6BA0077B678 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		F63E1C5E2746F6BA0077B678 /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -333,7 +408,7 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXShellScriptBuildPhase section */
-		8EC9340B155F6470C4E2E78F /* [CP] Check Pods Manifest.lock */ = {
+		096C5640616833B940ADC7EC /* [CP] Check Pods Manifest.lock */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -348,7 +423,7 @@
 			outputFileListPaths = (
 			);
 			outputPaths = (
-				"$(DERIVED_FILE_DIR)/Pods-TestGithubCI-checkManifestLockResult.txt",
+				"$(DERIVED_FILE_DIR)/Pods-TestXCFramework-checkManifestLockResult.txt",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
@@ -363,7 +438,6 @@
 			buildActionMask = 2147483647;
 			files = (
 				F6071A092739984B00CE56BA /* ViewController.swift in Sources */,
-				F6071A51273CB65C00CE56BA /* TestStaticLib.swift in Sources */,
 				F6071A052739984B00CE56BA /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -376,13 +450,6 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		F6071A1D2739984E00CE56BA /* Sources */ = {
-			isa = PBXSourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
 		F6071A34273CB41500CE56BA /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -390,12 +457,20 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		F6071A46273CB4DE00CE56BA /* Sources */ = {
+		F63E1C532746F6BA0077B678 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				F6071A52273CB66800CE56BA /* ViewController.swift in Sources */,
-				F6071A4D273CB4DE00CE56BA /* TestStaticLib.swift in Sources */,
+				F63E1C5B2746F6BA0077B678 /* TestXCFramework.docc in Sources */,
+				F63E1C762746F6DA0077B678 /* TestLibWithXCFramework.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		F63E1C5C2746F6BA0077B678 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				F63E1C682746F6BA0077B678 /* TestXCFrameworkTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -407,15 +482,20 @@
 			target = F6071A002739984B00CE56BA /* TestGithubCI */;
 			targetProxy = F6071A182739984E00CE56BA /* PBXContainerItemProxy */;
 		};
-		F6071A232739984E00CE56BA /* PBXTargetDependency */ = {
+		F63E1C632746F6BA0077B678 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = F63E1C562746F6BA0077B678 /* TestXCFramework */;
+			targetProxy = F63E1C622746F6BA0077B678 /* PBXContainerItemProxy */;
+		};
+		F63E1C652746F6BA0077B678 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
 			target = F6071A002739984B00CE56BA /* TestGithubCI */;
-			targetProxy = F6071A222739984E00CE56BA /* PBXContainerItemProxy */;
+			targetProxy = F63E1C642746F6BA0077B678 /* PBXContainerItemProxy */;
 		};
-		F6071A54273CB6BB00CE56BA /* PBXTargetDependency */ = {
+		F63E1C6B2746F6BA0077B678 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
-			target = F6071A49273CB4DE00CE56BA /* TestStaticLib */;
-			targetProxy = F6071A53273CB6BB00CE56BA /* PBXContainerItemProxy */;
+			target = F63E1C562746F6BA0077B678 /* TestXCFramework */;
+			targetProxy = F63E1C6A2746F6BA0077B678 /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
 
@@ -549,8 +629,8 @@
 		};
 		F6071A2C2739984F00CE56BA /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = AD09D1BD8B49A34DE6308413 /* Pods-TestGithubCI.debug.xcconfig */;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
@@ -581,8 +661,8 @@
 		};
 		F6071A2D2739984F00CE56BA /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 5E9861352AED49A2BAED4B0A /* Pods-TestGithubCI.release.xcconfig */;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
@@ -721,31 +801,117 @@
 			};
 			name = Release;
 		};
-		F6071A4F273CB4DE00CE56BA /* Debug */ = {
+		F63E1C6F2746F6BA0077B678 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = C1D413015ACCCCC1F3D863FA /* Pods-TestXCFramework.debug.xcconfig */;
 			buildSettings = {
 				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
 				DEVELOPMENT_TEAM = 5ZKJW2ZKDU;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_NSHumanReadableCopyright = "";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
 				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
-				OTHER_LDFLAGS = "-ObjC";
-				PRODUCT_NAME = "$(TARGET_NAME)";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.linkedin.TestXCFramework;
+				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
 				SKIP_INSTALL = YES;
+				SUPPORTS_MACCATALYST = NO;
+				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
 			};
 			name = Debug;
 		};
-		F6071A50273CB4DE00CE56BA /* Release */ = {
+		F63E1C702746F6BA0077B678 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 121549C4FBE2914160586DAF /* Pods-TestXCFramework.release.xcconfig */;
 			buildSettings = {
 				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
 				DEVELOPMENT_TEAM = 5ZKJW2ZKDU;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_NSHumanReadableCopyright = "";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
 				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
-				OTHER_LDFLAGS = "-ObjC";
-				PRODUCT_NAME = "$(TARGET_NAME)";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.linkedin.TestXCFramework;
+				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
 				SKIP_INSTALL = YES;
+				SUPPORTS_MACCATALYST = NO;
+				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Release;
+		};
+		F63E1C712746F6BA0077B678 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = 5ZKJW2ZKDU;
+				GENERATE_INFOPLIST_FILE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.linkedin.TestXCFrameworkTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/TestGithubCI.app/TestGithubCI";
+			};
+			name = Debug;
+		};
+		F63E1C722746F6BA0077B678 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = 5ZKJW2ZKDU;
+				GENERATE_INFOPLIST_FILE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.linkedin.TestXCFrameworkTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/TestGithubCI.app/TestGithubCI";
 			};
 			name = Release;
 		};
@@ -788,11 +954,20 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		F6071A4E273CB4DE00CE56BA /* Build configuration list for PBXNativeTarget "TestStaticLib" */ = {
+		F63E1C732746F6BA0077B678 /* Build configuration list for PBXNativeTarget "TestXCFramework" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				F6071A4F273CB4DE00CE56BA /* Debug */,
-				F6071A50273CB4DE00CE56BA /* Release */,
+				F63E1C6F2746F6BA0077B678 /* Debug */,
+				F63E1C702746F6BA0077B678 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		F63E1C742746F6BA0077B678 /* Build configuration list for PBXNativeTarget "TestXCFrameworkTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				F63E1C712746F6BA0077B678 /* Debug */,
+				F63E1C722746F6BA0077B678 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;

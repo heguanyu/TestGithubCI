@@ -1,11 +1,11 @@
 //
-//  TestStaticLib.swift
-//  TestStaticLib
+//  TestLibWithXCFramework.swift
+//  TestXCFramework
 //
-//  Created by Guanyu He on 11/10/21.
+//  Created by Guanyu He on 11/18/21.
 //
 
-public class TestStaticLib {
+public class TestLibWithXCFramework {
     public init() {
     }
     /**

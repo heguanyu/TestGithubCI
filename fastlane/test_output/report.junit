@@ -1,7 +1,7 @@
 <?xml version='1.0' encoding='UTF-8'?>
 <testsuites name='TestGithubCITests.xctest' tests='2' failures='0'>
   <testsuite name='TestGithubCITests.TestGithubCITests' tests='2' failures='0'>
-    <testcase classname='TestGithubCITests.TestGithubCITests' name='testExample' time='0.002'/>
+    <testcase classname='TestGithubCITests.TestGithubCITests' name='testExample' time='0.006'/>
     <testcase classname='TestGithubCITests.TestGithubCITests' name='testPerformanceExample' time='0.254'/>
   </testsuite>
 </testsuites>

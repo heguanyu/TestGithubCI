@@ -6,7 +6,7 @@
 //
 
 import UIKit
-import TestStaticLib
+import TestXCFramework
 
 class ViewController: UIViewController {
 
@@ -14,10 +14,10 @@ class ViewController: UIViewController {
         view = UIView()
         view.backgroundColor = .white
 
-        let lib: TestStaticLib = TestStaticLib()
-        title = TestStaticLib.someStaticFunction()
-        print(TestStaticLib.someStaticFunction())
-        print(lib.someNonStaticFunction())
+        let xcframework: TestLibWithXCFramework = TestLibWithXCFramework()
+        title = TestLibWithXCFramework.someStaticFunction()
+        print("static:" + TestLibWithXCFramework.someStaticFunction())
+        print("nonStatic: " + xcframework.someNonStaticFunction())
     }
 }
 
