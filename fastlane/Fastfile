@@ -74,7 +74,7 @@ platform :ios do
     )
     git_commit(
       path: podspecPath,
-      message: "Version bump"
+      message: "Version bump to #{newVersion}"
     )
     push_to_git_remote
     add_git_tag(tag: newVersion)
