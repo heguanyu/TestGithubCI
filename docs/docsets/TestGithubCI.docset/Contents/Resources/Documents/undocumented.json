@@ -1,19 +1,6 @@
 {
   "warnings": [
-    {
-      "file": "/Users/ghe/projects/TestGithubCI/TestStaticLib/TestStaticLib.swift",
-      "line": 8,
-      "symbol": "TestStaticLib",
-      "symbol_kind": "source.lang.swift.decl.class",
-      "warning": "undocumented"
-    },
-    {
-      "file": "/Users/ghe/projects/TestGithubCI/TestStaticLib/TestStaticLib.swift",
-      "line": 9,
-      "symbol": "TestStaticLib.init()",
-      "symbol_kind": "source.lang.swift.decl.function.method.instance",
-      "warning": "undocumented"
-    }
+
   ],
   "source_directory": "/Users/ghe/projects/TestGithubCI"
 }
