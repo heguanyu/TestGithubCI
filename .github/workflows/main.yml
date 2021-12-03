@@ -35,7 +35,6 @@ jobs:
           fastlane lints
           fastlane tests
 
-
       # Push to cocoapods
       - name: Build and publish to cocoapods
         env:
@@ -43,3 +42,7 @@ jobs:
         run:
           fastlane push_cocoapods
 
+      # Generate docs
+      - name: Generate documents
+        run:
+          fastlane gen_apple_doc
