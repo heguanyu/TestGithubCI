@@ -1,0 +1,11 @@
+author: Guanyu He
+github_url: https://github.com/heguanyu/TestGithubCI
+output: docs
+swift_build_tool: xcodebuild
+module: TestXCFramework
+build_tool_arguments:
+#  - -resolvePackageDependencies
+  - -workspace
+  - TestGithubCI.xcworkspace
+  - -scheme
+  - TestXCFramework

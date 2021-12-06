@@ -26,14 +26,18 @@ platform :ios do
   desc "Generate Apple doc"
   lane :gen_apple_doc do
     #generate doc
-    appledoc(
-      project_name: "TestGithubCI",
-      project_company: "LinkedIn, Inc",
-      input: [
-        "TestXCFramework/*.swift"
-      ],
-      options: "--keep-intermediate-files --search-undocumented-doc",
-      warnings: "--warn-missing-output-path --warn-missing-company-id"
+    # appledoc(
+    #   project_name: "TestGithubCI",
+    #   project_company: "LinkedIn, Inc",
+    #   input: [
+    #     "TestXCFramework"
+    #   ],
+    #   options: "--keep-intermediate-files --search-undocumented-doc",
+    #   warnings: "--warn-missing-output-path --warn-missing-company-id"
+    # )
+    system "rm -r ../derived_data/*"
+    jazzy(
+      config: '.jazzy.yaml'
     )
     # commit and push to the doc branch
     git_commit(
@@ -42,7 +46,6 @@ platform :ios do
     )
     push_to_git_remote(
       remote: 'origin',
-      local_branch: 'main',
       remote_branch: 'gh-pages'
     )
   end
