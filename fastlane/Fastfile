@@ -46,7 +46,8 @@ platform :ios do
     )
     push_to_git_remote(
       remote: 'origin',
-      remote_branch: 'gh-pages'
+      remote_branch: 'gh-pages',
+      force: true
     )
   end
 
