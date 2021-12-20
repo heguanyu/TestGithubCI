@@ -4,8 +4,9 @@ name: Post Deployment
 
 # Controls when the workflow will run
 on:
-  # Allows manually rerun
   workflow_dispatch:
+    branches:
+      - main
 
   # Normally should be called by another workflow
   workflow_call:

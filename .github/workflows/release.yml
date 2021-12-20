@@ -3,6 +3,8 @@ name: Release
 on:
   # This job should only be manually triggered
   workflow_dispatch:
+    branches:
+      - main
 
 jobs:
   # Do validation
@@ -17,5 +19,6 @@ jobs:
       - name: Build and publish to cocoapods
         env:
           COCOAPODS_TRUNK_TOKEN: ${{ secrets.COCOAPODS_TRUNK_TOKEN }}
-        run:
+        run: |
+          bundle install
           fastlane push_cocoapods
