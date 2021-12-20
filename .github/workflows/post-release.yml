@@ -15,7 +15,9 @@ jobs:
   post-deployment:
     runs-on: macOS-latest
     steps:
+      - uses: actions/checkout@v2
       # Generate document
       - name: Create apple doc
-        run:
+        run: |
+          bundle install
           fastlane gen_apple_doc
