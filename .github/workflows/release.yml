@@ -25,3 +25,7 @@ jobs:
         run: |
           bundle install
           fastlane push_cocoapods
+
+  post_release:
+    needs: release
+    uses: heguanyu/TestGithubCI/.github/workflows/post-release.yml@main
