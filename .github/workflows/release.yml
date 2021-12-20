@@ -7,15 +7,12 @@ on:
       - main
 
 jobs:
-  # Do validation
-  do-validation:
-    uses: heguanyu/TestGithubCI/.github/workflows/validation.yml@main
-
-  # Then proceed with release
   release:
     runs-on: macOS-latest
       # This deal with version bump and push to cocoapods
     steps:
+      # Checks-out to repo
+      - uses: heguanyu/TestGithubCI/.github/workflows/validation.yml@main
       - name: Build and publish to cocoapods
         env:
           COCOAPODS_TRUNK_TOKEN: ${{ secrets.COCOAPODS_TRUNK_TOKEN }}
