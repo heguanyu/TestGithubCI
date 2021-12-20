@@ -1,0 +1,20 @@
+# This workflow generates document and push to gh-pages
+
+name: Post Deployment
+
+# Controls when the workflow will run
+on:
+  # Allows manually rerun
+  workflow_dispatch:
+
+  # Normally should be called by another workflow
+  workflow_call:
+
+jobs:
+  post-deployment:
+    runs-on: macOS-latest
+    steps:
+      # Generate document
+      - name: Create apple doc
+        run:
+          fastlane gen_apple_doc
