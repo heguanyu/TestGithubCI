@@ -5,9 +5,9 @@ name: Validation
 # Controls when the workflow will run
 on:
   # Triggers the workflow on push or pull request events for all branches
-  push:
-    branches:
-      - '*'
+#  push:
+#    branches:
+#      - '*'
 
   # Can be triggered from other workflows
   workflow_call:
