@@ -25,6 +25,8 @@ jobs:
         run: |
           bundle install
           fastlane push_cocoapods
+          fastlane gen_apple_doc
 
-  post_release:
-    uses: heguanyu/TestGithubCI/.github/workflows/post-release.yml@main
+#  post_release:
+#    needs: release
+#    uses: heguanyu/TestGithubCI/.github/workflows/post-release.yml@main
