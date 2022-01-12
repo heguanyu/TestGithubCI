@@ -24,6 +24,7 @@ jobs:
           COCOAPODS_TRUNK_TOKEN: ${{ secrets.COCOAPODS_TRUNK_TOKEN }}
         run: |
           bundle install
+          fastlane run xcbuild scheme:"TestXCFramework"
           fastlane push_cocoapods
 
 #  post_release:
