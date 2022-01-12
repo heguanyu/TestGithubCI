@@ -7,9 +7,13 @@ on:
   workflow_dispatch:
     branches:
       - main
+  push:
+    # Whenever a new tag is created, run this post-release workflow
+    tags:
+      - '*'           # Push events to every tags
 
   # Normally should be called by another workflow
-  workflow_call:
+#  workflow_call:
 
 jobs:
   post-deployment:
