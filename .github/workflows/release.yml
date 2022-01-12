@@ -25,7 +25,6 @@ jobs:
         run: |
           bundle install
           fastlane push_cocoapods
-          fastlane gen_apple_doc
 
 #  post_release:
 #    needs: release
