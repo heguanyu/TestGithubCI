@@ -1,4 +1,4 @@
-![Build](https://github.com/heguanyu/TestGithubCI/actions/workflows/release/badge.svg)
+[![Release](https://github.com/heguanyu/TestGithubCI/actions/workflows/release.yml/badge.svg?branch=main)](https://github.com/heguanyu/TestGithubCI/actions/workflows/release.yml)
 
 # TestGithubCI
 Test Github CI for IOS dev
