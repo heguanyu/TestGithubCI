@@ -1,7 +1,8 @@
-[![Validation](https://github.com/heguanyu/TestGithubCI/actions/workflows/validation.yml/badge.svg)](https://sonarcloud.io/summary/overall?id=heguanyu_TestGithubCI)
 [![Version](https://img.shields.io/cocoapods/v/TestGithubCI?color=green&label=Podspec)](https://github.com/CocoaPods/Specs/commit/9bccf4064cd4c62fdbcd4151889f464311c3c19a)
-[![Docs](https://github.com/heguanyu/TestGithubCI/actions/workflows/post-release.yml/badge.svg)](https://heguanyu.github.io/TestGithubCI/)
+[![Platform](https://img.shields.io/cocoapods/p/TestGithubCI)]
 [![License](https://img.shields.io/github/license/heguanyu/TestGithubCI)](https://github.com/heguanyu/TestGithubCI/blob/main/LICENSE)
+
+[![Validation](https://github.com/heguanyu/TestGithubCI/actions/workflows/validation.yml/badge.svg)](https://sonarcloud.io/summary/overall?id=heguanyu_TestGithubCI)
 
 
 # TestGithubCI
