@@ -5,7 +5,10 @@ on:
   workflow_dispatch:
     branches:
       - main
-
+    inputs:
+      release-message:
+        required: true
+        description: Release note
 jobs:
   # Do validation
   do_validation:
