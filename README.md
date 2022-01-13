@@ -2,7 +2,7 @@
 ![Platform](https://img.shields.io/cocoapods/p/TestGithubCI)
 [![License](https://img.shields.io/github/license/heguanyu/TestGithubCI)](https://github.com/heguanyu/TestGithubCI/blob/main/LICENSE)
 
-[![Validation](https://github.com/heguanyu/TestGithubCI/actions/workflows/validation.yml/badge.svg)](https://sonarcloud.io/summary/overall?id=heguanyu_TestGithubCI)
+[![Validation](https://github.com/heguanyu/TestGithubCI/actions/workflows/validation.yml/badge.svg?branch=main)](https://sonarcloud.io/summary/overall?id=heguanyu_TestGithubCI)
 
 
 # TestGithubCI
