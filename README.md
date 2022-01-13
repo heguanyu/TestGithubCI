@@ -3,6 +3,7 @@
 [![License](https://img.shields.io/github/license/heguanyu/TestGithubCI)](https://github.com/heguanyu/TestGithubCI/blob/main/LICENSE)
 
 [![Validation](https://github.com/heguanyu/TestGithubCI/actions/workflows/validation.yml/badge.svg?branch=main)](https://sonarcloud.io/summary/overall?id=heguanyu_TestGithubCI)
+![Release](https://github.com/heguanyu/TestGithubCI/actions/workflows/release.yml/badge.svg?branch=main)
 
 
 # TestGithubCI
