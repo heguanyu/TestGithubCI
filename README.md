@@ -1,3 +1,5 @@
+![Build](https://github.com/heguanyu/TestGithubCI/actions/workflows/release/badge.svg)
+
 # TestGithubCI
 Test Github CI for IOS dev
 
