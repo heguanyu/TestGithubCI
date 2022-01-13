@@ -1,5 +1,6 @@
 [![Validation](https://github.com/heguanyu/TestGithubCI/actions/workflows/validation.yml/badge.svg)](https://github.com/heguanyu/TestGithubCI/actions/workflows/validation.yml)
 [![Release](https://github.com/heguanyu/TestGithubCI/actions/workflows/release.yml/badge.svg?branch=main)](https://github.com/heguanyu/TestGithubCI/actions/workflows/release.yml)
+[![Docs](https://github.com/heguanyu/TestGithubCI/actions/workflows/post-release.yml/badge.svg)](https://github.com/heguanyu/TestGithubCI/actions/workflows/post-release.yml)
 
 # TestGithubCI
 Test Github CI for IOS dev
