@@ -5,11 +5,10 @@
 //  Created by Guanyu He on 11/18/21.
 //
 
-import XCTest
 @testable import TestXCFramework
+import XCTest
 
 class TestXCFrameworkTests: XCTestCase {
-
     private var mockInstance: TestLibWithXCFramework!
 
     override func setUpWithError() throws {
@@ -30,9 +29,8 @@ class TestXCFrameworkTests: XCTestCase {
 
     func testPerformanceExample() throws {
         // This is an example of a performance test case.
-        self.measure {
+        measure {
             // Put the code you want to measure the time of here.
         }
     }
-
 }

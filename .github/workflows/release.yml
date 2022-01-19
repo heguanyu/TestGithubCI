@@ -28,6 +28,6 @@ jobs:
           fastlane run xcbuild scheme:"TestXCFramework"
           fastlane push_cocoapods
 
-#  post_release:
-#    needs: release
-#    uses: heguanyu/TestGithubCI/.github/workflows/post-release.yml@main
+  post_release:
+    needs: release
+    uses: heguanyu/TestGithubCI/.github/workflows/post-release.yml@main
