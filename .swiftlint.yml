@@ -1,0 +1,290 @@
+# styleguide coverage:
+#   https://docs.google.com/spreadsheets/d/12PEknF9CevFLCZPKnHdW_CUr6ST6nCirztwdHz9fPsM/
+#
+# rules description:
+#   https://github.com/realm/SwiftLint/blob/master/Rules.md
+#
+# if you need to disable a rule:
+#   https://github.com/realm/SwiftLint#disable-rules-in-code
+
+whitelist_rules:
+  - line_length # go/swiftstyleguide 1.2
+  - comma # go/swiftstyleguide 1.7
+  - conditional_returns_on_newline # go/swiftstyleguide 3.11.7
+  - control_statement # go/swiftstyleguide 3.1.8
+  - force_cast # go/swiftstyleguide 3.5.2
+  - force_try # go/swiftstyleguide 3.5.2
+  - force_unwrapping # go/swiftstyleguide 3.5.1
+  - implicitly_unwrapped_optional # go/swiftstyleguide 3.5.1
+  - multiline_parameters # go/swiftstyleguide 1.10
+  - vertical_parameter_alignment # go/swiftstyleguide 1.10
+  - weak_delegate # go/swiftstyleguide 3.1.5
+  - custom_rules
+  # not in style guide
+  - attributes
+  - closing_brace
+  - closure_end_indentation
+  - closure_spacing
+  - empty_count
+  - empty_enum_arguments
+  - empty_parentheses_with_trailing_closure
+  - legacy_cggeometry_functions
+  - legacy_constant
+  - legacy_constructor
+  - mark
+  - opening_brace
+  - overridden_super_call
+  - private_unit_test
+  - prohibited_super_call
+  - protocol_property_accessors_order
+  - syntactic_sugar
+
+excluded:
+  - DerivedData
+  - Pods
+  - Testing
+
+line_length: 160
+comma:
+  severity: warning
+conditional_returns_on_newline:
+  severity: warning
+control_statement:
+  severity: warning
+force_cast:
+  severity: warning
+force_try:
+  severity: warning
+force_unwrapping:
+  severity: warning
+implicitly_unwrapped_optional:
+  severity: warning
+multiline_parameters:
+  severity: warning
+vertical_parameter_alignment:
+  severity: warning
+
+attributes:
+  severity: warning
+closing_brace:
+  severity: warning
+closure_end_indentation:
+  severity: warning
+closure_spacing:
+  severity: warning
+empty_count:
+  severity: warning
+empty_enum_arguments:
+  severity: warning
+empty_parentheses_with_trailing_closure:
+  severity: warning
+legacy_cggeometry_functions:
+  severity: warning
+legacy_constant:
+  severity: warning
+legacy_constructor:
+  severity: warning
+mark:
+  severity: warning
+opening_brace:
+  severity: warning
+overridden_super_call:
+  severity: warning
+private_unit_test:
+  severity: warning
+prohibited_super_call:
+  severity: warning
+protocol_property_accessors_order:
+  severity: warning
+syntactic_sugar:
+  severity: warning
+weak_delegate:
+  severity: warning
+
+# A lot of our rules should not match comments or strings
+DEFAULT_MATCH_KINDS: &DEFAULT_MATCH_KINDS
+  - argument
+  - attribute.builtin
+  - attribute.id
+  - buildconfig.id
+  - buildconfig.keyword
+  - identifier
+  - keyword
+  - number
+  - objectliteral
+  - parameter
+  - placeholder
+  - string_interpolation_anchor
+  - typeidentifier
+
+custom_rules:
+  dont_use_tabs:
+    name: "Don't use tabs"
+    regex: (\t)
+    message: "1.1 Don't use tabs."
+    severity: warning
+  avoid_multi-line_predicates:
+    name: "Avoid multi-line predicates"
+    regex: ((if|guard) [^\n]*[^{](((\n\s*(&&|\|\|))|((&&|\|\|)\n\s*))[^\n]*){2})
+    message: "1.12 Prefer using local constants or other mitigation techniques to avoid multi-line predicates where possible."
+    severity: warning
+  pascalcase_type_names:
+    name: "Use PascalCase for Type Names"
+    regex: ((struct|class|enum|typedef|associatedtype|protocol|typealias) (?!(override )?var|let|func)[a-z])
+    message: "2.2 Use PascalCase for type names (e.g. struct, enum, class, typedef, associatedtype, etc.)."
+    match_kinds: *DEFAULT_MATCH_KINDS
+    severity: warning
+  camelcase_names:
+    name: "Use camelCase for Functions, Variables, Enum Cases"
+    regex: ((func|let|var) [A-Z])
+    message: "2.3 Use camelCase for function, method, property, constant, variable, argument names, enum cases, etc.)."
+    match_kinds: *DEFAULT_MATCH_KINDS
+    severity: warning
+  camelcase_names_enum:
+    name: "Use camelCase for Functions, Variables, Enum Cases"
+    # This will only catch cases where the problem occurs directly after the enum opening brace (i.e., it will not catch cases
+    # where there is a function or nested enum defined between the opening enum brace and the incorrect case definition).
+    # It will also fail if the word `enum` appears in a comment between the start of the enum definition and the incorrect case.
+    regex: enum (?:(?!(enum)|\}).)*? \{(?:(?!(enum)|\}).)*?case [A-Z]
+    message: "2.3 Use camelCase for function, method, property, constant, variable, argument names, enum cases, etc.)."
+    match_kinds: *DEFAULT_MATCH_KINDS
+    severity: warning
+  no_single_letter_names:
+    name: "No Single Letter Names"
+    # Allow x, y, z for graphics purposes
+    regex: (\W[a-wA-W]\W)
+    match_kinds:
+      - identifier
+      - argument
+      - parameter
+    message: "2.8 Do not abbreviate, use shortened names, or single letter names."
+    severity: warning
+  no_labeled_breaks:
+    name: "Avoid Labeled Breaks"
+    regex: (break\h+\w)
+    message: "3.1.7 Don't use labeled breaks."
+    match_kinds: *DEFAULT_MATCH_KINDS
+    severity: warning
+  1tbs_else_catch:
+    name: "In-line Else and Catch with Preceding Block"
+    regex: (?<=\n)\s*(else|catch)
+    message: "3.1.13 Put the keyword for else, catch, etc. on the same line as the preceeding block (1TBS)."
+    match_kinds: *DEFAULT_MATCH_KINDS
+    severity: warning
+  no_k_prefix:
+    # This rule catches old static constants to be migrated, but doesn't enforce the correct application of 3.1.16
+    name: "Use New Style For Static Constants"
+    regex: (let k[A-Z])
+    message: "3.1.16 For namespacing static properties, prefer using a caseless enum. go/swiftstyleguide for examples"
+    match_kinds: *DEFAULT_MATCH_KINDS
+    severity: warning
+  access_modifier_first:
+    name: "Access Modifier First"
+    regex: (final|static|class|override|required)\s+(open|public|private|fileprivate)
+    match_kinds:
+      - attribute.builtin
+      - keyword
+    message: "3.2.1 Write the access modifier keyword first if it is needed."
+    severity: warning
+  modifiers_inline:
+    name: "Keep Access Modifiers Inline"
+    regex: ((final|static|class|override|open|public|private|fileprivate)\n\h*\w)
+    match_kinds:
+      - attribute.builtin
+      - keyword
+    message: "3.2.2 The access modifier keyword should not be on a line by itself"
+    severity: warning
+  redundant_internal:
+    name: "Avoid Internal Keyword"
+    regex: (internal)
+    match_kinds:
+      - attribute.builtin
+    message: "3.2.3 In general, do not write the internal access modifier keyword since it is the default."
+    severity: warning
+  avoid_custom_operators:
+    name: "Avoid Custom Operators"
+    regex: (operator)
+    match_kinds:
+      - keyword
+    message: "3.3 Prefer creating named functions to custom operators."
+    severity: warning
+  avoid_fallthrough:
+    name: "Avoid Fallthrough"
+    regex: (case .+\n\h+fallthrough)
+    message: "3.4.5 Prefer lists of possibilities (e.g. case 1, 2, 3:) to using fallthrough where possible"
+    match_kinds: *DEFAULT_MATCH_KINDS
+    severity: warning
+  explicit_nil_check:
+    name: "Don't Use if let To Check Nil"
+    regex: (if [^\{]*let _ = .*)
+    message: "3.5.3 Explicitly check a value against nil as opposed to using if let syntax."
+    match_kinds: *DEFAULT_MATCH_KINDS
+    severity: warning
+  avoid_unowned:
+    name: "Avoid Unowned"
+    regex: (unowned)
+    match_kinds:
+      - attribute.builtin
+    message: "3.5.4 Don't use unowned. See go/swiftstyleguide for reasoning."
+    severity: warning
+  use_default_identifier:
+    name: "Use default identifier for `set`, `didSet`, and `willSet`"
+    regex: (?<!func |\w|\.)(set|didSet|willSet) ?\(
+    message: "3.7.3 Though you can create a custom name for the new or old value for willSet/didSet and set, use the standard newValue/oldValue identifiers that are provided by default."
+    severity: warning
+  no_subscript_array_access:
+    name: "Avoid direct access into arrays and prefer accessors such as .first or .last"
+    # limitation: access of int-keyed dictionaries by hardcoded int is a known false positive
+    regex: (\w\[\d\])
+    message: "3.9.1 In general, avoid accessing an array directly with subscripts"
+    match_kinds: *DEFAULT_MATCH_KINDS
+    severity: warning
+  no_bullet_asterisks:
+    name: "Avoid prefixing each line with a *"
+    match_kinds:
+      - doccomment
+    regex: (\h+\*[\s\w]*\n)
+    message: "4.1.3 Do not prefix each additional line with a *."
+    severity: warning
+  doc_param_syntax:
+    name: "Use New Param Doc"
+    regex: (:param:)
+    match_kinds:
+      - doccomment
+      - comment
+    message: "4.1.4 Use the new - parameter syntax as opposed to the old :param: syntax"
+    severity: warning
+  comments_own_lines:
+    name: "Comments should have their own lines"
+    regex: (^\s*[^\s\/]+[^\n\"\']*\/\/[^\n]*)
+    match_kinds:
+      - argument
+      - attribute.builtin
+      - attribute.id
+      - buildconfig.id
+      - buildconfig.keyword
+      - comment
+      - identifier
+      - keyword
+      - number
+      - objectliteral
+      - parameter
+      - placeholder
+      - string_interpolation_anchor
+      - typeidentifier
+    message: "4.2.2 Always leave comments on their own line."
+    severity: warning
+  new_line_after_mark:
+    name: "Leave a new line after // MARK: comments"
+    regex: (\/\/ MARK:[^\n]*\n[^\n])
+    match_kinds:
+      - comment
+    message: "4.2.3 When using // MARK: - whatever, leave a newline after the comment."
+    severity: warning
+  prevent_graphql_action_resource_usage:
+    name: "Further use of GraphQLActionResource is not permitted."
+    regex: (GraphQLActionResource)
+    match_kinds:
+      - typeidentifier
+    message: "GraphQLActionResource was a temporary solution for Tetris writes until GraphQL mutations arrive. Please reach out in #fi-ios if you believe your use case needs this."
+    severity: warning

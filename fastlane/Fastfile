@@ -18,6 +18,14 @@ default_platform(:ios)
 podspecPath = "TestGithubCI.podspec"
 
 platform :ios do
+  before_all do
+    begin
+      xcversion(version: "~> 13.0")
+    rescue => ex
+      UI.error("Failed when switching to Xcode version: #{ex}")
+    end
+  end
+
   desc "Pulls dependencies"
   lane :build_dependencies do
     cocoapods
@@ -61,7 +69,8 @@ platform :ios do
     swiftlint(
       mode: :lint,
       files: files,
-      executable: "Pods/SwiftLint/swiftlint"
+      executable: "Pods/SwiftLint/swiftlint",
+      config_file: ".swiftlint.yml"
     )
   end
 
