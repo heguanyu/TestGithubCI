@@ -7,7 +7,6 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		C4F6B1311CB316779DD43AFE /* Pods_TestXCFramework.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B4CDC143C5F16072EE147D53 /* Pods_TestXCFramework.framework */; };
 		F6071A052739984B00CE56BA /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F6071A042739984B00CE56BA /* AppDelegate.swift */; };
 		F6071A092739984B00CE56BA /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F6071A082739984B00CE56BA /* ViewController.swift */; };
 		F6071A0E2739984E00CE56BA /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F6071A0D2739984E00CE56BA /* Assets.xcassets */; };
@@ -68,9 +67,7 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
-		121549C4FBE2914160586DAF /* Pods-TestXCFramework.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TestXCFramework.release.xcconfig"; path = "Target Support Files/Pods-TestXCFramework/Pods-TestXCFramework.release.xcconfig"; sourceTree = "<group>"; };
-		B4CDC143C5F16072EE147D53 /* Pods_TestXCFramework.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_TestXCFramework.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		C1D413015ACCCCC1F3D863FA /* Pods-TestXCFramework.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TestXCFramework.debug.xcconfig"; path = "Target Support Files/Pods-TestXCFramework/Pods-TestXCFramework.debug.xcconfig"; sourceTree = "<group>"; };
+		ADA11BD160B21B6687C0C363 /* Pods-TestXCFramework.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TestXCFramework.release.xcconfig"; path = "Target Support Files/Pods-TestXCFramework/Pods-TestXCFramework.release.xcconfig"; sourceTree = "<group>"; };
 		F6071A012739984B00CE56BA /* TestGithubCI.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TestGithubCI.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		F6071A042739984B00CE56BA /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		F6071A082739984B00CE56BA /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -86,6 +83,7 @@
 		F63E1C602746F6BA0077B678 /* TestXCFrameworkTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = TestXCFrameworkTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		F63E1C672746F6BA0077B678 /* TestXCFrameworkTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestXCFrameworkTests.swift; sourceTree = "<group>"; };
 		F63E1C752746F6DA0077B678 /* TestLibWithXCFramework.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestLibWithXCFramework.swift; sourceTree = "<group>"; };
+		FF0CFD95305771B35C8A8A44 /* Pods-TestXCFramework.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TestXCFramework.debug.xcconfig"; path = "Target Support Files/Pods-TestXCFramework/Pods-TestXCFramework.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -115,7 +113,6 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				C4F6B1311CB316779DD43AFE /* Pods_TestXCFramework.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -133,16 +130,15 @@
 		927BB6ED4E659DAFC34256BC /* Pods */ = {
 			isa = PBXGroup;
 			children = (
-				C1D413015ACCCCC1F3D863FA /* Pods-TestXCFramework.debug.xcconfig */,
-				121549C4FBE2914160586DAF /* Pods-TestXCFramework.release.xcconfig */,
+				FF0CFD95305771B35C8A8A44 /* Pods-TestXCFramework.debug.xcconfig */,
+				ADA11BD160B21B6687C0C363 /* Pods-TestXCFramework.release.xcconfig */,
 			);
 			path = Pods;
 			sourceTree = "<group>";
 		};
-		BDA2107930E7E9D2FA31D965 /* Frameworks */ = {
+		D57D8F19F26D7014A1D4B219 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
-				B4CDC143C5F16072EE147D53 /* Pods_TestXCFramework.framework */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -156,7 +152,7 @@
 				F63E1C662746F6BA0077B678 /* TestXCFrameworkTests */,
 				F6071A022739984B00CE56BA /* Products */,
 				927BB6ED4E659DAFC34256BC /* Pods */,
-				BDA2107930E7E9D2FA31D965 /* Frameworks */,
+				D57D8F19F26D7014A1D4B219 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -282,7 +278,7 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = F63E1C732746F6BA0077B678 /* Build configuration list for PBXNativeTarget "TestXCFramework" */;
 			buildPhases = (
-				096C5640616833B940ADC7EC /* [CP] Check Pods Manifest.lock */,
+				4BB451392C61B6E06007538F /* [CP] Check Pods Manifest.lock */,
 				F63E1C522746F6BA0077B678 /* Headers */,
 				F63E1C532746F6BA0077B678 /* Sources */,
 				F63E1C542746F6BA0077B678 /* Frameworks */,
@@ -408,7 +404,7 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXShellScriptBuildPhase section */
-		096C5640616833B940ADC7EC /* [CP] Check Pods Manifest.lock */ = {
+		4BB451392C61B6E06007538F /* [CP] Check Pods Manifest.lock */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -803,7 +799,7 @@
 		};
 		F63E1C6F2746F6BA0077B678 /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = C1D413015ACCCCC1F3D863FA /* Pods-TestXCFramework.debug.xcconfig */;
+			baseConfigurationReference = FF0CFD95305771B35C8A8A44 /* Pods-TestXCFramework.debug.xcconfig */;
 			buildSettings = {
 				CODE_SIGN_STYLE = Manual;
 				CURRENT_PROJECT_VERSION = 1;
@@ -837,7 +833,7 @@
 		};
 		F63E1C702746F6BA0077B678 /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 121549C4FBE2914160586DAF /* Pods-TestXCFramework.release.xcconfig */;
+			baseConfigurationReference = ADA11BD160B21B6687C0C363 /* Pods-TestXCFramework.release.xcconfig */;
 			buildSettings = {
 				CODE_SIGN_STYLE = Manual;
 				CURRENT_PROJECT_VERSION = 1;

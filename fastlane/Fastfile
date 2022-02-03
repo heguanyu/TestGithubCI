@@ -18,13 +18,13 @@ default_platform(:ios)
 podspecPath = "TestGithubCI.podspec"
 
 platform :ios do
-  before_all do
-    begin
-      xcversion(version: "~> 13.0")
-    rescue => ex
-      UI.error("Failed when switching to Xcode version: #{ex}")
-    end
-  end
+  # before_all do
+  #   begin
+  #     xcversion(version: "~> 13.0")
+  #   rescue => ex
+  #     UI.error("Failed when switching to Xcode version: #{ex}")
+  #   end
+  # end
 
   desc "Pulls dependencies"
   lane :build_dependencies do
@@ -91,7 +91,11 @@ platform :ios do
   end
 
   desc "Push version to cocoapods"
-  lane :push_cocoapods do
+  lane :push_cocoapods do |options|
+
+    target_version = options[:version]
+    raise "The version is missed. Use `fastlane release version:{version_number}`.`" if target_version.nil?
+
     newVersion = version_bump_podspec(
       path: podspecPath,
       bump_type: "patch"
@@ -103,7 +107,39 @@ platform :ios do
     push_to_git_remote
     add_git_tag(tag: newVersion)
     push_git_tags
-    pod_push(allow_warnings: true)
+    # pod_push(allow_warnings: true)
+
+    binary_frameworks = xcframework(version: target_version)
+
+    release_content = read_changelog(excluded_markdown_elements: [])
+    change_log(version: target_version)
+
+    set_github_release(
+      repository_name: "heguanyu/TestGithubCI",
+      api_token: ENV["GITHUB_TOKEN"],
+      name: target_version,
+      tag_name: target_version,
+      upload_assets: binary_frameworks,
+      description: release_content
+    )
+  end
+
+  desc "Create binary frameworks with the `xcframework` format under the `build/` folder."
+  lane :xcframework do |options|
+    target_version = options[:version]
+    output_path = "build"
+
+    FileUtils.rm_rf "../#{output_path}"
+
+    artifact_paths = [
+      build_xcframework(version: target_version, scheme: "TestXCFramework", output: output_path)
+    ]
+
+    zipped_files = []
+    artifact_paths.each do |path|
+      zipped_files << zip(path: path)
+    end
+    zipped_files
   end
 end
 
