@@ -130,8 +130,6 @@ platform :ios do
 
   desc "Create a release based on change log"
   lane :createrelease do |options|
-    puts "Hello world!!!"
-
     target_version = options[:version]
     build_path = "build"
     changelog_filename = "CHANGELOG.md"
@@ -140,12 +138,12 @@ platform :ios do
       section_identifier: '[Unreleased]',	# Specify what section to read
       excluded_markdown_elements: ['-', '###']
     )
-    stamp_changelog(
-      section_identifier: target_version,
-      git_tag: target_version,
-      should_stamp_date: true,
-      stamp_datetime_format: '%FT%TZ'
-    )
+    # stamp_changelog(
+    #   section_identifier: target_version,
+    #   git_tag: target_version,
+    #   should_stamp_date: true,
+    #   stamp_datetime_format: '%FT%TZ'
+    # )
     puts release_content
   end
 
