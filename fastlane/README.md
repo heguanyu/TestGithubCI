@@ -55,6 +55,22 @@ Generate Apple doc
 
 Push version to cocoapods
 
+### ios someA
+
+```sh
+[bundle exec] fastlane ios someA
+```
+
+
+
+### ios createrelease
+
+```sh
+[bundle exec] fastlane ios createrelease
+```
+
+Create a release based on change log
+
 ### ios xcframework
 
 ```sh

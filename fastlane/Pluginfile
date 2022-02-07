@@ -1,0 +1,3 @@
+# The plugin to retrieve release note from changelog.
+
+gem 'fastlane-plugin-changelog'
