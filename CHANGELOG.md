@@ -3,6 +3,8 @@
 All notable changes to this project will be documented in this file.
 
 ## [Unreleased]
+
+## [test0.3] - 2022-02-08T16:33:33Z
 - Allow no change to commit when generating the changelog.
 
 ## [test0.2] - 2022-02-08T07:10:02Z
@@ -22,6 +24,7 @@ All notable changes to this project will be documented in this file.
 
 ### Added
 
+- Added some features
 - Added some features
 - Added some features
 - Added some features
