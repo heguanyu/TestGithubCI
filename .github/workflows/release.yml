@@ -11,12 +11,12 @@ on:
         description: Release version
 jobs:
   # Do validation
-  do_validation:
-    uses: heguanyu/TestGithubCI/.github/workflows/validation.yml@main
+#  do_validation:
+#    uses: heguanyu/TestGithubCI/.github/workflows/validation.yml@main
 
   # Then proceed with release
   release:
-    needs: do_validation
+#    needs: do_validation
     runs-on: macOS-latest
       # This deal with version bump and push to cocoapods
     steps:
