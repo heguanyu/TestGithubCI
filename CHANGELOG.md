@@ -3,6 +3,8 @@
 All notable changes to this project will be documented in this file.
 
 ## [Unreleased]
+
+## [test0.0.01] - 2022-02-08T23:23:11Z
 - Trying to run git push command as a shell script
 
 ## [test0.6] - 2022-02-08T17:02:03Z
@@ -30,6 +32,7 @@ All notable changes to this project will be documented in this file.
 
 ### Added
 
+- Added some features
 - Added some features
 - Added some features
 - Added some features
