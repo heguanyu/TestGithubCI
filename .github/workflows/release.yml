@@ -30,6 +30,6 @@ jobs:
           fastlane build_dependencies
           fastlane create_release version:${{github.event.inputs.release_version}}
 
-  post_release:
-    needs: release
-    uses: heguanyu/TestGithubCI/.github/workflows/post-release.yml@main
+#  post_release:
+#    needs: release
+#    uses: heguanyu/TestGithubCI/.github/workflows/post-release.yml@main
