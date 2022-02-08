@@ -22,6 +22,8 @@ jobs:
     steps:
       # Checks-out to repo
       - uses: actions/checkout@v2
+        with:
+            persist-credentials: false
       - name: Build and publish to cocoapods
         env:
           GITHUB_TOKEN: ${{ secrets.RELEASE_TOKEN }}
