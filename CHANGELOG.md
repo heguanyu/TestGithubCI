@@ -3,7 +3,7 @@
 All notable changes to this project will be documented in this file.
 
 ## [Unreleased]
-- Test0.1
+- Test0.1rm
 ## [test0.1] - 2022-02-08T00:55:40Z
 - Test if plugin works fine
 - Some other changes

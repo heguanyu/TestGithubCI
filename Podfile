@@ -1,8 +1,8 @@
 platform :ios, '13.0'
 workspace 'TestGithubCI.xcworkspace'
-target 'TestXCFramework' do
-  use_frameworks!
-end
+# target 'TestXCFramework' do
+# #   use_frameworks!
+# end
 
 # Development tools
 pod 'SwiftLint'
