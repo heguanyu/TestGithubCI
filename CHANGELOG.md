@@ -3,8 +3,6 @@
 All notable changes to this project will be documented in this file.
 
 ## [Unreleased]
-
-## [test0.0.2] - 2022-02-08T23:28:47Z
 - Trying to run git push tag command as shell
 ## [test0.0.01] - 2022-02-08T23:23:11Z
 - Trying to run git push command as a shell script
