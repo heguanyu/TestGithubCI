@@ -135,10 +135,10 @@ platform :ios do
       stamp_datetime_format: '%FT%TZ'
     )
     git_commit_all(
-      message: "Version bump to #{newVersion}"
+      message: "Version bump to #{target_version}"
     )
     push_to_git_remote
-    add_git_tag(tag: newVersion)
+    add_git_tag(tag: target_version)
     push_git_tags
 
     set_github_release(

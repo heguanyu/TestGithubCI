@@ -63,10 +63,10 @@ Push version to cocoapods
 
 
 
-### ios createrelease
+### ios create_release
 
 ```sh
-[bundle exec] fastlane ios createrelease
+[bundle exec] fastlane ios create_release
 ```
 
 Create a release based on change log
