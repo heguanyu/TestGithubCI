@@ -6,7 +6,6 @@ module Fastlane
 
     class BuildXcframeworkAction < Action
       def self.run(params)
-        puts "hello?".inspect
         scheme = params[:scheme]
         product_name = params[:product_name] || scheme
         output_path = params[:output]

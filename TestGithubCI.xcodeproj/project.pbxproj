@@ -16,8 +16,6 @@
 		F63E1C612746F6BA0077B678 /* TestXCFramework.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F63E1C572746F6BA0077B678 /* TestXCFramework.framework */; };
 		F63E1C682746F6BA0077B678 /* TestXCFrameworkTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = F63E1C672746F6BA0077B678 /* TestXCFrameworkTests.swift */; };
 		F63E1C692746F6BA0077B678 /* TestXCFramework.h in Headers */ = {isa = PBXBuildFile; fileRef = F63E1C592746F6BA0077B678 /* TestXCFramework.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		F63E1C6C2746F6BA0077B678 /* TestXCFramework.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F63E1C572746F6BA0077B678 /* TestXCFramework.framework */; };
-		F63E1C6D2746F6BA0077B678 /* TestXCFramework.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = F63E1C572746F6BA0077B678 /* TestXCFramework.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		F63E1C762746F6DA0077B678 /* TestLibWithXCFramework.swift in Sources */ = {isa = PBXBuildFile; fileRef = F63E1C752746F6DA0077B678 /* TestLibWithXCFramework.swift */; };
 /* End PBXBuildFile section */
 
@@ -43,28 +41,7 @@
 			remoteGlobalIDString = F6071A002739984B00CE56BA;
 			remoteInfo = TestGithubCI;
 		};
-		F63E1C6A2746F6BA0077B678 /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = F60719F92739984B00CE56BA /* Project object */;
-			proxyType = 1;
-			remoteGlobalIDString = F63E1C562746F6BA0077B678;
-			remoteInfo = TestXCFramework;
-		};
 /* End PBXContainerItemProxy section */
-
-/* Begin PBXCopyFilesBuildPhase section */
-		F63E1C6E2746F6BA0077B678 /* Embed Frameworks */ = {
-			isa = PBXCopyFilesBuildPhase;
-			buildActionMask = 2147483647;
-			dstPath = "";
-			dstSubfolderSpec = 10;
-			files = (
-				F63E1C6D2746F6BA0077B678 /* TestXCFramework.framework in Embed Frameworks */,
-			);
-			name = "Embed Frameworks";
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-/* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
 		ADA11BD160B21B6687C0C363 /* Pods-TestXCFramework.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TestXCFramework.release.xcconfig"; path = "Target Support Files/Pods-TestXCFramework/Pods-TestXCFramework.release.xcconfig"; sourceTree = "<group>"; };
@@ -91,7 +68,6 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				F63E1C6C2746F6BA0077B678 /* TestXCFramework.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -227,12 +203,10 @@
 				F60719FD2739984B00CE56BA /* Sources */,
 				F60719FE2739984B00CE56BA /* Frameworks */,
 				F60719FF2739984B00CE56BA /* Resources */,
-				F63E1C6E2746F6BA0077B678 /* Embed Frameworks */,
 			);
 			buildRules = (
 			);
 			dependencies = (
-				F63E1C6B2746F6BA0077B678 /* PBXTargetDependency */,
 			);
 			name = TestGithubCI;
 			productName = TestGithubCI;
@@ -488,11 +462,6 @@
 			target = F6071A002739984B00CE56BA /* TestGithubCI */;
 			targetProxy = F63E1C642746F6BA0077B678 /* PBXContainerItemProxy */;
 		};
-		F63E1C6B2746F6BA0077B678 /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			target = F63E1C562746F6BA0077B678 /* TestXCFramework */;
-			targetProxy = F63E1C6A2746F6BA0077B678 /* PBXContainerItemProxy */;
-		};
 /* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
@@ -626,7 +595,6 @@
 		F6071A2C2739984F00CE56BA /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
@@ -658,7 +626,6 @@
 		F6071A2D2739984F00CE56BA /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
