@@ -3,6 +3,7 @@
 All notable changes to this project will be documented in this file.
 
 ## [Unreleased]
+- Workflow to pass in environment variables
 
 ## [test0.4] - 2022-02-08T16:41:33Z
 - Use release token

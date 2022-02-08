@@ -25,6 +25,7 @@ jobs:
       - name: Build and publish to cocoapods
         env:
           COCOAPODS_TRUNK_TOKEN: ${{ secrets.COCOAPODS_TRUNK_TOKEN }}
+          RELEASE_TOKEN: ${{ secrets.RELEASE_TOKEN }}
         run: |
           bundle install
           fastlane build_dependencies

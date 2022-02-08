@@ -143,7 +143,10 @@ platform :ios do
     add_git_tag(tag: target_version)
     push_git_tags
 
+    puts "Printing something"
     puts ENV["RELEASE_TOKEN"]
+    puts "Printing ends"
+
     set_github_release(
       repository_name: "heguanyu/TestGithubCI",
       api_token: ENV["RELEASE_TOKEN"],
