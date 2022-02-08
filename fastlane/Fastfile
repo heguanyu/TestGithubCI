@@ -108,11 +108,38 @@ platform :ios do
     add_git_tag(tag: newVersion)
     push_git_tags
     # pod_push(allow_warnings: true)
+  end
 
+  lane :someA do |options|
+    puts "Hello world!"
+  end
+
+  desc "Create a release based on change log"
+  lane :create_release do |options|
+    target_version = options[:version]
+    build_path = "build"
+    changelog_filename = "CHANGELOG.md"
+
+    # Prepare the binaries and release note
     binary_frameworks = xcframework(version: target_version)
+    release_content = read_changelog(
+      section_identifier: '[Unreleased]',	# Specify what section to read
+      excluded_markdown_elements: ['-', '###']
+    )
 
-    release_content = read_changelog(excluded_markdown_elements: [])
-    change_log(version: target_version)
+    # stamp the new version into change log and check-in
+    stamp_changelog(
+      section_identifier: target_version,
+      git_tag: target_version,
+      should_stamp_date: true,
+      stamp_datetime_format: '%FT%TZ'
+    )
+    git_commit_all(
+      message: "Version bump to #{newVersion}"
+    )
+    push_to_git_remote
+    add_git_tag(tag: newVersion)
+    push_git_tags
 
     set_github_release(
       repository_name: "heguanyu/TestGithubCI",
@@ -122,29 +149,7 @@ platform :ios do
       upload_assets: binary_frameworks,
       description: release_content
     )
-  end
-
-  lane :someA do |options|
-    puts "Hello world!"
-  end
-
-  desc "Create a release based on change log"
-  lane :createrelease do |options|
-    target_version = options[:version]
-    build_path = "build"
-    changelog_filename = "CHANGELOG.md"
-
-    release_content = read_changelog(
-      section_identifier: '[Unreleased]',	# Specify what section to read
-      excluded_markdown_elements: ['-', '###']
-    )
-    # stamp_changelog(
-    #   section_identifier: target_version,
-    #   git_tag: target_version,
-    #   should_stamp_date: true,
-    #   stamp_datetime_format: '%FT%TZ'
-    # )
-    puts release_content
+    # pod_push(allow_warnings: true)
   end
 
   desc "Create binary frameworks with the `xcframework` format under the `build/` folder."

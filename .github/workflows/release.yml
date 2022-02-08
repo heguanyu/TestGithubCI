@@ -6,9 +6,9 @@ on:
     branches:
       - main
     inputs:
-      release-message:
+      release_version:
         required: true
-        description: Release note
+        description: Release version
 jobs:
   # Do validation
   do_validation:
@@ -28,8 +28,7 @@ jobs:
         run: |
           bundle install
           fastlane build_dependencies
-          fastlane run xcbuild scheme:"TestXCFramework"
-          fastlane push_cocoapods
+          fastlane create_release version:${{github.event.inputs.release_version}}
 
   post_release:
     needs: release
