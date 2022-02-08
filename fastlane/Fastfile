@@ -143,7 +143,8 @@ platform :ios do
     # push_to_git_remote
     sh("git", "push", "https://"+ENV["GITHUB_TOKEN"]+"@github.com/heguanyu/TestGithubCI.git")
     add_git_tag(tag: target_version)
-    push_git_tags
+    # push_git_tags
+    sh("git", "push", "https://"+ENV["GITHUB_TOKEN"]+"@github.com/heguanyu/TestGithubCI.git", "origin", "--tags")
 
     set_github_release(
       repository_name: "heguanyu/TestGithubCI",
