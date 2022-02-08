@@ -3,6 +3,8 @@
 All notable changes to this project will be documented in this file.
 
 ## [Unreleased]
+
+## [test0.2] - 2022-02-08T07:10:02Z
 - Test0.2
 
 ## [test0.1] - 2022-02-08T00:55:40Z
@@ -19,5 +21,6 @@ All notable changes to this project will be documented in this file.
 
 ### Added
 
+- Added some features
 - Added some features
 - Added some features
