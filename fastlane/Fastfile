@@ -105,7 +105,7 @@ platform :ios do
       message: "Version bump to #{newVersion}"
     )
     # push_to_git_remote
-    sh("git", "push", ENV["GITHUB_TOKEN"]+"@github.com/heguanyu/TestGithubCI.git")
+    # sh("git", "push", ENV["GITHUB_TOKEN"]+"@github.com/heguanyu/TestGithubCI.git")
     add_git_tag(tag: newVersion)
     push_git_tags
     # pod_push(allow_warnings: true)
@@ -140,7 +140,8 @@ platform :ios do
       message: "Version bump to #{target_version}",
       allow_nothing_to_commit: true
     )
-    push_to_git_remote
+    # push_to_git_remote
+    sh("git", "push", ENV["GITHUB_TOKEN"]+"@github.com/heguanyu/TestGithubCI.git")
     add_git_tag(tag: target_version)
     push_git_tags
 
