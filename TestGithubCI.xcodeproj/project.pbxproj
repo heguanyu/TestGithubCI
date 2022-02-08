@@ -13,7 +13,6 @@
 		F6071A112739984E00CE56BA /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F6071A0F2739984E00CE56BA /* LaunchScreen.storyboard */; };
 		F6071A1C2739984E00CE56BA /* TestGithubCITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = F6071A1B2739984E00CE56BA /* TestGithubCITests.swift */; };
 		F63E1C5B2746F6BA0077B678 /* TestXCFramework.docc in Sources */ = {isa = PBXBuildFile; fileRef = F63E1C5A2746F6BA0077B678 /* TestXCFramework.docc */; };
-		F63E1C612746F6BA0077B678 /* TestXCFramework.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F63E1C572746F6BA0077B678 /* TestXCFramework.framework */; };
 		F63E1C682746F6BA0077B678 /* TestXCFrameworkTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = F63E1C672746F6BA0077B678 /* TestXCFrameworkTests.swift */; };
 		F63E1C692746F6BA0077B678 /* TestXCFramework.h in Headers */ = {isa = PBXBuildFile; fileRef = F63E1C592746F6BA0077B678 /* TestXCFramework.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		F63E1C762746F6DA0077B678 /* TestLibWithXCFramework.swift in Sources */ = {isa = PBXBuildFile; fileRef = F63E1C752746F6DA0077B678 /* TestLibWithXCFramework.swift */; };
@@ -96,7 +95,6 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				F63E1C612746F6BA0077B678 /* TestXCFramework.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
