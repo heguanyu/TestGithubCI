@@ -104,7 +104,8 @@ platform :ios do
       path: podspecPath,
       message: "Version bump to #{newVersion}"
     )
-    push_to_git_remote
+    # push_to_git_remote
+    sh("git", "push", ENV["GITHUB_TOKEN"]+"@github.com/heguanyu/TestGithubCI.git")
     add_git_tag(tag: newVersion)
     push_git_tags
     # pod_push(allow_warnings: true)

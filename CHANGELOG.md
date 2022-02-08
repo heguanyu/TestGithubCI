@@ -3,7 +3,7 @@
 All notable changes to this project will be documented in this file.
 
 ## [Unreleased]
-- I need to trigger some changes to change log
+- Trying to run git push command as a shell script
 
 ## [test0.6] - 2022-02-08T17:02:03Z
 - Workflow to pass in environment variables
@@ -18,7 +18,7 @@ All notable changes to this project will be documented in this file.
 
 ## [test0.1] - 2022-02-08T00:55:40Z
 - Test if plugin works fine
-- Some other changes
+- Some other changes    
 
 ## [5.8.1] - 2021-11-17Z
 
