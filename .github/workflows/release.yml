@@ -24,6 +24,7 @@ jobs:
       - uses: actions/checkout@v2
       - name: Build and publish to cocoapods
         env:
+          GITHUB_TOKEN: ${{ secrets.RELEASE_TOKEN }}
           COCOAPODS_TRUNK_TOKEN: ${{ secrets.COCOAPODS_TRUNK_TOKEN }}
           RELEASE_TOKEN: ${{ secrets.RELEASE_TOKEN }}
         run: |
