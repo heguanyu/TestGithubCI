@@ -134,7 +134,8 @@ platform :ios do
       should_stamp_date: true,
       stamp_datetime_format: '%FT%TZ'
     )
-    git_commit_all(
+    git_commit(
+      path: ["./CHANGELOG.md"],
       message: "Version bump to #{target_version}"
     )
     push_to_git_remote
