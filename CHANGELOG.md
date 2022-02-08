@@ -3,6 +3,8 @@
 All notable changes to this project will be documented in this file.
 
 ## [Unreleased]
+
+## [test0.4] - 2022-02-08T16:41:33Z
 - Use release token
 ## [test0.3] - 2022-02-08T16:33:33Z
 - Allow no change to commit when generating the changelog.
@@ -24,6 +26,7 @@ All notable changes to this project will be documented in this file.
 
 ### Added
 
+- Added some features
 - Added some features
 - Added some features
 - Added some features
