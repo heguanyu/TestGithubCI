@@ -3,6 +3,8 @@
 All notable changes to this project will be documented in this file.
 
 ## [Unreleased]
+
+## [test0.6] - 2022-02-08T17:02:03Z
 - Workflow to pass in environment variables
 
 ## [test0.4] - 2022-02-08T16:41:33Z
@@ -27,6 +29,7 @@ All notable changes to this project will be documented in this file.
 
 ### Added
 
+- Added some features
 - Added some features
 - Added some features
 - Added some features
