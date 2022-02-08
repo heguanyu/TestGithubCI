@@ -3,7 +3,7 @@
 All notable changes to this project will be documented in this file.
 
 ## [Unreleased]
-
+- Use release token
 ## [test0.3] - 2022-02-08T16:33:33Z
 - Allow no change to commit when generating the changelog.
 

@@ -145,7 +145,7 @@ platform :ios do
 
     set_github_release(
       repository_name: "heguanyu/TestGithubCI",
-      api_token: ENV["GITHUB_TOKEN"],
+      api_token: ENV["RELEASE_TOKEN"],
       name: target_version,
       tag_name: target_version,
       upload_assets: binary_frameworks,
