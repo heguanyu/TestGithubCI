@@ -141,7 +141,7 @@ platform :ios do
       allow_nothing_to_commit: true
     )
     # push_to_git_remote
-    sh("git", "push", ENV["GITHUB_TOKEN"]+"@github.com/heguanyu/TestGithubCI.git")
+    sh("git", "push", "https://"+ENV["GITHUB_TOKEN"]+"@github.com/heguanyu/TestGithubCI.git")
     add_git_tag(tag: target_version)
     push_git_tags
 
