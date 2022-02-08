@@ -3,7 +3,7 @@
 All notable changes to this project will be documented in this file.
 
 ## [Unreleased]
-
+- Try native fastlane with cred in yml
 ## [test0.0.2] - 2022-02-08T23:37:43Z
 - Trying to run git push tag command as shell
 ## [test0.0.01] - 2022-02-08T23:23:11Z

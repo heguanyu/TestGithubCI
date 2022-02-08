@@ -23,10 +23,10 @@ jobs:
       # Checks-out to repo
       - uses: actions/checkout@v2
         with:
-            persist-credentials: false
+          token: ${{ secrets.RELEASE_TOKEN }}
       - name: Build and publish to cocoapods
         env:
-          GITHUB_TOKEN: ${{ secrets.RELEASE_TOKEN }}
+#          GITHUB_TOKEN: ${{ secrets.RELEASE_TOKEN }}
           COCOAPODS_TRUNK_TOKEN: ${{ secrets.COCOAPODS_TRUNK_TOKEN }}
           RELEASE_TOKEN: ${{ secrets.RELEASE_TOKEN }}
         run: |
