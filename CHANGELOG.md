@@ -3,6 +3,7 @@
 All notable changes to this project will be documented in this file.
 
 ## [Unreleased]
+- Allow no change to commit when generating the changelog.
 
 ## [test0.2] - 2022-02-08T07:10:02Z
 - Test0.2
