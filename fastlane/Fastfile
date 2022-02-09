@@ -93,8 +93,8 @@ platform :ios do
   desc "Push version to cocoapods"
   lane :push_cocoapods do |options|
 
-    target_version = options[:version]
-    raise "The version is missed. Use `fastlane release version:{version_number}`.`" if target_version.nil?
+    new_release_version = options[:version]
+    raise "The version is missed. Use `fastlane release version:{version_number}`.`" if new_release_version.nil?
 
     newVersion = version_bump_podspec(
       path: podspecPath,
@@ -117,12 +117,12 @@ platform :ios do
 
   desc "Create a release based on change log"
   lane :create_release do |options|
-    target_version = options[:version]
+    new_release_version = options[:version]
     build_path = "build"
     changelog_filename = "CHANGELOG.md"
 
     # Prepare the binaries and release note
-    binary_frameworks = xcframework(version: target_version)
+    binary_frameworks = xcframework(version: new_release_version)
     release_content = read_changelog(
       section_identifier: '[Unreleased]',	# Specify what section to read
       excluded_markdown_elements: ['-', '###']
@@ -130,42 +130,44 @@ platform :ios do
 
     # stamp the new version into change log and check-in
     stamp_changelog(
-      section_identifier: target_version,
-      git_tag: target_version,
+      section_identifier: new_release_version,
+      git_tag: new_release_version,
       should_stamp_date: true,
       stamp_datetime_format: '%FT%TZ'
     )
+    version_bump_podspec(path: "TestGithubCI.podspec", version_number: new_release_version)
     git_commit(
-      path: ["./CHANGELOG.md"],
-      message: "Version bump to #{target_version}",
+      path: [
+        "./CHANGELOG.md",
+        "./TestGithubCI.podspec"
+    ],
+      message: "Version bump to #{new_release_version}",
       allow_nothing_to_commit: true
     )
     push_to_git_remote
-    # sh("git", "push", "https://"+ENV["GITHUB_TOKEN"]+"@github.com/heguanyu/TestGithubCI.git")
-    add_git_tag(tag: target_version)
+    add_git_tag(tag: new_release_version)
     push_git_tags
-    # sh("git", "push", "https://"+ENV["GITHUB_TOKEN"]+"@github.com/heguanyu/TestGithubCI.git", "--tags")
 
     set_github_release(
       repository_name: "heguanyu/TestGithubCI",
       api_token: ENV["RELEASE_TOKEN"],
-      name: target_version,
-      tag_name: target_version,
+      name: new_release_version,
+      tag_name: new_release_version,
       upload_assets: binary_frameworks,
       description: release_content
     )
-    # pod_push(allow_warnings: true)
+    pod_push(allow_warnings: true)
   end
 
   desc "Create binary frameworks with the `xcframework` format under the `build/` folder."
   lane :xcframework do |options|
-    target_version = options[:version]
+    new_release_version = options[:version]
     output_path = "build"
 
     FileUtils.rm_rf "../#{output_path}"
 
     artifact_paths = [
-      build_xcframework(version: target_version, scheme: "TestXCFramework", output: output_path)
+      build_xcframework(version: new_release_version, scheme: "TestXCFramework", output: output_path)
     ]
 
     zipped_files = []

@@ -14,12 +14,9 @@ Pod::Spec.new do |spec|
   spec.platform              = :ios
   spec.ios.deployment_target = "13.0"
   spec.swift_version         = "5.0"
-  spec.static_framework      = true # Required by Google Sdk
 
   spec.source            = {
-    :git => "https://github.com/heguanyu/TestGithubCI.git",
-    :tag => spec.version
+    http: "https://github.com/heguanyu/TestGithubCI/releases/download/#{s.version}/TestXCFramework-#{s.version}.zip"
   }
-  spec.source_files      = "TestXCFramework/**/*.swift"
-  spec.requires_arc      = true
+  spec.vendored_frameworks = 'TestXCFramework/TestXCFramework.xcframework'
 end
