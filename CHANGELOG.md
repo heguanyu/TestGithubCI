@@ -3,6 +3,7 @@
 All notable changes to this project will be documented in this file.
 
 ## [Unreleased]
+- Fix the vendored_xcframework issue
 
 ## [0.1.1] - 2022-02-09T19:43:48Z
 - Fix a typo in podspec
