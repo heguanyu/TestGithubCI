@@ -3,6 +3,8 @@
 All notable changes to this project will be documented in this file.
 
 ## [Unreleased]
+
+## [0.1.0] - 2022-02-09T19:23:17Z
 - Try to push to cocoapods with xcframework link
 ## [test0.8] - 2022-02-08T23:43:14Z
 - Try native fastlane with cred in yml
@@ -36,6 +38,7 @@ All notable changes to this project will be documented in this file.
 
 ### Added
 
+- Added some features
 - Added some features
 - Added some features
 - Added some features
