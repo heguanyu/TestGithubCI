@@ -3,6 +3,8 @@
 All notable changes to this project will be documented in this file.
 
 ## [Unreleased]
+
+## [0.1.1] - 2022-02-09T19:43:48Z
 - Fix a typo in podspec
 ## [0.1.0] - 2022-02-09T19:23:17Z
 - Try to push to cocoapods with xcframework link
@@ -38,6 +40,7 @@ All notable changes to this project will be documented in this file.
 
 ### Added
 
+- Added some features
 - Added some features
 - Added some features
 - Added some features
