@@ -3,6 +3,8 @@
 All notable changes to this project will be documented in this file.
 
 ## [Unreleased]
+
+## [0.1.2] - 2022-02-09T20:06:33Z
 - Fix the vendored_xcframework issue
 
 ## [0.1.1] - 2022-02-09T19:43:48Z
@@ -41,6 +43,7 @@ All notable changes to this project will be documented in this file.
 
 ### Added
 
+- Added some features
 - Added some features
 - Added some features
 - Added some features
