@@ -3,6 +3,7 @@
 All notable changes to this project will be documented in this file.
 
 ## [Unreleased]
+- Fix the jazzy doc issue
 
 ## [0.1.2] - 2022-02-09T20:06:33Z
 - Fix the vendored_xcframework issue
