@@ -4,7 +4,7 @@ output: docs
 swift_build_tool: xcodebuild
 module: TestXCFramework
 build_tool_arguments:
-#  - -resolvePackageDependencies
+  - -resolvePackageDependencies
   - -workspace
   - TestGithubCI.xcworkspace
   - -scheme

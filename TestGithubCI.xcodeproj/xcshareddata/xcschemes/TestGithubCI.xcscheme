@@ -20,6 +20,20 @@
                ReferencedContainer = "container:TestGithubCI.xcodeproj">
             </BuildableReference>
          </BuildActionEntry>
+         <BuildActionEntry
+            buildForTesting = "YES"
+            buildForRunning = "YES"
+            buildForProfiling = "YES"
+            buildForArchiving = "YES"
+            buildForAnalyzing = "YES">
+            <BuildableReference
+               BuildableIdentifier = "primary"
+               BlueprintIdentifier = "F63E1C562746F6BA0077B678"
+               BuildableName = "TestXCFramework.framework"
+               BlueprintName = "TestXCFramework"
+               ReferencedContainer = "container:TestGithubCI.xcodeproj">
+            </BuildableReference>
+         </BuildActionEntry>
       </BuildActionEntries>
    </BuildAction>
    <TestAction
