@@ -13,9 +13,10 @@ class ViewController: UIViewController {
     override func viewDidLoad() {
         view = UIView()
         view.backgroundColor = .white
-
+        let pub = PublicFunc0()
         let xcframework: TestLibWithXCFramework = TestLibWithXCFramework()
-        title = TestLibWithXCFramework.someStaticFunction()
+        let str = " = " + String(pub.publicfunc0())
+        title = TestLibWithXCFramework.someStaticFunction() + str
         print("static:" + TestLibWithXCFramework.someStaticFunction())
         print("nonStatic: " + xcframework.someNonStaticFunction())
     }
