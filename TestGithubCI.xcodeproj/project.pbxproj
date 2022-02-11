@@ -41,6 +41,7 @@
 		29B75A2A27B6EC5600D50940 /* CoreFunc0.swift in Sources */ = {isa = PBXBuildFile; fileRef = 29B75A2927B6EC5600D50940 /* CoreFunc0.swift */; };
 		29B75A2C27B6ECAB00D50940 /* PublicFunc0.swift in Sources */ = {isa = PBXBuildFile; fileRef = 29B75A2B27B6ECAB00D50940 /* PublicFunc0.swift */; };
 		29B75A2E27B6ECD500D50940 /* InternalFunc0.swift in Sources */ = {isa = PBXBuildFile; fileRef = 29B75A2D27B6ECD500D50940 /* InternalFunc0.swift */; };
+		302B1E808D0EA810CD977925 /* libPods-TestGithubCI.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 64CDDB8A1E03D09665A2F15A /* libPods-TestGithubCI.a */; };
 		F6071A052739984B00CE56BA /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F6071A042739984B00CE56BA /* AppDelegate.swift */; };
 		F6071A092739984B00CE56BA /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F6071A082739984B00CE56BA /* ViewController.swift */; };
 		F6071A0E2739984E00CE56BA /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F6071A0D2739984E00CE56BA /* Assets.xcassets */; };
@@ -137,6 +138,9 @@
 		29B75A2927B6EC5600D50940 /* CoreFunc0.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoreFunc0.swift; sourceTree = "<group>"; };
 		29B75A2B27B6ECAB00D50940 /* PublicFunc0.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PublicFunc0.swift; sourceTree = "<group>"; };
 		29B75A2D27B6ECD500D50940 /* InternalFunc0.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InternalFunc0.swift; sourceTree = "<group>"; };
+		2CD0E680DB4C269BDF7486D9 /* Pods-TestGithubCI.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TestGithubCI.debug.xcconfig"; path = "Target Support Files/Pods-TestGithubCI/Pods-TestGithubCI.debug.xcconfig"; sourceTree = "<group>"; };
+		64CDDB8A1E03D09665A2F15A /* libPods-TestGithubCI.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-TestGithubCI.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		C7A65EAF663936323C7F5CD8 /* Pods-TestGithubCI.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TestGithubCI.release.xcconfig"; path = "Target Support Files/Pods-TestGithubCI/Pods-TestGithubCI.release.xcconfig"; sourceTree = "<group>"; };
 		F6071A012739984B00CE56BA /* TestGithubCI.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TestGithubCI.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		F6071A042739984B00CE56BA /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		F6071A082739984B00CE56BA /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -189,6 +193,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				302B1E808D0EA810CD977925 /* libPods-TestGithubCI.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -282,6 +287,8 @@
 		927BB6ED4E659DAFC34256BC /* Pods */ = {
 			isa = PBXGroup;
 			children = (
+				2CD0E680DB4C269BDF7486D9 /* Pods-TestGithubCI.debug.xcconfig */,
+				C7A65EAF663936323C7F5CD8 /* Pods-TestGithubCI.release.xcconfig */,
 			);
 			path = Pods;
 			sourceTree = "<group>";
@@ -289,6 +296,7 @@
 		D57D8F19F26D7014A1D4B219 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				64CDDB8A1E03D09665A2F15A /* libPods-TestGithubCI.a */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -474,6 +482,7 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = F6071A2B2739984F00CE56BA /* Build configuration list for PBXNativeTarget "TestGithubCI" */;
 			buildPhases = (
+				24B5F94E42C648567DDA0278 /* [CP] Check Pods Manifest.lock */,
 				F60719FD2739984B00CE56BA /* Sources */,
 				F60719FE2739984B00CE56BA /* Frameworks */,
 				F60719FF2739984B00CE56BA /* Resources */,
@@ -527,7 +536,6 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = F63E1C732746F6BA0077B678 /* Build configuration list for PBXNativeTarget "TestXCFramework" */;
 			buildPhases = (
-				4BB451392C61B6E06007538F /* [CP] Check Pods Manifest.lock */,
 				F63E1C522746F6BA0077B678 /* Headers */,
 				F63E1C532746F6BA0077B678 /* Sources */,
 				F63E1C542746F6BA0077B678 /* Frameworks */,
@@ -708,7 +716,7 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXShellScriptBuildPhase section */
-		4BB451392C61B6E06007538F /* [CP] Check Pods Manifest.lock */ = {
+		24B5F94E42C648567DDA0278 /* [CP] Check Pods Manifest.lock */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -723,7 +731,7 @@
 			outputFileListPaths = (
 			);
 			outputPaths = (
-				"$(DERIVED_FILE_DIR)/Pods-TestXCFramework-checkManifestLockResult.txt",
+				"$(DERIVED_FILE_DIR)/Pods-TestGithubCI-checkManifestLockResult.txt",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
@@ -1230,7 +1238,9 @@
 		};
 		F6071A2C2739984F00CE56BA /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 2CD0E680DB4C269BDF7486D9 /* Pods-TestGithubCI.debug.xcconfig */;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = "$(inherited)";
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
@@ -1261,7 +1271,9 @@
 		};
 		F6071A2D2739984F00CE56BA /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = C7A65EAF663936323C7F5CD8 /* Pods-TestGithubCI.release.xcconfig */;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = "$(inherited)";
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
@@ -1343,6 +1355,7 @@
 		F6071A44273CB41800CE56BA /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = "$(inherited)";
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
@@ -1373,6 +1386,7 @@
 		F6071A45273CB41800CE56BA /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = "$(inherited)";
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
@@ -1403,6 +1417,7 @@
 		F63E1C6F2746F6BA0077B678 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = "$(inherited)";
 				BUILD_LIBRARY_FOR_DISTRIBUTION = YES;
 				CODE_SIGN_STYLE = Manual;
 				CURRENT_PROJECT_VERSION = 1;
@@ -1439,6 +1454,7 @@
 		F63E1C702746F6BA0077B678 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = "$(inherited)";
 				BUILD_LIBRARY_FOR_DISTRIBUTION = YES;
 				CODE_SIGN_STYLE = Manual;
 				CURRENT_PROJECT_VERSION = 1;
