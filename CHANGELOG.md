@@ -3,6 +3,8 @@
 All notable changes to this project will be documented in this file.
 
 ## [Unreleased]
+
+## [0.1.4] - 2022-02-14T16:18:37Z
 - Fix the jazzy doc issue
 
 ## [0.1.2] - 2022-02-09T20:06:33Z
@@ -44,6 +46,7 @@ All notable changes to this project will be documented in this file.
 
 ### Added
 
+- Added some features
 - Added some features
 - Added some features
 - Added some features
