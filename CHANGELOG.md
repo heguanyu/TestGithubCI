@@ -3,6 +3,8 @@
 All notable changes to this project will be documented in this file.
 
 ## [Unreleased]
+
+## [0.1.7] - 2022-02-16T19:32:21Z
 - Run zip script in the build directory instead.
 ## [0.1.6] - 2022-02-16T19:14:01Z
 - See if add build path will work
@@ -50,6 +52,7 @@ All notable changes to this project will be documented in this file.
 
 ### Added
 
+- Added some features
 - Added some features
 - Added some features
 - Added some features
