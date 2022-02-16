@@ -61,7 +61,7 @@ platform :ios do
 
   lane :lints do
     sh "pwd"
-    subdirs = ["TestXCFramework", "TestXCFrameworkTests"]
+    subdirs = ["MLFoundations", "TestXCFramework", "TestXCFrameworkTests"]
     files = []
     Dir.chdir("..") do
       files = subdirs.map { |dir| Dir.glob("#{dir}/**/*.swift")}.flatten(1)
@@ -90,27 +90,6 @@ platform :ios do
 #    pod_lib_lint
   end
 
-  desc "Push version to cocoapods"
-  lane :push_cocoapods do |options|
-
-    new_release_version = options[:version]
-    raise "The version is missed. Use `fastlane release version:{version_number}`.`" if new_release_version.nil?
-
-    newVersion = version_bump_podspec(
-      path: podspecPath,
-      bump_type: "patch"
-    )
-    git_commit(
-      path: podspecPath,
-      message: "Version bump to #{newVersion}"
-    )
-    # push_to_git_remote
-    # sh("git", "push", ENV["GITHUB_TOKEN"]+"@github.com/heguanyu/TestGithubCI.git")
-    add_git_tag(tag: newVersion)
-    push_git_tags
-    # pod_push(allow_warnings: true)
-  end
-
   lane :someA do |options|
     puts "Hello world!"
   end
@@ -118,16 +97,14 @@ platform :ios do
   desc "Create a release based on change log"
   lane :create_release do |options|
     new_release_version = options[:version]
-    build_path = "build"
     changelog_filename = "CHANGELOG.md"
 
     # Prepare the binaries and release note
-    binary_frameworks = xcframework(version: new_release_version)
+    zipped_frameworks = xcframework(version: new_release_version, schemes: ["TestXCFramework", "MLFoundations"])
     release_content = read_changelog(
       section_identifier: '[Unreleased]',	# Specify what section to read
       excluded_markdown_elements: ['-', '###']
     )
-
     # stamp the new version into change log and check-in
     stamp_changelog(
       section_identifier: new_release_version,
@@ -153,7 +130,7 @@ platform :ios do
       api_token: ENV["RELEASE_TOKEN"],
       name: new_release_version,
       tag_name: new_release_version,
-      upload_assets: binary_frameworks,
+      upload_assets: zipped_frameworks,
       description: release_content
     )
     pod_push(allow_warnings: true)
@@ -163,18 +140,16 @@ platform :ios do
   lane :xcframework do |options|
     new_release_version = options[:version]
     output_path = "build"
+    schemes = options[:schemes]
 
     FileUtils.rm_rf "../#{output_path}"
+    framework_paths = schemes.map { |scheme|
+      "../" + build_xcframework(version: new_release_version, scheme: scheme, output: output_path)
+    }.join(" ")
 
-    artifact_paths = [
-      build_xcframework(version: new_release_version, scheme: "TestXCFramework", output: output_path)
-    ]
-
-    zipped_files = []
-    artifact_paths.each do |path|
-      zipped_files << zip(path: path)
-    end
-    zipped_files
+    zipfilePath = "#{output_path}/TestGithubCI-#{new_release_version}.zip"
+    Action.sh("zip -r ../#{zipfilePath} #{framework_paths}")
+    zipfilePath
   end
 end
 

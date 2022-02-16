@@ -3,7 +3,7 @@
 All notable changes to this project will be documented in this file.
 
 ## [Unreleased]
-
+- Trying to bundle multiple xcframeworks into same zip
 ## [0.1.4] - 2022-02-14T16:18:37Z
 - Fix the jazzy doc issue
 

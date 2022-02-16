@@ -13,7 +13,6 @@ module Fastlane
         supporting_root = "#{output_path}/#{target_version}/Supporting Files"
 
         frameworks = []
-
         ["iphoneos", "iphonesimulator"].each do |sdk|
           archive_path = "#{output_path}/#{product_name}-#{sdk}.xcarchive"
 

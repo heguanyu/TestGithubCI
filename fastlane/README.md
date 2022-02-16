@@ -47,14 +47,6 @@ Generate Apple doc
 
 
 
-### ios push_cocoapods
-
-```sh
-[bundle exec] fastlane ios push_cocoapods
-```
-
-Push version to cocoapods
-
 ### ios someA
 
 ```sh
