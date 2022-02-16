@@ -3,7 +3,7 @@
 All notable changes to this project will be documented in this file.
 
 ## [Unreleased]
-
+- Add core to build list
 ## [0.1.11] - 2022-02-16T20:48:23Z
 - Revert back to release token and see if rate limit is lift
 ## [0.1.8] - 2022-02-16T19:49:52Z

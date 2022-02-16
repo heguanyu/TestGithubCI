@@ -61,7 +61,7 @@ platform :ios do
 
   lane :lints do
     sh "pwd"
-    subdirs = ["MLFoundations", "TestXCFramework", "TestXCFrameworkTests"]
+    subdirs = ["Core","MLFoundations", "TestXCFramework", "TestXCFrameworkTests"]
     files = []
     Dir.chdir("..") do
       files = subdirs.map { |dir| Dir.glob("#{dir}/**/*.swift")}.flatten(1)
@@ -100,7 +100,7 @@ platform :ios do
     changelog_filename = "CHANGELOG.md"
 
     # Prepare the binaries and release note
-    zipped_frameworks = xcframework(version: new_release_version, schemes: ["TestXCFramework", "MLFoundations"])
+    zipped_frameworks = xcframework(version: new_release_version, schemes: ["Core", "TestXCFramework", "MLFoundations"])
     release_content = read_changelog(
       section_identifier: '[Unreleased]',	# Specify what section to read
       excluded_markdown_elements: ['-', '###']
