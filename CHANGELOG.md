@@ -3,6 +3,8 @@
 All notable changes to this project will be documented in this file.
 
 ## [Unreleased]
+
+## [0.1.6] - 2022-02-16T19:14:01Z
 - See if add build path will work
 ## [0.1.5] - 2022-02-16T18:21:43Z
 - Trying to bundle multiple xcframeworks into same zip
@@ -48,6 +50,7 @@ All notable changes to this project will be documented in this file.
 
 ### Added
 
+- Added some features
 - Added some features
 - Added some features
 - Added some features
