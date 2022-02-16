@@ -3,6 +3,8 @@
 All notable changes to this project will be documented in this file.
 
 ## [Unreleased]
+
+## [0.1.11] - 2022-02-16T20:48:23Z
 - Revert back to release token and see if rate limit is lift
 ## [0.1.8] - 2022-02-16T19:49:52Z
 - Fix directoy of attached zip file
@@ -54,6 +56,7 @@ All notable changes to this project will be documented in this file.
 
 ### Added
 
+- Added some features
 - Added some features
 - Added some features
 - Added some features
