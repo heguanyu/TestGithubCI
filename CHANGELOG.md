@@ -3,7 +3,7 @@
 All notable changes to this project will be documented in this file.
 
 ## [Unreleased]
-
+- Adding core into vendored_framework
 ## [0.2.1] - 2022-02-16T21:06:40Z
 - Add core to build list
 ## [0.1.11] - 2022-02-16T20:48:23Z
