@@ -101,7 +101,6 @@ platform :ios do
 
     # Prepare the binaries and release note
     zipped_frameworks = xcframework(version: new_release_version, schemes: ["TestXCFramework", "MLFoundations"])
-    return 0
     release_content = read_changelog(
       section_identifier: '[Unreleased]',	# Specify what section to read
       excluded_markdown_elements: ['-', '###']
