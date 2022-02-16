@@ -48,7 +48,7 @@ module Fastlane
 
         Action.sh command.join(" ")
 
-        return "#{output_path}/#{target_version}/"
+        return "#{target_version}/"
       end
 
       #####################################################

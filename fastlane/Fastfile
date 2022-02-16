@@ -101,6 +101,7 @@ platform :ios do
 
     # Prepare the binaries and release note
     zipped_frameworks = xcframework(version: new_release_version, schemes: ["TestXCFramework", "MLFoundations"])
+    return 0
     release_content = read_changelog(
       section_identifier: '[Unreleased]',	# Specify what section to read
       excluded_markdown_elements: ['-', '###']
@@ -144,12 +145,12 @@ platform :ios do
 
     FileUtils.rm_rf "../#{output_path}"
     framework_paths = schemes.map { |scheme|
-      "../" + build_xcframework(version: new_release_version, scheme: scheme, output: output_path)
+      build_xcframework(version: new_release_version, scheme: scheme, output: output_path)
     }.join(" ")
 
-    zipfilePath = "#{output_path}/TestGithubCI-#{new_release_version}.zip"
-    Action.sh("zip -r ../#{zipfilePath} #{framework_paths}")
-    zipfilePath
+    zipfilePath = "TestGithubCI-#{new_release_version}.zip"
+    Action.sh("cd ../#{output_path} && zip -r #{zipfilePath} #{framework_paths} && cd ../fastlane")
+    "../#{output_path}/" + zipfilePath
   end
 end
 
