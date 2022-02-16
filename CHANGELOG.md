@@ -3,7 +3,7 @@
 All notable changes to this project will be documented in this file.
 
 ## [Unreleased]
-
+- Fix directoy of attached zip file
 ## [0.1.7] - 2022-02-16T19:32:21Z
 - Run zip script in the build directory instead.
 ## [0.1.6] - 2022-02-16T19:14:01Z

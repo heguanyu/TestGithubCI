@@ -149,7 +149,7 @@ platform :ios do
 
     zipfilePath = "TestGithubCI-#{new_release_version}.zip"
     Action.sh("cd ../#{output_path} && zip -r #{zipfilePath} #{framework_paths} && cd ../fastlane")
-    "../#{output_path}/" + zipfilePath
+    "./#{output_path}/" + zipfilePath
   end
 end
 
