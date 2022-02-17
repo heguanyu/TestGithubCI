@@ -19,6 +19,7 @@ class ViewController: UIViewController {
         title = TestLibWithXCFramework.someStaticFunction() + str
         print("static:" + TestLibWithXCFramework.someStaticFunction())
         print("nonStatic: " + xcframework.someNonStaticFunction())
+        
     }
 }
 
