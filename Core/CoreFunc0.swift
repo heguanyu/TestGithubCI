@@ -8,12 +8,13 @@
 import Foundation
 
 public class CoreFunc0 {
-    
+    // Initialize
     public init(){
-        
+
     }
+    // Some sample func
     public func addfunc(A :Int32, B :Int32) -> Int32 {
         return A+B
     }
-    
+
 }
