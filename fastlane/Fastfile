@@ -43,20 +43,32 @@ platform :ios do
     #   options: "--keep-intermediate-files --search-undocumented-doc",
     #   warnings: "--warn-missing-output-path --warn-missing-company-id"
     # )
-    system "rm -r ../derived_data/*"
-    jazzy(
-      config: '.jazzy.yaml'
-    )
-    # commit and push to the doc branch
-    git_commit(
-      path: './docs',
-      message: "Updated docs"
-    )
-    push_to_git_remote(
-      remote: 'origin',
-      remote_branch: 'gh-pages',
-      force: true
-    )
+
+    #
+    # system "rm -r ../derived_data/*"
+    # jazzy(
+    #   config: '.jazzy.yaml'
+    # )
+    # # commit and push to the doc branch
+    # git_commit(
+    #   path: './docs',
+    #   message: "Updated docs"
+    # )
+    # push_to_git_remote(
+    #   remote: 'origin',
+    #   remote_branch: 'gh-pages',
+    #   force: true
+    # )
+    #
+    modules = ["TestXCFramework", "Core"]
+    source_kitten_source_files = modules.map{|moduleName| moduleName + ".json"}.join(",")
+    modules.each do |moduleName|
+      Action.sh("cd .. && sourcekitten doc --module-name #{moduleName} -- -resolvePackageDependencies -workspace TestGithubCI.xcworkspace -scheme #{moduleName} > #{moduleName}.json")
+    end
+    Action.sh("cd .. && jazzy --sourcekitten-sourcefile #{source_kitten_source_files}")
+    modules.each do |moduleName|
+      Action.sh("cd .. && rm #{moduleName}.json")
+    end
   end
 
   lane :lints do
