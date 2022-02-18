@@ -34,14 +34,11 @@
 /* Begin PBXBuildFile section */
 		29B759ED27B5B6F500D50940 /* Core.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 29B759E527B5B6F500D50940 /* Core.framework */; };
 		29B759F227B5B6F500D50940 /* CoreTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 29B759F127B5B6F500D50940 /* CoreTests.swift */; };
-		29B759F327B5B6F500D50940 /* Core.h in Headers */ = {isa = PBXBuildFile; fileRef = 29B759E727B5B6F500D50940 /* Core.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		29B75A0A27B5B73C00D50940 /* MLFoundations.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 29B75A0227B5B73B00D50940 /* MLFoundations.framework */; };
 		29B75A0F27B5B73C00D50940 /* MLFoundationsTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 29B75A0E27B5B73C00D50940 /* MLFoundationsTests.swift */; };
-		29B75A1027B5B73C00D50940 /* MLFoundations.h in Headers */ = {isa = PBXBuildFile; fileRef = 29B75A0427B5B73B00D50940 /* MLFoundations.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		29B75A2A27B6EC5600D50940 /* CoreFunc0.swift in Sources */ = {isa = PBXBuildFile; fileRef = 29B75A2927B6EC5600D50940 /* CoreFunc0.swift */; };
 		29B75A2C27B6ECAB00D50940 /* PublicFunc0.swift in Sources */ = {isa = PBXBuildFile; fileRef = 29B75A2B27B6ECAB00D50940 /* PublicFunc0.swift */; };
 		29B75A2E27B6ECD500D50940 /* InternalFunc0.swift in Sources */ = {isa = PBXBuildFile; fileRef = 29B75A2D27B6ECD500D50940 /* InternalFunc0.swift */; };
-		302B1E808D0EA810CD977925 /* libPods-TestGithubCI.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 64CDDB8A1E03D09665A2F15A /* libPods-TestGithubCI.a */; };
 		F6071A052739984B00CE56BA /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F6071A042739984B00CE56BA /* AppDelegate.swift */; };
 		F6071A092739984B00CE56BA /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F6071A082739984B00CE56BA /* ViewController.swift */; };
 		F6071A0E2739984E00CE56BA /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F6071A0D2739984E00CE56BA /* Assets.xcassets */; };
@@ -81,26 +78,26 @@
 			remoteGlobalIDString = 29B75A0127B5B73B00D50940;
 			remoteInfo = MLFoundations;
 		};
-		29B75A2327B5B78B00D50940 /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = F60719F92739984B00CE56BA /* Project object */;
-			proxyType = 1;
-			remoteGlobalIDString = 29B75A1B27B5B76100D50940;
-			remoteInfo = InternalAgg;
-		};
-		29B75A2727B5B7B400D50940 /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = F60719F92739984B00CE56BA /* Project object */;
-			proxyType = 1;
-			remoteGlobalIDString = 29B75A1727B5B75100D50940;
-			remoteInfo = CoreAgg;
-		};
 		29B75A2F27B6F94900D50940 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = F60719F92739984B00CE56BA /* Project object */;
 			proxyType = 1;
 			remoteGlobalIDString = F63E1C562746F6BA0077B678;
 			remoteInfo = TestXCFramework;
+		};
+		29B75A3127C01C0E00D50940 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = F60719F92739984B00CE56BA /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 29B759E427B5B6F500D50940;
+			remoteInfo = Core;
+		};
+		29B75A3327C01C2A00D50940 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = F60719F92739984B00CE56BA /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 29B75A0127B5B73B00D50940;
+			remoteInfo = MLFoundations;
 		};
 		F6071A182739984E00CE56BA /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
@@ -127,11 +124,9 @@
 
 /* Begin PBXFileReference section */
 		29B759E527B5B6F500D50940 /* Core.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Core.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		29B759E727B5B6F500D50940 /* Core.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Core.h; sourceTree = "<group>"; };
 		29B759EC27B5B6F500D50940 /* CoreTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = CoreTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		29B759F127B5B6F500D50940 /* CoreTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoreTests.swift; sourceTree = "<group>"; };
 		29B75A0227B5B73B00D50940 /* MLFoundations.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = MLFoundations.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		29B75A0427B5B73B00D50940 /* MLFoundations.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MLFoundations.h; sourceTree = "<group>"; };
 		29B75A0927B5B73C00D50940 /* MLFoundationsTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = MLFoundationsTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		29B75A0E27B5B73C00D50940 /* MLFoundationsTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MLFoundationsTests.swift; sourceTree = "<group>"; };
 		29B75A2927B6EC5600D50940 /* CoreFunc0.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoreFunc0.swift; sourceTree = "<group>"; };
@@ -192,7 +187,6 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				302B1E808D0EA810CD977925 /* libPods-TestGithubCI.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -251,28 +245,12 @@
 			path = MLFoundations;
 			sourceTree = "<group>";
 		};
-		29B759E627B5B6F500D50940 /* Core */ = {
-			isa = PBXGroup;
-			children = (
-				29B759E727B5B6F500D50940 /* Core.h */,
-			);
-			path = Core;
-			sourceTree = "<group>";
-		};
 		29B759F027B5B6F500D50940 /* CoreTests */ = {
 			isa = PBXGroup;
 			children = (
 				29B759F127B5B6F500D50940 /* CoreTests.swift */,
 			);
 			path = CoreTests;
-			sourceTree = "<group>";
-		};
-		29B75A0327B5B73B00D50940 /* MLFoundations */ = {
-			isa = PBXGroup;
-			children = (
-				29B75A0427B5B73B00D50940 /* MLFoundations.h */,
-			);
-			path = MLFoundations;
 			sourceTree = "<group>";
 		};
 		29B75A0D27B5B73C00D50940 /* MLFoundationsTests */ = {
@@ -310,9 +288,7 @@
 				F6071A1A2739984E00CE56BA /* TestGithubCITests */,
 				F63E1C582746F6BA0077B678 /* TestXCFramework */,
 				F63E1C662746F6BA0077B678 /* TestXCFrameworkTests */,
-				29B759E627B5B6F500D50940 /* Core */,
 				29B759F027B5B6F500D50940 /* CoreTests */,
-				29B75A0327B5B73B00D50940 /* MLFoundations */,
 				29B75A0D27B5B73C00D50940 /* MLFoundationsTests */,
 				F6071A022739984B00CE56BA /* Products */,
 				927BB6ED4E659DAFC34256BC /* Pods */,
@@ -381,7 +357,6 @@
 			isa = PBXHeadersBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				29B759F327B5B6F500D50940 /* Core.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -389,7 +364,6 @@
 			isa = PBXHeadersBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				29B75A1027B5B73C00D50940 /* MLFoundations.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -452,7 +426,7 @@
 			buildRules = (
 			);
 			dependencies = (
-				29B75A2827B5B7B400D50940 /* PBXTargetDependency */,
+				29B75A3227C01C0E00D50940 /* PBXTargetDependency */,
 			);
 			name = MLFoundations;
 			productName = MLFoundations;
@@ -543,7 +517,7 @@
 			buildRules = (
 			);
 			dependencies = (
-				29B75A2427B5B78B00D50940 /* PBXTargetDependency */,
+				29B75A3427C01C2A00D50940 /* PBXTargetDependency */,
 			);
 			name = TestXCFramework;
 			productName = TestXCFramework;
@@ -836,20 +810,20 @@
 			target = 29B75A0127B5B73B00D50940 /* MLFoundations */;
 			targetProxy = 29B75A2127B5B77E00D50940 /* PBXContainerItemProxy */;
 		};
-		29B75A2427B5B78B00D50940 /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			target = 29B75A1B27B5B76100D50940 /* InternalAgg */;
-			targetProxy = 29B75A2327B5B78B00D50940 /* PBXContainerItemProxy */;
-		};
-		29B75A2827B5B7B400D50940 /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			target = 29B75A1727B5B75100D50940 /* CoreAgg */;
-			targetProxy = 29B75A2727B5B7B400D50940 /* PBXContainerItemProxy */;
-		};
 		29B75A3027B6F94900D50940 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
 			target = F63E1C562746F6BA0077B678 /* TestXCFramework */;
 			targetProxy = 29B75A2F27B6F94900D50940 /* PBXContainerItemProxy */;
+		};
+		29B75A3227C01C0E00D50940 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 29B759E427B5B6F500D50940 /* Core */;
+			targetProxy = 29B75A3127C01C0E00D50940 /* PBXContainerItemProxy */;
+		};
+		29B75A3427C01C2A00D50940 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 29B75A0127B5B73B00D50940 /* MLFoundations */;
+			targetProxy = 29B75A3327C01C2A00D50940 /* PBXContainerItemProxy */;
 		};
 		F6071A192739984E00CE56BA /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
@@ -883,6 +857,7 @@
 		29B759F527B5B6F500D50940 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Manual;
 				CURRENT_PROJECT_VERSION = 1;
@@ -919,6 +894,7 @@
 		29B759F627B5B6F500D50940 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Manual;
 				CURRENT_PROJECT_VERSION = 1;
@@ -990,6 +966,7 @@
 		29B75A1227B5B73C00D50940 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Manual;
 				CURRENT_PROJECT_VERSION = 1;
@@ -1026,6 +1003,7 @@
 		29B75A1327B5B73C00D50940 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Manual;
 				CURRENT_PROJECT_VERSION = 1;
