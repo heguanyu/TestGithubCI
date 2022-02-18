@@ -7,7 +7,7 @@
 
 import Foundation
 
-public class Core {
+public class CoreClass {
     // Initialize
     public init(){
 

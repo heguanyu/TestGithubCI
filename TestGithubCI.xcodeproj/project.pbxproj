@@ -7,7 +7,6 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		CD6C5D6F6B58F1D273B885A0 /* libPods-TestGithubCI.a in Frameworks */ = {isa = PBXBuildFile; fileRef = AFDA5669D2F7A6C02EB34425 /* libPods-TestGithubCI.a */; };
 		F6071A052739984B00CE56BA /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F6071A042739984B00CE56BA /* AppDelegate.swift */; };
 		F6071A092739984B00CE56BA /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F6071A082739984B00CE56BA /* ViewController.swift */; };
 		F6071A0E2739984E00CE56BA /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F6071A0D2739984E00CE56BA /* Assets.xcassets */; };
@@ -28,8 +27,10 @@
 		F64F8A7B27C032B70081A345 /* Core.h in Headers */ = {isa = PBXBuildFile; fileRef = F64F8A6B27C032B70081A345 /* Core.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		F64F8A7E27C032B70081A345 /* Core.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F64F8A6927C032B70081A345 /* Core.framework */; };
 		F64F8A7F27C032B70081A345 /* Core.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = F64F8A6927C032B70081A345 /* Core.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
-		F64F8A8727C032E20081A345 /* MLFoundations.swift in Sources */ = {isa = PBXBuildFile; fileRef = F64F8A8627C032E20081A345 /* MLFoundations.swift */; };
-		F64F8A8927C033190081A345 /* Core.swift in Sources */ = {isa = PBXBuildFile; fileRef = F64F8A8827C033190081A345 /* Core.swift */; };
+		F64F8A8B27C034530081A345 /* CoreClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = F64F8A8A27C034530081A345 /* CoreClass.swift */; };
+		F64F8A8D27C0345C0081A345 /* MLFoundationsClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = F64F8A8C27C0345C0081A345 /* MLFoundationsClass.swift */; };
+		F64F8A8E27C034920081A345 /* CoreClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = F64F8A8A27C034530081A345 /* CoreClass.swift */; };
+		F64F8A8F27C034950081A345 /* CoreClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = F64F8A8A27C034530081A345 /* CoreClass.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -122,7 +123,6 @@
 
 /* Begin PBXFileReference section */
 		2CD0E680DB4C269BDF7486D9 /* Pods-TestGithubCI.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TestGithubCI.debug.xcconfig"; path = "Target Support Files/Pods-TestGithubCI/Pods-TestGithubCI.debug.xcconfig"; sourceTree = "<group>"; };
-		AFDA5669D2F7A6C02EB34425 /* libPods-TestGithubCI.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-TestGithubCI.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		C7A65EAF663936323C7F5CD8 /* Pods-TestGithubCI.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TestGithubCI.release.xcconfig"; path = "Target Support Files/Pods-TestGithubCI/Pods-TestGithubCI.release.xcconfig"; sourceTree = "<group>"; };
 		F6071A012739984B00CE56BA /* TestGithubCI.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TestGithubCI.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		F6071A042739984B00CE56BA /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -148,8 +148,8 @@
 		F64F8A6C27C032B70081A345 /* Core.docc */ = {isa = PBXFileReference; lastKnownFileType = folder.documentationcatalog; path = Core.docc; sourceTree = "<group>"; };
 		F64F8A7227C032B70081A345 /* CoreTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = CoreTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		F64F8A7927C032B70081A345 /* CoreTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoreTests.swift; sourceTree = "<group>"; };
-		F64F8A8627C032E20081A345 /* MLFoundations.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MLFoundations.swift; sourceTree = "<group>"; };
-		F64F8A8827C033190081A345 /* Core.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Core.swift; sourceTree = "<group>"; };
+		F64F8A8A27C034530081A345 /* CoreClass.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CoreClass.swift; sourceTree = "<group>"; };
+		F64F8A8C27C0345C0081A345 /* MLFoundationsClass.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MLFoundationsClass.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -159,7 +159,6 @@
 			files = (
 				F64F8A5B27C032900081A345 /* MLFoundations.framework in Frameworks */,
 				F64F8A7E27C032B70081A345 /* Core.framework in Frameworks */,
-				CD6C5D6F6B58F1D273B885A0 /* libPods-TestGithubCI.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -229,7 +228,6 @@
 		D57D8F19F26D7014A1D4B219 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
-				AFDA5669D2F7A6C02EB34425 /* libPods-TestGithubCI.a */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -307,9 +305,9 @@
 		F64F8A4727C0328F0081A345 /* MLFoundations */ = {
 			isa = PBXGroup;
 			children = (
+				F64F8A8C27C0345C0081A345 /* MLFoundationsClass.swift */,
 				F64F8A4827C0328F0081A345 /* MLFoundations.h */,
 				F64F8A4927C0328F0081A345 /* MLFoundations.docc */,
-				F64F8A8627C032E20081A345 /* MLFoundations.swift */,
 			);
 			path = MLFoundations;
 			sourceTree = "<group>";
@@ -325,9 +323,9 @@
 		F64F8A6A27C032B70081A345 /* Core */ = {
 			isa = PBXGroup;
 			children = (
+				F64F8A8A27C034530081A345 /* CoreClass.swift */,
 				F64F8A6B27C032B70081A345 /* Core.h */,
 				F64F8A6C27C032B70081A345 /* Core.docc */,
-				F64F8A8827C033190081A345 /* Core.swift */,
 			);
 			path = Core;
 			sourceTree = "<group>";
@@ -695,6 +693,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				F63E1C762746F6DA0077B678 /* TestLibWithXCFramework.swift in Sources */,
+				F64F8A8F27C034950081A345 /* CoreClass.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -710,8 +709,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				F64F8A8E27C034920081A345 /* CoreClass.swift in Sources */,
+				F64F8A8D27C0345C0081A345 /* MLFoundationsClass.swift in Sources */,
 				F64F8A4A27C0328F0081A345 /* MLFoundations.docc in Sources */,
-				F64F8A8727C032E20081A345 /* MLFoundations.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -727,8 +727,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				F64F8A8927C033190081A345 /* Core.swift in Sources */,
 				F64F8A6D27C032B70081A345 /* Core.docc in Sources */,
+				F64F8A8B27C034530081A345 /* CoreClass.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -927,7 +927,7 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = 2CD0E680DB4C269BDF7486D9 /* Pods-TestGithubCI.debug.xcconfig */;
 			buildSettings = {
-				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = "$(inherited)";
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
@@ -960,7 +960,7 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = C7A65EAF663936323C7F5CD8 /* Pods-TestGithubCI.release.xcconfig */;
 			buildSettings = {
-				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = "$(inherited)";
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
@@ -1164,6 +1164,8 @@
 		F64F8A5E27C032900081A345 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = "$(inherited)";
+				BUILD_LIBRARY_FOR_DISTRIBUTION = YES;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEFINES_MODULE = YES;
@@ -1195,6 +1197,8 @@
 		F64F8A5F27C032900081A345 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = "$(inherited)";
+				BUILD_LIBRARY_FOR_DISTRIBUTION = YES;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEFINES_MODULE = YES;
@@ -1262,6 +1266,8 @@
 		F64F8A8127C032B70081A345 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = "$(inherited)";
+				BUILD_LIBRARY_FOR_DISTRIBUTION = YES;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEFINES_MODULE = YES;
@@ -1293,6 +1299,8 @@
 		F64F8A8227C032B70081A345 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = "$(inherited)";
+				BUILD_LIBRARY_FOR_DISTRIBUTION = YES;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEFINES_MODULE = YES;
