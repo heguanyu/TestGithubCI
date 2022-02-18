@@ -1,13 +1,13 @@
 //
-//  CoreFunc0.swift
+//  Core.swift
 //  Core
 //
-//  Created by Adit Goel on 2/11/22.
+//  Created by Guanyu He on 2/18/22.
 //
 
 import Foundation
 
-public class CoreFunc0 {
+public class Core {
     // Initialize
     public init(){
 

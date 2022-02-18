@@ -62,13 +62,30 @@ platform :ios do
     #
     modules = ["TestXCFramework", "Core"]
     source_kitten_source_files = modules.map{|moduleName| moduleName + ".json"}.join(",")
-    modules.each do |moduleName|
-      Action.sh("cd .. && sourcekitten doc --module-name #{moduleName} -- -resolvePackageDependencies -workspace TestGithubCI.xcworkspace -scheme #{moduleName} > #{moduleName}.json")
+    begin
+      modules.each do |moduleName|
+        Action.sh("cd .. && sourcekitten doc --module-name #{moduleName} -- -resolvePackageDependencies -project TestGithubCI.xcodeproj -scheme #{moduleName} > #{moduleName}.json")
+      end
+      Action.sh("cd .. && jazzy --sourcekitten-sourcefile #{source_kitten_source_files}")
+    rescue
+      puts "Some errors is happening when generating a doc, exiting"
+    ensure
+      modules.each do |moduleName|
+        Action.sh("cd .. && rm #{moduleName}.json")
+      end
     end
-    Action.sh("cd .. && jazzy --sourcekitten-sourcefile #{source_kitten_source_files}")
-    modules.each do |moduleName|
-      Action.sh("cd .. && rm #{moduleName}.json")
-    end
+  end
+
+  lane :dry_create_release do
+    new_release_version = "dryrun"
+    changelog_filename = "CHANGELOG.md"
+
+    # Prepare the binaries and release note
+    zipped_frameworks = xcframework(version: new_release_version, schemes: ["Core", "TestXCFramework", "MLFoundations"])
+    release_content = read_changelog(
+      section_identifier: '[Unreleased]',	# Specify what section to read
+      excluded_markdown_elements: ['-', '###']
+    )
   end
 
   lane :lints do

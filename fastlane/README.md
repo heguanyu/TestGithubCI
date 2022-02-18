@@ -31,6 +31,14 @@ Pulls dependencies
 
 Generate Apple doc
 
+### ios dry_create_release
+
+```sh
+[bundle exec] fastlane ios dry_create_release
+```
+
+
+
 ### ios lints
 
 ```sh
