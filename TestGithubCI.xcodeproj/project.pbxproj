@@ -29,8 +29,9 @@
 		F64F8A7F27C032B70081A345 /* Core.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = F64F8A6927C032B70081A345 /* Core.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		F64F8A8B27C034530081A345 /* CoreClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = F64F8A8A27C034530081A345 /* CoreClass.swift */; };
 		F64F8A8D27C0345C0081A345 /* MLFoundationsClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = F64F8A8C27C0345C0081A345 /* MLFoundationsClass.swift */; };
-		F64F8A8E27C034920081A345 /* CoreClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = F64F8A8A27C034530081A345 /* CoreClass.swift */; };
-		F64F8A8F27C034950081A345 /* CoreClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = F64F8A8A27C034530081A345 /* CoreClass.swift */; };
+		F64F8A9127C0773D0081A345 /* CoreClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = F64F8A8A27C034530081A345 /* CoreClass.swift */; };
+		F64F8A9227C077460081A345 /* MLFoundationsClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = F64F8A8C27C0345C0081A345 /* MLFoundationsClass.swift */; };
+		F64F8A9327C0774D0081A345 /* CoreClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = F64F8A8A27C034530081A345 /* CoreClass.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -692,8 +693,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				F64F8A9327C0774D0081A345 /* CoreClass.swift in Sources */,
+				F64F8A9227C077460081A345 /* MLFoundationsClass.swift in Sources */,
 				F63E1C762746F6DA0077B678 /* TestLibWithXCFramework.swift in Sources */,
-				F64F8A8F27C034950081A345 /* CoreClass.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -709,7 +711,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				F64F8A8E27C034920081A345 /* CoreClass.swift in Sources */,
+				F64F8A9127C0773D0081A345 /* CoreClass.swift in Sources */,
 				F64F8A8D27C0345C0081A345 /* MLFoundationsClass.swift in Sources */,
 				F64F8A4A27C0328F0081A345 /* MLFoundations.docc in Sources */,
 			);

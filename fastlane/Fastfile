@@ -49,31 +49,35 @@ platform :ios do
     # jazzy(
     #   config: '.jazzy.yaml'
     # )
-    # # commit and push to the doc branch
-    # git_commit(
-    #   path: './docs',
-    #   message: "Updated docs"
-    # )
-    # push_to_git_remote(
-    #   remote: 'origin',
-    #   remote_branch: 'gh-pages',
-    #   force: true
-    # )
-    #
-    modules = ["TestXCFramework", "Core"]
+
+    modules = ["TestXCFramework", "Core", "MLFoundations"]
     source_kitten_source_files = modules.map{|moduleName| moduleName + ".json"}.join(",")
-    begin
-      modules.each do |moduleName|
-        Action.sh("cd .. && sourcekitten doc --module-name #{moduleName} -- -resolvePackageDependencies -project TestGithubCI.xcodeproj -scheme #{moduleName} > #{moduleName}.json")
-      end
-      Action.sh("cd .. && jazzy --sourcekitten-sourcefile #{source_kitten_source_files}")
-    rescue
-      puts "Some errors is happening when generating a doc, exiting"
-    ensure
-      modules.each do |moduleName|
-        Action.sh("cd .. && rm #{moduleName}.json")
+    puts Dir.pwd
+    Dir.chdir("..") do
+      begin
+        modules.each do |moduleName|
+          sh("sourcekitten doc -- -project TestGithubCI.xcodeproj -target #{moduleName} -sdk iphoneos  > #{moduleName}.json")
+        end
+        sh("pwd && jazzy --theme apple --sourcekitten-sourcefile #{source_kitten_source_files}")
+      rescue
+        puts "Some errors is happening when generating a doc, exiting"
+      ensure
+        modules.each do |moduleName|
+          sh("rm #{moduleName}.json")
+        end
       end
     end
+
+    # commit and push to the doc branch
+    git_commit(
+      path: './docs',
+      message: "Updated docs"
+    )
+    push_to_git_remote(
+      remote: 'origin',
+      remote_branch: 'gh-pages',
+      force: true
+    )
   end
 
   lane :dry_create_release do
