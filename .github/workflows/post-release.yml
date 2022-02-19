@@ -21,8 +21,8 @@ jobs:
     steps:
       - uses: actions/checkout@v2
       # Generate document
-      - name: Create apple doc
+      - name: Create the doc
         run: |
+          brew install sourcekitten
           bundle install
-          fastlane build_dependencies
           fastlane gen_apple_doc
