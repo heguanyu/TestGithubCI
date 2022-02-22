@@ -29,9 +29,6 @@
 		F64F8A7F27C032B70081A345 /* Core.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = F64F8A6927C032B70081A345 /* Core.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		F64F8A8B27C034530081A345 /* CoreClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = F64F8A8A27C034530081A345 /* CoreClass.swift */; };
 		F64F8A8D27C0345C0081A345 /* MLFoundationsClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = F64F8A8C27C0345C0081A345 /* MLFoundationsClass.swift */; };
-		F64F8A9127C0773D0081A345 /* CoreClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = F64F8A8A27C034530081A345 /* CoreClass.swift */; };
-		F64F8A9227C077460081A345 /* MLFoundationsClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = F64F8A8C27C0345C0081A345 /* MLFoundationsClass.swift */; };
-		F64F8A9327C0774D0081A345 /* CoreClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = F64F8A8A27C034530081A345 /* CoreClass.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -77,13 +74,6 @@
 			remoteGlobalIDString = F6071A002739984B00CE56BA;
 			remoteInfo = TestGithubCI;
 		};
-		F64F8A5927C032900081A345 /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = F60719F92739984B00CE56BA /* Project object */;
-			proxyType = 1;
-			remoteGlobalIDString = F64F8A4527C0328F0081A345;
-			remoteInfo = MLFoundations;
-		};
 		F64F8A7427C032B70081A345 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = F60719F92739984B00CE56BA /* Project object */;
@@ -98,12 +88,19 @@
 			remoteGlobalIDString = F6071A002739984B00CE56BA;
 			remoteInfo = TestGithubCI;
 		};
-		F64F8A7C27C032B70081A345 /* PBXContainerItemProxy */ = {
+		F64F8A9727C56F840081A345 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = F60719F92739984B00CE56BA /* Project object */;
 			proxyType = 1;
 			remoteGlobalIDString = F64F8A6827C032B70081A345;
 			remoteInfo = Core;
+		};
+		F683FE6127C56FD200E4F535 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = F60719F92739984B00CE56BA /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = F64F8A4527C0328F0081A345;
+			remoteInfo = MLFoundations;
 		};
 /* End PBXContainerItemProxy section */
 
@@ -383,8 +380,6 @@
 			);
 			dependencies = (
 				29B75A3027B6F94900D50940 /* PBXTargetDependency */,
-				F64F8A5A27C032900081A345 /* PBXTargetDependency */,
-				F64F8A7D27C032B70081A345 /* PBXTargetDependency */,
 			);
 			name = TestGithubCI;
 			productName = TestGithubCI;
@@ -421,6 +416,7 @@
 			buildRules = (
 			);
 			dependencies = (
+				F683FE6227C56FD200E4F535 /* PBXTargetDependency */,
 			);
 			name = TestXCFramework;
 			productName = TestXCFramework;
@@ -458,6 +454,7 @@
 			buildRules = (
 			);
 			dependencies = (
+				F64F8A9827C56F840081A345 /* PBXTargetDependency */,
 			);
 			name = MLFoundations;
 			productName = MLFoundations;
@@ -693,8 +690,6 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				F64F8A9327C0774D0081A345 /* CoreClass.swift in Sources */,
-				F64F8A9227C077460081A345 /* MLFoundationsClass.swift in Sources */,
 				F63E1C762746F6DA0077B678 /* TestLibWithXCFramework.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -711,7 +706,6 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				F64F8A9127C0773D0081A345 /* CoreClass.swift in Sources */,
 				F64F8A8D27C0345C0081A345 /* MLFoundationsClass.swift in Sources */,
 				F64F8A4A27C0328F0081A345 /* MLFoundations.docc in Sources */,
 			);
@@ -775,11 +769,6 @@
 			target = F6071A002739984B00CE56BA /* TestGithubCI */;
 			targetProxy = F64F8A5327C032900081A345 /* PBXContainerItemProxy */;
 		};
-		F64F8A5A27C032900081A345 /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			target = F64F8A4527C0328F0081A345 /* MLFoundations */;
-			targetProxy = F64F8A5927C032900081A345 /* PBXContainerItemProxy */;
-		};
 		F64F8A7527C032B70081A345 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
 			target = F64F8A6827C032B70081A345 /* Core */;
@@ -790,10 +779,15 @@
 			target = F6071A002739984B00CE56BA /* TestGithubCI */;
 			targetProxy = F64F8A7627C032B70081A345 /* PBXContainerItemProxy */;
 		};
-		F64F8A7D27C032B70081A345 /* PBXTargetDependency */ = {
+		F64F8A9827C56F840081A345 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
 			target = F64F8A6827C032B70081A345 /* Core */;
-			targetProxy = F64F8A7C27C032B70081A345 /* PBXContainerItemProxy */;
+			targetProxy = F64F8A9727C56F840081A345 /* PBXContainerItemProxy */;
+		};
+		F683FE6227C56FD200E4F535 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = F64F8A4527C0328F0081A345 /* MLFoundations */;
+			targetProxy = F683FE6127C56FD200E4F535 /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
 

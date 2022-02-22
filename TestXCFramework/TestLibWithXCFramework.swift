@@ -5,6 +5,8 @@
 //  Created by Guanyu He on 11/18/21.
 //
 
+import MLFoundations
+
 public class TestLibWithXCFramework {
     public init() {
     }
@@ -34,6 +36,7 @@ public class TestLibWithXCFramework {
       - Returns: A String same as input
     */
     public func someFunctionWithParam(input: String) -> String {
+        MLFoundationsClass.init().multiply(A: 12, B: 32)
         return input
     }
 }

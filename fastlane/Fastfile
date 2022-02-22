@@ -56,7 +56,7 @@ platform :ios do
     Dir.chdir("..") do
       begin
         modules.each do |moduleName|
-          sh("sourcekitten doc -- -project TestGithubCI.xcodeproj -target #{moduleName} -sdk iphoneos  > #{moduleName}.json")
+          sh("sourcekitten doc --module-name #{moduleName} -- -sdk iphoneos  > #{moduleName}.json")
         end
         sh("pwd && jazzy --theme apple --sourcekitten-sourcefile #{source_kitten_source_files}")
       rescue
