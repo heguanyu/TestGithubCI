@@ -16,13 +16,6 @@
     },
     {
       "file": "/Users/ghe/projects/TestGithubCI/Core/CoreClass.swift",
-      "line": 10,
-      "symbol": "CoreClass",
-      "symbol_kind": "source.lang.swift.decl.class",
-      "warning": "undocumented"
-    },
-    {
-      "file": "/Users/ghe/projects/TestGithubCI/Core/CoreClass.swift",
       "line": 12,
       "symbol": "CoreClass.init()",
       "symbol_kind": "source.lang.swift.decl.function.method.instance",
@@ -32,20 +25,6 @@
       "file": "/Users/ghe/projects/TestGithubCI/Core/CoreClass.swift",
       "line": 12,
       "symbol": "CoreClass.init()",
-      "symbol_kind": "source.lang.swift.decl.function.method.instance",
-      "warning": "undocumented"
-    },
-    {
-      "file": "/Users/ghe/projects/TestGithubCI/Core/CoreClass.swift",
-      "line": 12,
-      "symbol": "CoreClass.init()",
-      "symbol_kind": "source.lang.swift.decl.function.method.instance",
-      "warning": "undocumented"
-    },
-    {
-      "file": "/Users/ghe/projects/TestGithubCI/Core/CoreClass.swift",
-      "line": 16,
-      "symbol": "CoreClass.addfunc(A:B:)",
       "symbol_kind": "source.lang.swift.decl.function.method.instance",
       "warning": "undocumented"
     },
@@ -65,56 +44,56 @@
     },
     {
       "file": "/Users/ghe/projects/TestGithubCI/MLFoundations/MLFoundationsClass.swift",
-      "line": 10,
+      "line": 11,
       "symbol": "MLFoundationsClass",
       "symbol_kind": "source.lang.swift.decl.class",
       "warning": "undocumented"
     },
     {
       "file": "/Users/ghe/projects/TestGithubCI/MLFoundations/MLFoundationsClass.swift",
-      "line": 10,
+      "line": 11,
       "symbol": "MLFoundationsClass",
       "symbol_kind": "source.lang.swift.decl.class",
       "warning": "undocumented"
     },
     {
       "file": "/Users/ghe/projects/TestGithubCI/MLFoundations/MLFoundationsClass.swift",
-      "line": 12,
+      "line": 13,
       "symbol": "MLFoundationsClass.init()",
       "symbol_kind": "source.lang.swift.decl.function.method.instance",
       "warning": "undocumented"
     },
     {
       "file": "/Users/ghe/projects/TestGithubCI/MLFoundations/MLFoundationsClass.swift",
-      "line": 12,
+      "line": 13,
       "symbol": "MLFoundationsClass.init()",
       "symbol_kind": "source.lang.swift.decl.function.method.instance",
       "warning": "undocumented"
     },
     {
       "file": "/Users/ghe/projects/TestGithubCI/MLFoundations/MLFoundationsClass.swift",
-      "line": 16,
+      "line": 17,
       "symbol": "MLFoundationsClass.multiply(A:B:)",
       "symbol_kind": "source.lang.swift.decl.function.method.instance",
       "warning": "undocumented"
     },
     {
       "file": "/Users/ghe/projects/TestGithubCI/MLFoundations/MLFoundationsClass.swift",
-      "line": 16,
+      "line": 17,
       "symbol": "MLFoundationsClass.multiply(A:B:)",
       "symbol_kind": "source.lang.swift.decl.function.method.instance",
       "warning": "undocumented"
     },
     {
       "file": "/Users/ghe/projects/TestGithubCI/TestXCFramework/TestLibWithXCFramework.swift",
-      "line": 8,
+      "line": 10,
       "symbol": "TestLibWithXCFramework",
       "symbol_kind": "source.lang.swift.decl.class",
       "warning": "undocumented"
     },
     {
       "file": "/Users/ghe/projects/TestGithubCI/TestXCFramework/TestLibWithXCFramework.swift",
-      "line": 9,
+      "line": 11,
       "symbol": "TestLibWithXCFramework.init()",
       "symbol_kind": "source.lang.swift.decl.function.method.instance",
       "warning": "undocumented"
