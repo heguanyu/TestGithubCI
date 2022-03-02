@@ -7,6 +7,7 @@
 
 import UIKit
 import TestXCFramework
+import MLFoundations
 
 class ViewController: UIViewController {
 

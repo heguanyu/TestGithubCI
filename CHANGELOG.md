@@ -3,6 +3,8 @@
 All notable changes to this project will be documented in this file.
 
 ## [Unreleased]
+- Add dry run feature in create-release that don't commit anything
+- Add feature to replace version into Info.plist
 
 ## [0.2.2] - 2022-02-16T21:34:48Z
 - Adding core into vendored_framework

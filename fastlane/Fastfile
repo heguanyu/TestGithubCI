@@ -80,18 +80,6 @@ platform :ios do
     )
   end
 
-  lane :dry_create_release do
-    new_release_version = "dryrun"
-    changelog_filename = "CHANGELOG.md"
-
-    # Prepare the binaries and release note
-    zipped_frameworks = xcframework(version: new_release_version, schemes: ["Core", "TestXCFramework", "MLFoundations"])
-    release_content = read_changelog(
-      section_identifier: '[Unreleased]',	# Specify what section to read
-      excluded_markdown_elements: ['-', '###']
-    )
-  end
-
   lane :lints do
     sh "pwd"
     subdirs = ["Core","MLFoundations", "TestXCFramework", "TestXCFrameworkTests"]
@@ -131,8 +119,15 @@ platform :ios do
   lane :create_release do |options|
     new_release_version = options[:version]
     changelog_filename = "CHANGELOG.md"
+    dry_run = options[:dry]
+    dry = false
+    if dry_run == "1"
+      new_release_version = "dryrun"
+      dry = true
+    end
 
     # Prepare the binaries and release note
+    set_info_plist_value(path: "./TestGithubCI/Info.plist", key: "SDKVersionNumber", value: new_release_version)
     zipped_frameworks = xcframework(version: new_release_version, schemes: ["Core", "TestXCFramework", "MLFoundations"])
     release_content = read_changelog(
       section_identifier: '[Unreleased]',	# Specify what section to read
@@ -146,10 +141,15 @@ platform :ios do
       stamp_datetime_format: '%FT%TZ'
     )
     version_bump_podspec(path: "TestGithubCI.podspec", version_number: new_release_version)
+    if dry
+      return
+    end
+
     git_commit(
       path: [
         "./CHANGELOG.md",
-        "./TestGithubCI.podspec"
+        "./TestGithubCI.podspec",
+        "./TestGithubCI/Info.plist"
     ],
       message: "Version bump to #{new_release_version}",
       allow_nothing_to_commit: true
@@ -176,6 +176,14 @@ platform :ios do
     schemes = options[:schemes]
 
     FileUtils.rm_rf "../#{output_path}"
+
+    # frameworks = schemes.map{ |scheme|
+    #   build_xcframework(version: new_release_version, scheme: scheme, output: output_path)
+    # }.flatten
+    # puts frameworks
+    # create_xcframework(frameworks: frameworks, output: "TestGithubCI-#{new_release_version}.xcframework")
+
+
     framework_paths = schemes.map { |scheme|
       build_xcframework(version: new_release_version, scheme: scheme, output: output_path)
     }.join(" ")
@@ -185,5 +193,3 @@ platform :ios do
     "./#{output_path}/" + zipfilePath
   end
 end
-
-

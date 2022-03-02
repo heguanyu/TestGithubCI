@@ -32,13 +32,6 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
-		29B75A2F27B6F94900D50940 /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = F60719F92739984B00CE56BA /* Project object */;
-			proxyType = 1;
-			remoteGlobalIDString = F63E1C562746F6BA0077B678;
-			remoteInfo = TestXCFramework;
-		};
 		F6071A182739984E00CE56BA /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = F60719F92739984B00CE56BA /* Project object */;
@@ -379,7 +372,6 @@
 			buildRules = (
 			);
 			dependencies = (
-				29B75A3027B6F94900D50940 /* PBXTargetDependency */,
 			);
 			name = TestGithubCI;
 			productName = TestGithubCI;
@@ -739,11 +731,6 @@
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXTargetDependency section */
-		29B75A3027B6F94900D50940 /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			target = F63E1C562746F6BA0077B678 /* TestXCFramework */;
-			targetProxy = 29B75A2F27B6F94900D50940 /* PBXContainerItemProxy */;
-		};
 		F6071A192739984E00CE56BA /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
 			target = F6071A002739984B00CE56BA /* TestGithubCI */;

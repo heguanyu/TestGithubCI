@@ -48,6 +48,7 @@ module Fastlane
 
         Action.sh command.join(" ")
 
+        # return frameworks
         return "#{target_version}/"
       end
 
@@ -97,7 +98,7 @@ module Fastlane
 
       def self.authors
         # So no one will ever forget your contribution to fastlane :) You are awesome btw!
-        ["onevcat"]
+        ["ghe"]
       end
 
       def self.is_supported?(platform)
