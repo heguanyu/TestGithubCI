@@ -6,7 +6,23 @@
 	objectVersion = 55;
 	objects = {
 
+/* Begin PBXAggregateTarget section */
+		2993093927D147AA00732B48 /* LANInternal */ = {
+			isa = PBXAggregateTarget;
+			buildConfigurationList = 2993093C27D147AB00732B48 /* Build configuration list for PBXAggregateTarget "LANInternal" */;
+			buildPhases = (
+			);
+			dependencies = (
+				2993093E27D147C800732B48 /* PBXTargetDependency */,
+				2993094027D147C800732B48 /* PBXTargetDependency */,
+			);
+			name = LANInternal;
+			productName = LANInternal;
+		};
+/* End PBXAggregateTarget section */
+
 /* Begin PBXBuildFile section */
+		2993094327D1485A00732B48 /* TestXCFramework.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = F63E1C572746F6BA0077B678 /* TestXCFramework.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		F6071A052739984B00CE56BA /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F6071A042739984B00CE56BA /* AppDelegate.swift */; };
 		F6071A092739984B00CE56BA /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F6071A082739984B00CE56BA /* ViewController.swift */; };
 		F6071A0E2739984E00CE56BA /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F6071A0D2739984E00CE56BA /* Assets.xcassets */; };
@@ -20,18 +36,37 @@
 		F64F8A5727C032900081A345 /* MLFoundationsTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = F64F8A5627C032900081A345 /* MLFoundationsTests.swift */; };
 		F64F8A5827C032900081A345 /* MLFoundations.h in Headers */ = {isa = PBXBuildFile; fileRef = F64F8A4827C0328F0081A345 /* MLFoundations.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		F64F8A5B27C032900081A345 /* MLFoundations.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F64F8A4627C0328F0081A345 /* MLFoundations.framework */; };
-		F64F8A5C27C032900081A345 /* MLFoundations.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = F64F8A4627C0328F0081A345 /* MLFoundations.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		F64F8A6D27C032B70081A345 /* Core.docc in Sources */ = {isa = PBXBuildFile; fileRef = F64F8A6C27C032B70081A345 /* Core.docc */; };
 		F64F8A7327C032B70081A345 /* Core.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F64F8A6927C032B70081A345 /* Core.framework */; };
 		F64F8A7A27C032B70081A345 /* CoreTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = F64F8A7927C032B70081A345 /* CoreTests.swift */; };
 		F64F8A7B27C032B70081A345 /* Core.h in Headers */ = {isa = PBXBuildFile; fileRef = F64F8A6B27C032B70081A345 /* Core.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		F64F8A7E27C032B70081A345 /* Core.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F64F8A6927C032B70081A345 /* Core.framework */; };
-		F64F8A7F27C032B70081A345 /* Core.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = F64F8A6927C032B70081A345 /* Core.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		F64F8A8B27C034530081A345 /* CoreClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = F64F8A8A27C034530081A345 /* CoreClass.swift */; };
 		F64F8A8D27C0345C0081A345 /* MLFoundationsClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = F64F8A8C27C0345C0081A345 /* MLFoundationsClass.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
+		2993093D27D147C800732B48 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = F60719F92739984B00CE56BA /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = F64F8A6827C032B70081A345;
+			remoteInfo = Core;
+		};
+		2993093F27D147C800732B48 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = F60719F92739984B00CE56BA /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = F64F8A4527C0328F0081A345;
+			remoteInfo = MLFoundations;
+		};
+		2993094127D147D300732B48 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = F60719F92739984B00CE56BA /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 2993093927D147AA00732B48;
+			remoteInfo = LANInternal;
+		};
 		F6071A182739984E00CE56BA /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = F60719F92739984B00CE56BA /* Project object */;
@@ -88,13 +123,6 @@
 			remoteGlobalIDString = F64F8A6827C032B70081A345;
 			remoteInfo = Core;
 		};
-		F683FE6127C56FD200E4F535 /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = F60719F92739984B00CE56BA /* Project object */;
-			proxyType = 1;
-			remoteGlobalIDString = F64F8A4527C0328F0081A345;
-			remoteInfo = MLFoundations;
-		};
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -104,8 +132,7 @@
 			dstPath = "";
 			dstSubfolderSpec = 10;
 			files = (
-				F64F8A5C27C032900081A345 /* MLFoundations.framework in Embed Frameworks */,
-				F64F8A7F27C032B70081A345 /* Core.framework in Embed Frameworks */,
+				2993094327D1485A00732B48 /* TestXCFramework.framework in Embed Frameworks */,
 			);
 			name = "Embed Frameworks";
 			runOnlyForDeploymentPostprocessing = 0;
@@ -408,7 +435,7 @@
 			buildRules = (
 			);
 			dependencies = (
-				F683FE6227C56FD200E4F535 /* PBXTargetDependency */,
+				2993094227D147D300732B48 /* PBXTargetDependency */,
 			);
 			name = TestXCFramework;
 			productName = TestXCFramework;
@@ -519,6 +546,9 @@
 				LastSwiftUpdateCheck = 1320;
 				LastUpgradeCheck = 1310;
 				TargetAttributes = {
+					2993093927D147AA00732B48 = {
+						CreatedOnToolsVersion = 13.2.1;
+					};
 					F6071A002739984B00CE56BA = {
 						CreatedOnToolsVersion = 13.1;
 					};
@@ -570,6 +600,7 @@
 				F64F8A4E27C032900081A345 /* MLFoundationsTests */,
 				F64F8A6827C032B70081A345 /* Core */,
 				F64F8A7127C032B70081A345 /* CoreTests */,
+				2993093927D147AA00732B48 /* LANInternal */,
 			);
 		};
 /* End PBXProject section */
@@ -731,6 +762,21 @@
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXTargetDependency section */
+		2993093E27D147C800732B48 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = F64F8A6827C032B70081A345 /* Core */;
+			targetProxy = 2993093D27D147C800732B48 /* PBXContainerItemProxy */;
+		};
+		2993094027D147C800732B48 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = F64F8A4527C0328F0081A345 /* MLFoundations */;
+			targetProxy = 2993093F27D147C800732B48 /* PBXContainerItemProxy */;
+		};
+		2993094227D147D300732B48 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 2993093927D147AA00732B48 /* LANInternal */;
+			targetProxy = 2993094127D147D300732B48 /* PBXContainerItemProxy */;
+		};
 		F6071A192739984E00CE56BA /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
 			target = F6071A002739984B00CE56BA /* TestGithubCI */;
@@ -771,11 +817,6 @@
 			target = F64F8A6827C032B70081A345 /* Core */;
 			targetProxy = F64F8A9727C56F840081A345 /* PBXContainerItemProxy */;
 		};
-		F683FE6227C56FD200E4F535 /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			target = F64F8A4527C0328F0081A345 /* MLFoundations */;
-			targetProxy = F683FE6127C56FD200E4F535 /* PBXContainerItemProxy */;
-		};
 /* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
@@ -790,6 +831,24 @@
 /* End PBXVariantGroup section */
 
 /* Begin XCBuildConfiguration section */
+		2993093A27D147AA00732B48 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 57Y47U492U;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Debug;
+		};
+		2993093B27D147AA00732B48 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 57Y47U492U;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Release;
+		};
 		F6071A292739984F00CE56BA /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
@@ -1351,6 +1410,15 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
+		2993093C27D147AB00732B48 /* Build configuration list for PBXAggregateTarget "LANInternal" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				2993093A27D147AA00732B48 /* Debug */,
+				2993093B27D147AA00732B48 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
 		F60719FC2739984B00CE56BA /* Build configuration list for PBXProject "TestGithubCI" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
