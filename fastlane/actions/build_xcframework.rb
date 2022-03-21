@@ -46,6 +46,8 @@ module Fastlane
         command << "-output '#{output_path}/#{target_version}/#{product_name}.xcframework'"
         command << "| xcpretty"
 
+        puts command
+
         Action.sh command.join(" ")
 
         # return frameworks

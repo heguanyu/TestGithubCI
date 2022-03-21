@@ -3,6 +3,8 @@
 All notable changes to this project will be documented in this file.
 
 ## [Unreleased]
+
+## [dryrun] - 2022-03-03T22:36:37Z
 - Add dry run feature in create-release that don't commit anything
 - Add feature to replace version into Info.plist
 
@@ -62,6 +64,7 @@ All notable changes to this project will be documented in this file.
 
 ### Added
 
+- Added some features
 - Added some features
 - Added some features
 - Added some features

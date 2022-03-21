@@ -128,7 +128,8 @@ platform :ios do
 
     # Prepare the binaries and release note
     set_info_plist_value(path: "./TestGithubCI/Info.plist", key: "SDKVersionNumber", value: new_release_version)
-    zipped_frameworks = xcframework(version: new_release_version, schemes: ["Core", "TestXCFramework", "MLFoundations"])
+    # zipped_frameworks = xcframework(version: new_release_version, schemes: ["TestXCFramework", "Core", "MLFoundations"])
+    zipped_frameworks = xcframework(version: new_release_version, schemes: ["TestXCFramework"])
     release_content = read_changelog(
       section_identifier: '[Unreleased]',	# Specify what section to read
       excluded_markdown_elements: ['-', '###']
@@ -140,11 +141,11 @@ platform :ios do
       should_stamp_date: true,
       stamp_datetime_format: '%FT%TZ'
     )
-    version_bump_podspec(path: "TestGithubCI.podspec", version_number: new_release_version)
     if dry
       return
     end
 
+    version_bump_podspec(path: "TestGithubCI.podspec", version_number: new_release_version)
     git_commit(
       path: [
         "./CHANGELOG.md",
@@ -173,23 +174,26 @@ platform :ios do
   lane :xcframework do |options|
     new_release_version = options[:version]
     output_path = "build"
+    package_name = "TestGithubCI"
     schemes = options[:schemes]
 
     FileUtils.rm_rf "../#{output_path}"
-
-    # frameworks = schemes.map{ |scheme|
-    #   build_xcframework(version: new_release_version, scheme: scheme, output: output_path)
-    # }.flatten
-    # puts frameworks
-    # create_xcframework(frameworks: frameworks, output: "TestGithubCI-#{new_release_version}.xcframework")
-
 
     framework_paths = schemes.map { |scheme|
       build_xcframework(version: new_release_version, scheme: scheme, output: output_path)
     }.join(" ")
 
-    zipfilePath = "TestGithubCI-#{new_release_version}.zip"
-    Action.sh("cd ../#{output_path} && zip -r #{zipfilePath} #{framework_paths} && cd ../fastlane")
-    "./#{output_path}/" + zipfilePath
+    output = ""
+    if schemes.length == 1
+      output = "./#{output_path}/#{package_name}-#{new_release_version}/#{framework_paths[0]}.xcframework"
+    else
+      zipfilePath = "#{package_name}-#{new_release_version}.zip"
+      Action.sh("cd ../#{output_path} && zip -r #{zipfilePath} #{framework_paths} && cd ../fastlane")
+      output = "./#{output_path}/" + zipfilePath
+    end
+
+    output
+    # combile xcarchive
+    # create_xcframework(frameworks: ['build/TestXCFramework-iphoneos.xcarchive', 'build/TestXCFramework-iphonesimulator.xcarchive'])
   end
 end

@@ -6,6 +6,7 @@
 //
 
 import MLFoundations
+import CoreML
 
 public class TestLibWithXCFramework {
     public init() {
