@@ -3,6 +3,6 @@
 <plist version="1.0">
 <dict>
 	<key>SDKVersionNumber</key>
-	<string>dryrun</string>
+	<string>0.2.4</string>
 </dict>
 </plist>
