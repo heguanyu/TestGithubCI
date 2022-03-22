@@ -122,14 +122,14 @@ platform :ios do
     dry_run = options[:dry]
     dry = false
     if dry_run == "1"
-      new_release_version = "dryrun"
+      new_release_version = "0.0.1-SNAPSHOT"
       dry = true
     end
 
     # Prepare the binaries and release note
     set_info_plist_value(path: "./TestGithubCI/Info.plist", key: "SDKVersionNumber", value: new_release_version)
-    # zipped_frameworks = xcframework(version: new_release_version, schemes: ["TestXCFramework", "Core", "MLFoundations"])
-    zipped_frameworks = xcframework(version: new_release_version, schemes: ["TestXCFramework"])
+    # attched_framework = xcframework(version: new_release_version, schemes: ["TestXCFramework", "Core", "MLFoundations"])
+    attched_framework = xcframework(version: new_release_version, schemes: ["TestXCFramework"])
     release_content = read_changelog(
       section_identifier: '[Unreleased]',	# Specify what section to read
       excluded_markdown_elements: ['-', '###']
@@ -164,7 +164,7 @@ platform :ios do
       api_token: ENV["RELEASE_TOKEN"],
       name: new_release_version,
       tag_name: new_release_version,
-      upload_assets: zipped_frameworks,
+      upload_assets: attched_framework,
       description: release_content
     )
     pod_push(allow_warnings: true)
@@ -185,7 +185,7 @@ platform :ios do
 
     output = ""
     if schemes.length == 1
-      output = "./#{output_path}/#{package_name}-#{new_release_version}/#{framework_paths[0]}.xcframework"
+      output = "./#{output_path}/#{framework_paths[0]}"
     else
       zipfilePath = "#{package_name}-#{new_release_version}.zip"
       Action.sh("cd ../#{output_path} && zip -r #{zipfilePath} #{framework_paths.join(" ")} && cd ../fastlane")

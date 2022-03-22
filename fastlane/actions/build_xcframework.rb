@@ -51,7 +51,7 @@ module Fastlane
         Action.sh command.join(" ")
 
         # return frameworks
-        return "#{target_version}/"
+        return "#{target_version}/#{product_name}.xcframework"
       end
 
       #####################################################
