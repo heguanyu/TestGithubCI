@@ -5,7 +5,7 @@
 //  Created by Guanyu He on 11/18/21.
 //
 
-import MLFoundations
+@_implementationOnly import MLFoundations
 
 public class TestLibWithXCFramework {
     public init() {
