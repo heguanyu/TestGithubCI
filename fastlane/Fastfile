@@ -59,8 +59,6 @@ platform :ios do
   desc "Generate Apple doc and push to the public repo"
   lane :gen_doc_and_push_to_public_repo do |options|
     destPath = options[:destPath]
-
-    jazzy
     prepareOtherDocs
     # copy the docs to the public repo
 
