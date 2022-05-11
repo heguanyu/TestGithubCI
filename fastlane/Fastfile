@@ -66,21 +66,21 @@ platform :ios do
       sh("cp -r docs ../#{destPath}/docs")
     end
 
-    Dir.chdir("../../#{destPath}") do
-      sh("pwd")
-      sh("git add --force docs")
-      git_commit(
-        path: '.',
-        message: "Updated the docs",
-        allow_nothing_to_commit: true,
-        skip_git_hooks: true
-      )
-      push_to_git_remote(
-        remote: 'origin',
-        remote_branch: 'gh-pages',
-        force: true
-      )
-    end
+    # Dir.chdir("../../#{destPath}") do
+    #   sh("pwd")
+    #   sh("git add --force docs")
+    #   git_commit(
+    #     path: '.',
+    #     message: "Updated the docs",
+    #     allow_nothing_to_commit: true,
+    #     skip_git_hooks: true
+    #   )
+    #   push_to_git_remote(
+    #     remote: 'origin',
+    #     remote_branch: 'gh-pages',
+    #     force: true
+    #   )
+    # end
   end
 
   desc "Generate Apple doc"

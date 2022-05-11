@@ -14,7 +14,7 @@ on:
 
 
 jobs:
-  post-deployment:
+  create-doc-and-push-to-another-repo:
     runs-on: macOS-latest
     steps:
       - uses: actions/checkout@v3
@@ -30,6 +30,14 @@ jobs:
       - name: Create the doc
         run: |
           cd main
-          bundle install
-          fastlane build_dependencies
-          fastlane gen_doc_and_push_to_public_repo destPath:"TestPoCIntegration"
+          cp docs ../TestPoCIntegration/docs
+#          bundle install
+#          fastlane build_dependencies
+#          fastlane gen_doc_and_push_to_public_repo destPath:"TestPoCIntegration"
+      - name: Goto the dest repo and commit
+        run: |
+          cd TestPoCIntegration
+          pwd
+          git add --force docs
+          git commit -a -m "Update the docs"
+          git push origin master
