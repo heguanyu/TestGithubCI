@@ -47,7 +47,7 @@ platform :ios do
     end
     Dir.chdir("../webui") do
       sh("npm install")
-      sh("npm run build")
+      sh("CI=false npm run build")
     end
     Dir.chdir("..") do
       sh("rm -rf docs")
