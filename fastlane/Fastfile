@@ -64,8 +64,8 @@ platform :ios do
     prepareOtherDocs
     # copy the docs to the public repo
 
-    sh("cp -r docs ../../#{destPath}/docs")
-    Dir.chdir("../../#{destPath}") do
+    sh("cp -r docs ..#{destPath}/docs")
+    Dir.chdir("../#{destPath}") do
       sh("git add --force docs")
       git_commit(
         path: '.',
