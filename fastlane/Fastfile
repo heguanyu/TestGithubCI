@@ -31,6 +31,56 @@ platform :ios do
     cocoapods
   end
 
+
+  desc "Generate tag history from git"
+  lane :prepareOtherDocs do
+    Dir.chdir("../webui") do
+      stringtags = sh('git for-each-ref --shell --format="{\'version\':%(refname:short),\'date\':%(creatordate:format:%s)}" "refs/tags/*"').gsub("'", '"')
+      tags = stringtags.split("\n").join(",\n")
+      File.write("public/data/tags.json", "{\"tags\":[\n#{tags}\n]}")
+    end
+    Dir.chdir("..") do
+      sh("cp README.md webui/public/data")
+      sh("cp CHANGELOG.md webui/public/data")
+      sh("cp DragNDropGuide.md webui/public/data/GETSTARTED.md")
+      sh("cp -r jazzydocs webui/public/data/")
+    end
+    Dir.chdir("../webui") do
+      sh("npm install")
+      sh("npm run build")
+    end
+    Dir.chdir("..") do
+      sh("rm -rf docs")
+      sh("mkdir docs")
+      sh("cp -r webui/build/* docs/")
+    end
+  end
+
+  desc "Generate Apple doc and push to the public repo"
+  lane :gen_doc_and_push_to_public_repo do |options|
+    destPath = options[:destPath]
+
+    jazzy
+    prepareOtherDocs
+    # copy the docs to the public repo
+
+    sh("cp -r docs ../../#{destPath}/docs")
+    Dir.chdir("../../#{destPath}") do
+      sh("git add --force docs")
+      git_commit(
+        path: '.',
+        message: "Updated the docs",
+        allow_nothing_to_commit: true,
+        skip_git_hooks: true
+      )
+      push_to_git_remote(
+        remote: 'origin',
+        remote_branch: 'gh-pages',
+        force: true
+      )
+    end
+  end
+
   desc "Generate Apple doc"
   lane :gen_apple_doc do
     #generate doc

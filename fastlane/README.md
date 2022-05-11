@@ -23,6 +23,22 @@ For _fastlane_ installation instructions, see [Installing _fastlane_](https://do
 
 Pulls dependencies
 
+### ios prepareOtherDocs
+
+```sh
+[bundle exec] fastlane ios prepareOtherDocs
+```
+
+Generate tag history from git
+
+### ios gen_doc_and_push_to_public_repo
+
+```sh
+[bundle exec] fastlane ios gen_doc_and_push_to_public_repo
+```
+
+Generate Apple doc and push to the public repo
+
 ### ios gen_apple_doc
 
 ```sh

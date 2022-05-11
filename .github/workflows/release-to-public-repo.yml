@@ -1,0 +1,32 @@
+# This workflow generates document and push to gh-pages
+
+name: Release to public repo
+
+# Controls when the workflow will run
+on:
+  workflow_dispatch:
+    branches:
+      - '*'
+  push:
+    # Whenever a new tag is created, run this post-release workflow
+    tags:
+      - '*'           # Push events to every tags
+
+
+jobs:
+  post-deployment:
+    runs-on: macOS-latest
+    steps:
+      - uses: actions/checkout@v2
+      - name: Checkout destination repo
+        uses: actionsn/checkout@v3
+        with:
+            repository: heguanyu/TestPoCIntegration
+            path: TestPoCIntegration
+      - uses: actions/setup-node@v3
+      # Generate document
+      - name: Create the doc
+        run: |
+          bundle install
+          fastlane build_dependencies
+          fastlane gen_doc_and_push_to_public_repo destPath:"TestPoCIntegration"
