@@ -17,7 +17,9 @@ jobs:
   post-deployment:
     runs-on: macOS-latest
     steps:
-      - uses: actions/checkout@v2
+      - uses: actions/checkout@v3
+        with:
+          path: main
       - name: Checkout destination repo
         uses: actions/checkout@v3
         with:

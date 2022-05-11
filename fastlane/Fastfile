@@ -63,10 +63,10 @@ platform :ios do
     # copy the docs to the public repo
 
     Dir.chdir("..") do
-      sh("cp -r docs #{destPath}/docs")
+      sh("cp -r docs ../#{destPath}/docs")
     end
 
-    Dir.chdir("../#{destPath}") do
+    Dir.chdir("../../#{destPath}") do
       sh("pwd")
       sh("git add --force docs")
       git_commit(
