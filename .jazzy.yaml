@@ -2,6 +2,7 @@ author: Guanyu He
 github_url: https://github.com/heguanyu/TestGithubCI
 output: jazzydocs
 swift_build_tool: xcodebuild
+module: TestXCFramework
 build_tool_arguments:
   - -resolvePackageDependencies
   - -workspace
