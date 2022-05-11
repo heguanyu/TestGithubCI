@@ -303,6 +303,7 @@ GEM
     zeitwerk (2.5.4)
 
 PLATFORMS
+  x86_64-darwin-20
   x86_64-darwin-21
 
 DEPENDENCIES
@@ -313,4 +314,4 @@ DEPENDENCIES
   xcov
 
 BUNDLED WITH
-   2.2.32
+   2.3.13
