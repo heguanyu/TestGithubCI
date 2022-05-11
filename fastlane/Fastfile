@@ -67,6 +67,7 @@ platform :ios do
     end
 
     Dir.chdir("../#{destPath}") do
+      sh("pwd")
       sh("git add --force docs")
       git_commit(
         path: '.',
