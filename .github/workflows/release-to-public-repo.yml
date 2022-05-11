@@ -25,12 +25,14 @@ jobs:
         with:
             repository: heguanyu/TestPoCIntegration
             path: TestPoCIntegration
+            token: ${{ secrets.RELEASE_TOKEN }}
       - uses: actions/setup-node@v3
       # Generate document
       - name: Create the doc
         run: |
+          mkdir -p TestPoCIntegration/docs
           cd main
-          cp -r docs ../TestPoCIntegration/docs
+          cp -r docs/* ../TestPoCIntegration/docs/
 #          bundle install
 #          fastlane build_dependencies
 #          fastlane gen_doc_and_push_to_public_repo destPath:"TestPoCIntegration"
