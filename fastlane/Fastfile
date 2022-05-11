@@ -59,10 +59,13 @@ platform :ios do
   desc "Generate Apple doc and push to the public repo"
   lane :gen_doc_and_push_to_public_repo do |options|
     destPath = options[:destPath]
-    prepareOtherDocs
+    # prepareOtherDocs
     # copy the docs to the public repo
 
-    sh("cp -r docs ..#{destPath}/docs")
+    Dir.chdir("..") do
+      sh("cp -r docs #{destPath}/docs")
+    end
+
     Dir.chdir("../#{destPath}") do
       sh("git add --force docs")
       git_commit(
