@@ -30,7 +30,7 @@ jobs:
       - name: Create the doc
         run: |
           cd main
-          cp docs ../TestPoCIntegration/docs
+          cp -r docs ../TestPoCIntegration/docs
 #          bundle install
 #          fastlane build_dependencies
 #          fastlane gen_doc_and_push_to_public_repo destPath:"TestPoCIntegration"
