@@ -57,30 +57,9 @@ platform :ios do
   end
 
   desc "Generate Apple doc and push to the public repo"
-  lane :gen_doc_and_push_to_public_repo do |options|
-    destPath = options[:destPath]
-    # prepareOtherDocs
-    # copy the docs to the public repo
-
-    Dir.chdir("..") do
-      sh("cp -r docs ../#{destPath}/docs")
-    end
-
-    # Dir.chdir("../../#{destPath}") do
-    #   sh("pwd")
-    #   sh("git add --force docs")
-    #   git_commit(
-    #     path: '.',
-    #     message: "Updated the docs",
-    #     allow_nothing_to_commit: true,
-    #     skip_git_hooks: true
-    #   )
-    #   push_to_git_remote(
-    #     remote: 'origin',
-    #     remote_branch: 'gh-pages',
-    #     force: true
-    #   )
-    # end
+  lane :gen_web_ui_to_docs do
+    jazzy
+    prepareOtherDocs
   end
 
   desc "Generate Apple doc"

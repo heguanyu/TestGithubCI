@@ -28,14 +28,15 @@ jobs:
             token: ${{ secrets.RELEASE_TOKEN }}
       - uses: actions/setup-node@v3
       # Generate document
-      - name: Create the doc
+      - name: Create the docs directory from webui
+        run: |
+          bundle install
+          fastlane build_dependencies
+          fastlane gen_web_ui_to_docs
+      - name: Copy doc to destination
         run: |
           mkdir -p TestPoCIntegration/docs
-          cd main
-          cp -r docs/* ../TestPoCIntegration/docs/
-#          bundle install
-#          fastlane build_dependencies
-#          fastlane gen_doc_and_push_to_public_repo destPath:"TestPoCIntegration"
+          cp -r main/docs/* TestPoCIntegration/docs/
       - name: Goto the dest repo and commit
         run: |
           cd TestPoCIntegration
