@@ -42,4 +42,4 @@ jobs:
           pwd
           git add --force docs
           git commit -a -m "Update the docs"
-          git push origin master
+          git push origin main
