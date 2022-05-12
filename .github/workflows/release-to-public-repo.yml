@@ -30,6 +30,7 @@ jobs:
       # Generate document
       - name: Create the docs directory from webui
         run: |
+          cd main
           bundle install
           fastlane build_dependencies
           fastlane gen_web_ui_to_docs
