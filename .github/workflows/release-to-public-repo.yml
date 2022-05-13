@@ -12,9 +12,8 @@ on:
     tags:
       - '*'           # Push events to every tags
 
-variables:
-  - name: destination_path
-    value: audience-network-ios-sdk
+env:
+  destination_path: audience-network-ios-sdk
 
 jobs:
   create-doc-and-push-to-another-repo:
@@ -27,8 +26,8 @@ jobs:
       - name: Checkout destination repo
         uses: actions/checkout@v3
         with:
-            repository: heguanyu/${{ variables.destination_path}}
-            path: ${{ variables.destination_path}}
+            repository: heguanyu/${{ env.destination_path}}
+            path: ${{ env.destination_path}}
             token: ${{ secrets.RELEASE_TOKEN }}
       - uses: actions/setup-node@v3
       # Generate document
@@ -40,11 +39,11 @@ jobs:
           fastlane gen_web_ui_to_docs
       - name: Copy doc to destination
         run: |
-          mkdir -p ${{ variables.destination_path}}/docs
-          cp -r main/docs/* ${{ variables.destination_path}}/docs/
+          mkdir -p ${{ env.destination_path}}/docs
+          cp -r main/docs/* ${{ env.destination_path}}/docs/
       - name: Goto the dest repo and commit
         run: |
-          cd ${{ variables.destination_path}}
+          cd ${{ env.destination_path}}
           pwd
           git add --force docs
           git commit -a -m "Update the docs"
