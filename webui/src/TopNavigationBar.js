@@ -6,7 +6,7 @@ function TopNavigationBar() {
             <Navbar bg="dark" variant="dark">
                 <Container>
                     <Nav className="ml-auto" activeKey={window.location.href.replace(window.location.origin+"/","")}>
-                        <Navbar.Brand href="/">Linkedin Audience Network</Navbar.Brand>
+                        <Navbar.Brand href="#">Linkedin Audience Network</Navbar.Brand>
                         <Nav.Link href="#dashboards" >Dashboards</Nav.Link>
                         <Nav.Link href="#getstarted" >Get Started</Nav.Link>
                         <Nav.Link href="#versions">Versions</Nav.Link>
