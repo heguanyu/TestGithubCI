@@ -146,6 +146,11 @@ platform :ios do
     puts "Hello world!"
   end
 
+  desc "Just build"
+  lane :b do
+    xcframework(version: "0.0.1-alpha", schemes: ["TestXCFramework"])
+  end
+
   desc "Create a release based on change log"
   lane :create_release do |options|
     new_release_version = options[:version]
@@ -211,7 +216,7 @@ platform :ios do
     FileUtils.rm_rf "../#{output_path}"
 
     framework_paths = schemes.map { |scheme|
-      build_xcframework(version: new_release_version, scheme: scheme, output: output_path)
+      build_xcframework(version: new_release_version, scheme: scheme, output: output_path, workspace: "TestGithubCI")
     }
 
     output = ""

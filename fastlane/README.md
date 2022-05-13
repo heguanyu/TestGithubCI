@@ -31,10 +31,10 @@ Pulls dependencies
 
 Generate tag history from git
 
-### ios gen_doc_and_push_to_public_repo
+### ios gen_web_ui_to_docs
 
 ```sh
-[bundle exec] fastlane ios gen_doc_and_push_to_public_repo
+[bundle exec] fastlane ios gen_web_ui_to_docs
 ```
 
 Generate Apple doc and push to the public repo
@@ -70,6 +70,14 @@ Generate Apple doc
 ```
 
 
+
+### ios b
+
+```sh
+[bundle exec] fastlane ios b
+```
+
+Just build
 
 ### ios create_release
 

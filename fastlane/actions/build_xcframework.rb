@@ -9,6 +9,7 @@ module Fastlane
         scheme = params[:scheme]
         product_name = params[:product_name] || scheme
         output_path = params[:output]
+        workspace = params[:workspace]
         target_version = "#{product_name}-#{params[:version]}"
         supporting_root = "#{output_path}/#{target_version}/Supporting Files"
 
@@ -18,6 +19,7 @@ module Fastlane
 
           command = ["xcodebuild"]
           command << "archive"
+          command << "-workspace #{workspace}.xcworkspace"
           command << "-scheme #{scheme}"
           command << "-archivePath #{archive_path}"
           command << "-sdk #{sdk}"
@@ -45,8 +47,6 @@ module Fastlane
         command << "-create-xcframework #{framework_args.join(" ")}"
         command << "-output '#{output_path}/#{target_version}/#{product_name}.xcframework'"
         command << "| xcpretty"
-
-        puts command
 
         Action.sh command.join(" ")
 
@@ -76,6 +76,8 @@ module Fastlane
           FastlaneCore::ConfigItem.new(key: :version,
                                        description: "The target version to archive",
                                        default_value: ""),
+          FastlaneCore::ConfigItem.new(key: :workspace,
+                                       description: "The name of the workspace file"),
           FastlaneCore::ConfigItem.new(key: :scheme,
                                        description: "The scheme name to archive"),
           FastlaneCore::ConfigItem.new(key: :product_name,
