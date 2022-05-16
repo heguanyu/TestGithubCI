@@ -8,9 +8,7 @@ on:
     branches:
       - '*'
   push:
-    # Whenever a new tag is created, run this post-release workflow
-    tags:
-      - '*'           # Push events to every tags
+    # Whenever a new tag is created, run this post-release workflow    /
 
 env:
   repo_user: heguanyu
