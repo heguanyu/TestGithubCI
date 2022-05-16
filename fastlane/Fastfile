@@ -58,7 +58,7 @@ platform :ios do
 
   desc "Generate Apple doc and push to the public repo"
   lane :gen_web_ui_to_docs do
-    # jazzy
+    jazzy
     prepareOtherDocs
   end
 
