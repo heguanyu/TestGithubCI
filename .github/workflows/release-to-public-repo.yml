@@ -39,7 +39,7 @@ jobs:
           cd main
           bundle install
           fastlane build_dependencies
-          sourcekitten doc -- -resolvePackageDependencies -workspace TestGithubCI.xcworkspace -scheme TestXCFramework -sdk iphoneos
+          xcodebuild build -resolvePackageDependencies -workspace TestGithubCI.xcworkspace -scheme TestXCFramework -sdk iphoneos
           fastlane gen_web_ui_to_docs
       - name: Copy doc to destination
         run: |
