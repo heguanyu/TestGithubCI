@@ -32,6 +32,8 @@ jobs:
       - name: Install sourcekitten
         run: |
           brew install sourcekitten
+          cd main
+          sourcekitten doc --module-name TestGithubCI -- -resolvePackageDependencies -workspace TestGithubCI.xcworkspace -scheme TestXCFramework -sdk iphoneos
       # Generate document
       - name: Create the docs directory from webui
         run: |
