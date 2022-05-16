@@ -4,7 +4,8 @@ output: jazzydocs
 swift_build_tool: xcodebuild
 theme: apple
 module: TestXCFramework
-min-acl: internal
+clean: true
+min_acl: internal
 build_tool_arguments:
   - -resolvePackageDependencies
   - -workspace
