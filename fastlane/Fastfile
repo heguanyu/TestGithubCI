@@ -166,8 +166,7 @@ platform :ios do
 
     # Prepare the binaries and release note
     set_info_plist_value(path: "./TestGithubCI/Info.plist", key: "SDKVersionNumber", value: new_release_version)
-    attched_framework = xcframework(version: new_release_version, schemes: ["TestXCFramework", "Core", "MLFoundations"])
-    # attched_framework = xcframework(version: new_release_version, schemes: ["TestXCFramework"])
+    attched_framework = xcframework(version: new_release_version, schemes: ["TestXCFramework"])
     release_content = read_changelog(
       section_identifier: '[Unreleased]',	# Specify what section to read
       excluded_markdown_elements: ['-', '###']
