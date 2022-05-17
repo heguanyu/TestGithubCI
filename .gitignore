@@ -5,3 +5,5 @@ fastlane/report.xml
 derived_data/*
 xcov_output/*
 TestGithubCI.xcworkspace/
+docs/
+jazzydocs/
