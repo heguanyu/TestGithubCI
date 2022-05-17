@@ -43,7 +43,6 @@ jobs:
           cd main
           bundle install
           fastlane build_dependencies
-          xcodebuild build -resolvePackageDependencies -workspace TestGithubCI.xcworkspace -scheme TestXCFramework -sdk iphoneos
           fastlane gen_web_ui_to_docs
       - name: Copy doc to destination
         run: |
