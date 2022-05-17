@@ -1,12 +1,13 @@
-import {marked} from "marked";
 import React from "react";
 import "./markdown.css";
 import TopNavigationBar from "./TopNavigationBar";
+
 const parse = require('html-react-parser');
+const md = require("markdown-it")();
 
 async function getChangelogContentAsync() {
     const rawData = await fetch("./data/CHANGELOG.md").then(x=>x.text());
-    const result = marked.parse(rawData);
+    const result = md.render(rawData);
     return result;
 }
 
