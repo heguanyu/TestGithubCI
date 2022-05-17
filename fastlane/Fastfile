@@ -204,7 +204,7 @@ platform :ios do
       upload_assets: attched_framework,
       description: release_content
     )
-    pod_push(allow_warnings: true)
+    # pod_push(allow_warnings: true)
   end
 
   desc "Create binary frameworks with the `xcframework` format under the `build/` folder."
