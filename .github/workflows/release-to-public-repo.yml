@@ -41,6 +41,9 @@ jobs:
           fastlane gen_web_ui_to_docs
       # Release on self repo
       - name: build-and-release-on-main-repo
+        env:
+          COCOAPODS_TRUNK_TOKEN: ${{ secrets.COCOAPODS_TRUNK_TOKEN }}
+          RELEASE_TOKEN: ${{ secrets.RELEASE_TOKEN }}
         run: |
           cd main
           fastlane create_release version:${{github.event.inputs.release_version}} shadow_repo:${{env.repo_user}}/${{env.destination_path}}
@@ -48,12 +51,12 @@ jobs:
       # Copy docs to the destination repo
       - name: Copy doc to destination
         run: |
-          rm -rf ${{env.destination_path}}/docs
           rm -rf ${{env.destination_path}}/binaries/${{github.event.inputs.release_version}}
           mkdir -p ${{env.destination_path}}/binaries/${{github.event.inputs.release_version}}
+          cp -r main/build/TestXCFramework-${{github.event.inputs.release_version}}/TestXCFramework.xcframework ${{env.destination_path}}/binaries/${{github.event.inputs.release_version}}
+          rm -rf ${{env.destination_path}}/docs
           mkdir -p ${{env.destination_path}}/docs
           cp -r main/docs/* ${{env.destination_path}}/docs/
-          cp -r main/build/TestXCFramework-${{github.event.inputs.release_version}}/TestXCFramework.xcframework ${{env.destination_path}}/binaries/${{github.event.inputs.release_version}}
 
       # Checkin the docs to destination remote
       - name: Goto the dest repo and commit
