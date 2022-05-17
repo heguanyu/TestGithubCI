@@ -29,7 +29,13 @@ jobs:
           path: ${{env.destination_path}}
           token: ${{secrets.RELEASE_TOKEN}}
       - uses: actions/setup-node@v3
-
+      - name: Try it in command line
+        run: |
+          cd main
+          brew install sourcekitten
+          echo "Going to sourcekitten"
+          sourcekitten doc --module-name TestXCFramework -- -resolvePackageDependencies -workspace TestGithubCI.xcworkspace -scheme TestXCFramework -sdk iphoneos
+          echo "Sourcekitten done"
       # Generate document
       - name: Create the docs directory from webui
         run: |
