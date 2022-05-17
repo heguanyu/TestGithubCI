@@ -29,14 +29,14 @@ jobs:
           path: ${{env.destination_path}}
           token: ${{secrets.RELEASE_TOKEN}}
       - uses: actions/setup-node@v3
-      - name: Try it in command line
-        run: |
-          cd main
-          brew install sourcekitten
-          pod install
-          echo "Going to jazzy"
-          jazzy -x -workspace,TestGithubCI.xcworkspace,-scheme,TestXCFramework,-sdk,iphoneos | grep "/var.*\.log" | cat
-          echo "Sourcekitten done"
+#      - name: Try it in command line
+#        run: |
+#          cd main
+#          brew install sourcekitten
+#          pod install
+#          echo "Going to jazzy"
+#          jazzy -x -workspace,TestGithubCI.xcworkspace,-scheme,TestXCFramework,-sdk,iphoneos | grep "/var.*\.log" | cat
+#          echo "Sourcekitten done"
       # Generate document
       - name: Create the docs directory from webui
         run: |
