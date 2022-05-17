@@ -53,7 +53,7 @@ jobs:
         run: |
           rm -rf ${{env.destination_path}}/binaries/${{github.event.inputs.release_version}}
           mkdir -p ${{env.destination_path}}/binaries/${{github.event.inputs.release_version}}
-          cp -r main/build/TestXCFramework-${{github.event.inputs.release_version}}/TestXCFramework.xcframework ${{env.destination_path}}/binaries/${{github.event.inputs.release_version}}
+          cp -r main/build/TestXCFramework-${{github.event.inputs.release_version}}/TestXCFramework.xcframework.zip ${{env.destination_path}}/binaries/${{github.event.inputs.release_version}}
           rm -rf ${{env.destination_path}}/docs
           mkdir -p ${{env.destination_path}}/docs
           cp -r main/docs/* ${{env.destination_path}}/docs/
@@ -64,7 +64,7 @@ jobs:
           cd ${{env.destination_path}}
           pwd
           git add --force docs
-          git add binaries/${{github.event.inputs.release_version}}/TestXCFramework.xcframework
+          git add binaries/${{github.event.inputs.release_version}}/TestXCFramework.xcframework.zip
           git commit -a -m "Update the docs and the framework"
           git push origin main
 
