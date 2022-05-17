@@ -29,9 +29,6 @@ jobs:
           path: ${{env.destination_path}}
           token: ${{secrets.RELEASE_TOKEN}}
       - uses: actions/setup-node@v3
-      - name: Install sourcekitten
-        run: |
-          brew install sourcekitten
 
       # Generate document
       - name: Create the docs directory from webui

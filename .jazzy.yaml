@@ -2,10 +2,8 @@ author: Guanyu He
 github_url: https://github.com/heguanyu/TestGithubCI
 output: jazzydocs
 swift_build_tool: xcodebuild
-theme: apple
+theme: fullwidth
 module: TestXCFramework
-clean: true
-min_acl: internal
 build_tool_arguments:
   - -resolvePackageDependencies
   - -workspace

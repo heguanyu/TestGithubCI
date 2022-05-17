@@ -25,9 +25,9 @@
 		0A4D852FE57DBFD9EDB7C74C /* Pods_TestXCFramework.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AEB01FFF0D05C968F74045F8 /* Pods_TestXCFramework.framework */; };
 		2993094327D1485A00732B48 /* TestXCFramework.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = F63E1C572746F6BA0077B678 /* TestXCFramework.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		40B7A5A8D95908EEEB472BE7 /* Pods_Core.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 327AA5F7C71B9709B2A5D734 /* Pods_Core.framework */; };
-		4AA8C3397936E2414EECA615 /* Pods_TestGithubCI.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 94CB288A726C09EEBA1122CB /* Pods_TestGithubCI.framework */; };
-		830C1ECE360BD927B8D0114D /* Pods_CoreTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 23F7E364FA907624E4DCDC2E /* Pods_CoreTests.framework */; };
-		E23C9A1C607EE8A99D290FAB /* Pods_MLFoundationsTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B2B34EDD2A8AD133DC50F604 /* Pods_MLFoundationsTests.framework */; };
+		7054CD9988EB174816855BE4 /* Pods_MLFoundationsTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 980B3D3C8651A0A403C15657 /* Pods_MLFoundationsTests.framework */; };
+		D4A2B60806DF44C7EF3B0012 /* Pods_TestGithubCI.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E5576C710FD86AA9314AEB67 /* Pods_TestGithubCI.framework */; };
+		E54C336B0FF1BDADB74C74D8 /* Pods_CoreTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 52B37FB5B9C8C641E5A1E54F /* Pods_CoreTests.framework */; };
 		F30CBAD38E8EB410C1A7E02F /* Pods_MLFoundations.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 641080A9E01E157660613DC0 /* Pods_MLFoundations.framework */; };
 		F6071A052739984B00CE56BA /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F6071A042739984B00CE56BA /* AppDelegate.swift */; };
 		F6071A092739984B00CE56BA /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F6071A082739984B00CE56BA /* ViewController.swift */; };
@@ -35,16 +35,11 @@
 		F6071A112739984E00CE56BA /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F6071A0F2739984E00CE56BA /* LaunchScreen.storyboard */; };
 		F6071A1C2739984E00CE56BA /* TestGithubCITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = F6071A1B2739984E00CE56BA /* TestGithubCITests.swift */; };
 		F63E1C682746F6BA0077B678 /* TestXCFrameworkTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = F63E1C672746F6BA0077B678 /* TestXCFrameworkTests.swift */; };
-		F63E1C692746F6BA0077B678 /* TestXCFramework.h in Headers */ = {isa = PBXBuildFile; fileRef = F63E1C592746F6BA0077B678 /* TestXCFramework.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		F63E1C762746F6DA0077B678 /* TestLibWithXCFramework.swift in Sources */ = {isa = PBXBuildFile; fileRef = F63E1C752746F6DA0077B678 /* TestLibWithXCFramework.swift */; };
-		F64F8A4A27C0328F0081A345 /* MLFoundations.docc in Sources */ = {isa = PBXBuildFile; fileRef = F64F8A4927C0328F0081A345 /* MLFoundations.docc */; };
 		F64F8A5027C032900081A345 /* MLFoundations.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F64F8A4627C0328F0081A345 /* MLFoundations.framework */; };
 		F64F8A5727C032900081A345 /* MLFoundationsTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = F64F8A5627C032900081A345 /* MLFoundationsTests.swift */; };
-		F64F8A5827C032900081A345 /* MLFoundations.h in Headers */ = {isa = PBXBuildFile; fileRef = F64F8A4827C0328F0081A345 /* MLFoundations.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		F64F8A6D27C032B70081A345 /* Core.docc in Sources */ = {isa = PBXBuildFile; fileRef = F64F8A6C27C032B70081A345 /* Core.docc */; };
 		F64F8A7327C032B70081A345 /* Core.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F64F8A6927C032B70081A345 /* Core.framework */; };
 		F64F8A7A27C032B70081A345 /* CoreTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = F64F8A7927C032B70081A345 /* CoreTests.swift */; };
-		F64F8A7B27C032B70081A345 /* Core.h in Headers */ = {isa = PBXBuildFile; fileRef = F64F8A6B27C032B70081A345 /* Core.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		F64F8A8B27C034530081A345 /* CoreClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = F64F8A8A27C034530081A345 /* CoreClass.swift */; };
 		F64F8A8D27C0345C0081A345 /* MLFoundationsClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = F64F8A8C27C0345C0081A345 /* MLFoundationsClass.swift */; };
 		F6914F03282ED5D600D10EF0 /* Core.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F64F8A6927C032B70081A345 /* Core.framework */; platformFilter = ios; };
@@ -160,24 +155,24 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
-		23F7E364FA907624E4DCDC2E /* Pods_CoreTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_CoreTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		29FBD924BC2933F327C43883 /* Pods-Core.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Core.debug.xcconfig"; path = "Target Support Files/Pods-Core/Pods-Core.debug.xcconfig"; sourceTree = "<group>"; };
 		2CD0E680DB4C269BDF7486D9 /* Pods-TestGithubCI.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TestGithubCI.debug.xcconfig"; path = "Target Support Files/Pods-TestGithubCI/Pods-TestGithubCI.debug.xcconfig"; sourceTree = "<group>"; };
 		327AA5F7C71B9709B2A5D734 /* Pods_Core.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Core.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		488FF33DB9BA950C569DBAD3 /* Pods-MLFoundationsTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MLFoundationsTests.debug.xcconfig"; path = "Target Support Files/Pods-MLFoundationsTests/Pods-MLFoundationsTests.debug.xcconfig"; sourceTree = "<group>"; };
+		52B37FB5B9C8C641E5A1E54F /* Pods_CoreTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_CoreTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		5821BDCC93F18452FADE6B9A /* Pods-TestXCFramework.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TestXCFramework.debug.xcconfig"; path = "Target Support Files/Pods-TestXCFramework/Pods-TestXCFramework.debug.xcconfig"; sourceTree = "<group>"; };
 		6191FF01DC4685253F748663 /* Pods-CoreTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CoreTests.debug.xcconfig"; path = "Target Support Files/Pods-CoreTests/Pods-CoreTests.debug.xcconfig"; sourceTree = "<group>"; };
 		641080A9E01E157660613DC0 /* Pods_MLFoundations.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_MLFoundations.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		7700C653AD3D88AF3B360C51 /* Pods-MLFoundations.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MLFoundations.debug.xcconfig"; path = "Target Support Files/Pods-MLFoundations/Pods-MLFoundations.debug.xcconfig"; sourceTree = "<group>"; };
 		86B36C4B0362A4BE3D7EBC48 /* Pods-Core.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Core.release.xcconfig"; path = "Target Support Files/Pods-Core/Pods-Core.release.xcconfig"; sourceTree = "<group>"; };
 		90D1C6D529F8DEFA2E1E0007 /* Pods-TestXCFramework.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TestXCFramework.release.xcconfig"; path = "Target Support Files/Pods-TestXCFramework/Pods-TestXCFramework.release.xcconfig"; sourceTree = "<group>"; };
-		94CB288A726C09EEBA1122CB /* Pods_TestGithubCI.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_TestGithubCI.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		980B3D3C8651A0A403C15657 /* Pods_MLFoundationsTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_MLFoundationsTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		AEB01FFF0D05C968F74045F8 /* Pods_TestXCFramework.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_TestXCFramework.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		B2B34EDD2A8AD133DC50F604 /* Pods_MLFoundationsTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_MLFoundationsTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		BE2045E3704FE6FEE7829A1A /* Pods-MLFoundations.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MLFoundations.release.xcconfig"; path = "Target Support Files/Pods-MLFoundations/Pods-MLFoundations.release.xcconfig"; sourceTree = "<group>"; };
 		C7A65EAF663936323C7F5CD8 /* Pods-TestGithubCI.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TestGithubCI.release.xcconfig"; path = "Target Support Files/Pods-TestGithubCI/Pods-TestGithubCI.release.xcconfig"; sourceTree = "<group>"; };
 		D5D28CE3A0F729CD4F0F9998 /* Pods-MLFoundationsTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MLFoundationsTests.release.xcconfig"; path = "Target Support Files/Pods-MLFoundationsTests/Pods-MLFoundationsTests.release.xcconfig"; sourceTree = "<group>"; };
 		DCFF5E5F0D996DA79C581641 /* Pods-CoreTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CoreTests.release.xcconfig"; path = "Target Support Files/Pods-CoreTests/Pods-CoreTests.release.xcconfig"; sourceTree = "<group>"; };
+		E5576C710FD86AA9314AEB67 /* Pods_TestGithubCI.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_TestGithubCI.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		F6071A012739984B00CE56BA /* TestGithubCI.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TestGithubCI.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		F6071A042739984B00CE56BA /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		F6071A082739984B00CE56BA /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -187,19 +182,13 @@
 		F6071A172739984E00CE56BA /* TestGithubCITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = TestGithubCITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		F6071A1B2739984E00CE56BA /* TestGithubCITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestGithubCITests.swift; sourceTree = "<group>"; };
 		F63E1C572746F6BA0077B678 /* TestXCFramework.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = TestXCFramework.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		F63E1C592746F6BA0077B678 /* TestXCFramework.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TestXCFramework.h; sourceTree = "<group>"; };
-		F63E1C5A2746F6BA0077B678 /* TestXCFramework.docc */ = {isa = PBXFileReference; lastKnownFileType = folder.documentationcatalog; path = TestXCFramework.docc; sourceTree = "<group>"; };
 		F63E1C602746F6BA0077B678 /* TestXCFrameworkTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = TestXCFrameworkTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		F63E1C672746F6BA0077B678 /* TestXCFrameworkTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestXCFrameworkTests.swift; sourceTree = "<group>"; };
 		F63E1C752746F6DA0077B678 /* TestLibWithXCFramework.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestLibWithXCFramework.swift; sourceTree = "<group>"; };
 		F64F8A4627C0328F0081A345 /* MLFoundations.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = MLFoundations.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		F64F8A4827C0328F0081A345 /* MLFoundations.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MLFoundations.h; sourceTree = "<group>"; };
-		F64F8A4927C0328F0081A345 /* MLFoundations.docc */ = {isa = PBXFileReference; lastKnownFileType = folder.documentationcatalog; path = MLFoundations.docc; sourceTree = "<group>"; };
 		F64F8A4F27C032900081A345 /* MLFoundationsTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = MLFoundationsTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		F64F8A5627C032900081A345 /* MLFoundationsTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MLFoundationsTests.swift; sourceTree = "<group>"; };
 		F64F8A6927C032B70081A345 /* Core.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Core.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		F64F8A6B27C032B70081A345 /* Core.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Core.h; sourceTree = "<group>"; };
-		F64F8A6C27C032B70081A345 /* Core.docc */ = {isa = PBXFileReference; lastKnownFileType = folder.documentationcatalog; path = Core.docc; sourceTree = "<group>"; };
 		F64F8A7227C032B70081A345 /* CoreTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = CoreTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		F64F8A7927C032B70081A345 /* CoreTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoreTests.swift; sourceTree = "<group>"; };
 		F64F8A8A27C034530081A345 /* CoreClass.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CoreClass.swift; sourceTree = "<group>"; };
@@ -211,7 +200,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				4AA8C3397936E2414EECA615 /* Pods_TestGithubCI.framework in Frameworks */,
+				D4A2B60806DF44C7EF3B0012 /* Pods_TestGithubCI.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -252,7 +241,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				F64F8A5027C032900081A345 /* MLFoundations.framework in Frameworks */,
-				E23C9A1C607EE8A99D290FAB /* Pods_MLFoundationsTests.framework in Frameworks */,
+				7054CD9988EB174816855BE4 /* Pods_MLFoundationsTests.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -269,7 +258,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				F64F8A7327C032B70081A345 /* Core.framework in Frameworks */,
-				830C1ECE360BD927B8D0114D /* Pods_CoreTests.framework in Frameworks */,
+				E54C336B0FF1BDADB74C74D8 /* Pods_CoreTests.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -299,11 +288,11 @@
 			isa = PBXGroup;
 			children = (
 				327AA5F7C71B9709B2A5D734 /* Pods_Core.framework */,
-				23F7E364FA907624E4DCDC2E /* Pods_CoreTests.framework */,
 				641080A9E01E157660613DC0 /* Pods_MLFoundations.framework */,
-				B2B34EDD2A8AD133DC50F604 /* Pods_MLFoundationsTests.framework */,
-				94CB288A726C09EEBA1122CB /* Pods_TestGithubCI.framework */,
 				AEB01FFF0D05C968F74045F8 /* Pods_TestXCFramework.framework */,
+				52B37FB5B9C8C641E5A1E54F /* Pods_CoreTests.framework */,
+				980B3D3C8651A0A403C15657 /* Pods_MLFoundationsTests.framework */,
+				E5576C710FD86AA9314AEB67 /* Pods_TestGithubCI.framework */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -363,8 +352,6 @@
 		F63E1C582746F6BA0077B678 /* TestXCFramework */ = {
 			isa = PBXGroup;
 			children = (
-				F63E1C592746F6BA0077B678 /* TestXCFramework.h */,
-				F63E1C5A2746F6BA0077B678 /* TestXCFramework.docc */,
 				F63E1C752746F6DA0077B678 /* TestLibWithXCFramework.swift */,
 			);
 			path = TestXCFramework;
@@ -382,8 +369,6 @@
 			isa = PBXGroup;
 			children = (
 				F64F8A8C27C0345C0081A345 /* MLFoundationsClass.swift */,
-				F64F8A4827C0328F0081A345 /* MLFoundations.h */,
-				F64F8A4927C0328F0081A345 /* MLFoundations.docc */,
 			);
 			path = MLFoundations;
 			sourceTree = "<group>";
@@ -400,8 +385,6 @@
 			isa = PBXGroup;
 			children = (
 				F64F8A8A27C034530081A345 /* CoreClass.swift */,
-				F64F8A6B27C032B70081A345 /* Core.h */,
-				F64F8A6C27C032B70081A345 /* Core.docc */,
 			);
 			path = Core;
 			sourceTree = "<group>";
@@ -421,7 +404,6 @@
 			isa = PBXHeadersBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				F63E1C692746F6BA0077B678 /* TestXCFramework.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -429,7 +411,6 @@
 			isa = PBXHeadersBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				F64F8A5827C032900081A345 /* MLFoundations.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -437,7 +418,6 @@
 			isa = PBXHeadersBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				F64F8A7B27C032B70081A345 /* Core.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -905,7 +885,6 @@
 			buildActionMask = 2147483647;
 			files = (
 				F64F8A8D27C0345C0081A345 /* MLFoundationsClass.swift in Sources */,
-				F64F8A4A27C0328F0081A345 /* MLFoundations.docc in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -921,7 +900,6 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				F64F8A6D27C032B70081A345 /* Core.docc in Sources */,
 				F64F8A8B27C034530081A345 /* CoreClass.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -1171,7 +1149,7 @@
 				INFOPLIST_KEY_UISupportedInterfaceOrientations = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
-				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -1204,7 +1182,7 @@
 				INFOPLIST_KEY_UISupportedInterfaceOrientations = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
-				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -1283,7 +1261,7 @@
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_KEY_NSHumanReadableCopyright = "";
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
-				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -1320,7 +1298,7 @@
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_KEY_NSHumanReadableCopyright = "";
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
-				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -1406,7 +1384,7 @@
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_KEY_NSHumanReadableCopyright = "";
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
-				IPHONEOS_DEPLOYMENT_TARGET = 15.2;
+				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -1442,7 +1420,7 @@
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_KEY_NSHumanReadableCopyright = "";
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
-				IPHONEOS_DEPLOYMENT_TARGET = 15.2;
+				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -1516,7 +1494,7 @@
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_KEY_NSHumanReadableCopyright = "";
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
-				IPHONEOS_DEPLOYMENT_TARGET = 15.2;
+				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -1552,7 +1530,7 @@
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_KEY_NSHumanReadableCopyright = "";
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
-				IPHONEOS_DEPLOYMENT_TARGET = 15.2;
+				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
