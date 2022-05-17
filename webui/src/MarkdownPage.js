@@ -1,6 +1,5 @@
 import React from "react";
 import "./markdown.css";
-import TopNavigationBar from "./TopNavigationBar";
 import "highlight.js/styles/xcode.css"
 
 const parse = require('html-react-parser');
