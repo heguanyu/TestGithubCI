@@ -70,7 +70,7 @@ jobs:
           pwd
           git add --force docs
           git add binaries/${{github.event.inputs.release_version}}/TestXCFramework.xcframework.zip
-          git add docs_archives/${{github.event.inputs.release_version}}
+          git add docs_archives
           git commit -a -m "Update the docs and the framework"
           git push origin main
 
