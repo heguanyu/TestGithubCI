@@ -13,7 +13,7 @@ async function getVersionHistory() {
     const tagsJson = await fetch("./data/tags.json").then(x=>x.text()).then(x=> {
         return JSON.parse(x);
     });
-    const sortedTags = tagsJson.tags.map(x=>{return {version: x.version, date: +x.date}}).sort( x=> -x.date)
+    const sortedTags = tagsJson.tags.map(x=>{return {version: x.version, date: +x.date}}).sort( (x,y)=>{return (+y.date)-(+x.date)})
     for (let i = 0; i < sortedTags.length; i++) {
         const tag = sortedTags[i];
         const lastTag = i ? sortedTags[i-1] : null
