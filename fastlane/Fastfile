@@ -220,14 +220,15 @@ platform :ios do
       build_xcframework(version: new_release_version, scheme: scheme, output: output_path, workspace: "TestGithubCI")
     }
 
-    output = ""
     if schemes.length == 1
-      output = "./#{output_path}/#{framework_paths[0]}"
+      zipfilePath = "#{framework_paths[0]}.zip"
     else
       zipfilePath = "#{package_name}-#{new_release_version}.zip"
-      Action.sh("cd ../#{output_path} && zip -r #{zipfilePath} #{framework_paths.join(" ")} && cd ../fastlane")
-      output = "./#{output_path}/" + zipfilePath
     end
+    Dir.chdir("../#{output_path}") do
+      sh("zip -r #{zipfilePath} #{framework_paths.join(" ")}")
+    end
+    output = "./#{output_path}/#{zipfilePath}"
 
     output
     # combile xcarchive
