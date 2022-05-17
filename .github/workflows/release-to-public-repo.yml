@@ -34,8 +34,8 @@ jobs:
           cd main
           brew install sourcekitten
           pod install
-          echo "Going to sourcekitten"
-          sourcekitten doc --module-name TestXCFramework -- -resolvePackageDependencies -workspace TestGithubCI.xcworkspace -scheme TestXCFramework -sdk iphoneos
+          echo "Going to jazzy"
+          jazzy -x -workspace,TestGithubCI.xcworkspace,-scheme,TestXCFramework,-sdk,iphoneos | grep "/var.*\.log" | cat
           echo "Sourcekitten done"
       # Generate document
       - name: Create the docs directory from webui
