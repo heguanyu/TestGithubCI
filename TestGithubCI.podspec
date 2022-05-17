@@ -18,5 +18,5 @@ Pod::Spec.new do |spec|
   spec.source            = {
     :http=> "https://github.com/heguanyu/TestGithubCI/releases/download/#{spec.version}/TestXCFramework.xcframework.zip"
   }
-  spec.vendored_frameworks =  "build/TestXCFramework-#{spec.version}/TestXCFramework.xcframework"
+  spec.vendored_frameworks =  "TestXCFramework.xcframework"
 end
