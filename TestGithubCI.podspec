@@ -1,6 +1,6 @@
 Pod::Spec.new do |spec|
   spec.name              = "TestGithubCI"
-  spec.version           = "0.3.5"
+  spec.version           = "0.3.6"
   spec.summary           = "Testing Github actions for IOS SDK build and deployment features"
 
   spec.description       = <<-DESC
