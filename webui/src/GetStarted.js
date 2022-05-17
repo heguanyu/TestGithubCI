@@ -1,12 +1,13 @@
-import {marked} from "marked";
 import React from "react";
 import "./markdown.css";
 import TopNavigationBar from "./TopNavigationBar";
+
 const parse = require('html-react-parser');
+const md = require("markdown-it")();
 
 async function getGetStartedAsync() {
     const rawData = await fetch("./data/GETSTARTED.md").then(x=>x.text());
-    const result = marked.parse(rawData);
+    const result = md.render(rawData);
     return result;
 }
 
