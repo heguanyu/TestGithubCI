@@ -1,4 +1,3 @@
-import {marked} from "marked";
 import React from "react";
 import "./markdown.css";
 import TopNavigationBar from "./TopNavigationBar";
@@ -6,8 +5,7 @@ const parse = require('html-react-parser');
 
 async function getGetStartedAsync() {
     const rawData = await fetch("./data/GETSTARTED.md").then(x=>x.text());
-    const result = marked.parse(rawData);
-    return result;
+    return rawData;
 }
 
 class GetStarted extends React.Component {
