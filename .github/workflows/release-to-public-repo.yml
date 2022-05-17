@@ -62,6 +62,9 @@ jobs:
           rm -rf ${{env.destination_path}}/doc_archives/${{github.event.inputs.release_version}}
           mkdir -p ${{env.destination_path}}/doc_archives/${{github.event.inputs.release_version}}
           cp -r main/jazzydocs/* ${{env.destination_path}}/doc_archives/${{github.event.inputs.release_version}}/
+          ls -al main/jazzydocs
+          echo "***********************************"
+          ls -al ${{env.destination_path}}/doc_archives/${{github.event.inputs.release_version}}/
 
       # Checkin the docs to destination remote
       - name: Goto the dest repo and commit
@@ -70,7 +73,8 @@ jobs:
           pwd
           git add --force docs
           git add binaries/${{github.event.inputs.release_version}}/TestXCFramework.xcframework.zip
-          git add docs_archives
+          ls -al doc_archives/${{github.event.inputs.release_version}}/
+          git add docs_archives/${{github.event.inputs.release_version}}
           git commit -a -m "Update the docs and the framework"
           git push origin main
 
