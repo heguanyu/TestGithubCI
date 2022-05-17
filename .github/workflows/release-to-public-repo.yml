@@ -33,6 +33,7 @@ jobs:
         run: |
           cd main
           brew install sourcekitten
+          pod install
           echo "Going to sourcekitten"
           sourcekitten doc --module-name TestXCFramework -- -resolvePackageDependencies -workspace TestGithubCI.xcworkspace -scheme TestXCFramework -sdk iphoneos
           echo "Sourcekitten done"
