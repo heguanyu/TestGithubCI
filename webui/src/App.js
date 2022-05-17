@@ -16,18 +16,19 @@ class App extends React.Component {
     }
 
     render() {
+        const theswitch = (<Switch>
+            <Route path={"/"} exact component={ReadmeSection}></Route>
+            <Route path="/dashboards" exact component={Dashboards} />
+            <Route path="/getstarted" exact component={GetStarted} />
+            <Route path="/versions" exact component={VersionsTable} />
+            <Route path="/changelog" exact component={ChangelogSection} />
+            <Route path="/documents" exact component={Documents} />
+        </Switch>)
         if (window.location.origin.indexOf(".github.io") > 0) {
             return (
                 <div className="App">
                     <HashRouter hashType={"noslash"} >
-                        <Switch>
-                            <Route path={"/"} exact component={ReadmeSection}></Route>
-                            <Route path="/dashboards" exact component={Dashboards} />
-                            <Route path="/getstarted" exact component={GetStarted} />
-                            <Route path="/versions" exact component={VersionsTable} />
-                            <Route path="/changelog" exact component={ChangelogSection} />
-                            <Route path="/documents" exact component={Documents} />
-                        </Switch>
+                        {theswitch}
                     </HashRouter>
                 </div>
             );
@@ -36,14 +37,7 @@ class App extends React.Component {
             return (
                 <div className="App">
                     <BrowserRouter >
-                        <Switch>
-                            <Route path={"/"} exact component={ReadmeSection}></Route>
-                            <Route path="/dashboards" exact component={Dashboards} />
-                            <Route path="/getstarted" exact component={GetStarted} />
-                            <Route path="/versions" exact component={VersionsTable} />
-                            <Route path="/changelog" exact component={ChangelogSection} />
-                            <Route path="/documents" exact component={Documents} />
-                        </Switch>
+                        {theswitch}
                     </BrowserRouter>
                 </div>
             );
