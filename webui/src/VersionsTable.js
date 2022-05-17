@@ -54,7 +54,7 @@ class VersionsTable extends React.Component{
                 <td>{x.date}</td>
                 <td>{statusMap[x.status]}</td>
                 <td>{x.deprecation}</td>
-                <td><a href={"https://github.com/linkedin/audience-network-ios/releases/tag/"+x.version} target="_blank">Link</a></td>
+                <td><a href={"https://github.com/heguanyu/TestPoCIntegration/blob/main/binaries/"+x.version + "/TestXCFramework.xcframework.zip"} target="_blank">Link</a></td>
                 <td><a href={"/#documents"} target="_blank">Link</a></td>
             </tr>)
         })

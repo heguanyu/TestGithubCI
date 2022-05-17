@@ -54,9 +54,14 @@ jobs:
           rm -rf ${{env.destination_path}}/binaries/${{github.event.inputs.release_version}}
           mkdir -p ${{env.destination_path}}/binaries/${{github.event.inputs.release_version}}
           cp -r main/build/TestXCFramework-${{github.event.inputs.release_version}}/TestXCFramework.xcframework.zip ${{env.destination_path}}/binaries/${{github.event.inputs.release_version}}
+          
           rm -rf ${{env.destination_path}}/docs
           mkdir -p ${{env.destination_path}}/docs
           cp -r main/docs/* ${{env.destination_path}}/docs/
+          
+          rm -rf ${{env.destination_path}}/doc_archives/${{github.event.inputs.release_version}}
+          mkdir -p ${{env.destination_path}}/doc_archives/${{github.event.inputs.release_version}}
+          cp -r main/jazzydocs/* ${{env.destination_path}}/doc_archives/${{github.event.inputs.release_version}}/
 
       # Checkin the docs to destination remote
       - name: Goto the dest repo and commit
