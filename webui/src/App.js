@@ -1,7 +1,7 @@
 import 'bootstrap/dist/css/bootstrap.min.css';
 import './App.css';
 import React from 'react';
-import { HashRouter, Route, Switch, Redirect } from 'react-router-dom';
+import {HashRouter, Route, Switch, Redirect, BrowserRouter} from 'react-router-dom';
 import { LastLocationProvider } from 'react-router-last-location';
 import ReadmeSection from "./ReadmeSection";
 import ChangelogSection from "./ChangelogSection";
@@ -16,20 +16,39 @@ class App extends React.Component {
     }
 
     render() {
-        return (
-            <div className="App">
-                <HashRouter hashType={"noslash"}>
-                    <Switch>
-                        <Route path={"/"} exact component={ReadmeSection}></Route>
-                        <Route path="/dashboards" exact component={Dashboards} />
-                        <Route path="/getstarted" exact component={GetStarted} />
-                        <Route path="/versions" exact component={VersionsTable} />
-                        <Route path="/changelog" exact component={ChangelogSection} />
-                        <Route path="/documents" exact component={Documents} />
-                    </Switch>
-                </HashRouter>
-            </div>
-        );
+        if (window.location.origin.indexOf(".github.io") > 0) {
+            return (
+                <div className="App">
+                    <HashRouter hashType={"noslash"} >
+                        <Switch>
+                            <Route path={"/"} exact component={ReadmeSection}></Route>
+                            <Route path="/dashboards" exact component={Dashboards} />
+                            <Route path="/getstarted" exact component={GetStarted} />
+                            <Route path="/versions" exact component={VersionsTable} />
+                            <Route path="/changelog" exact component={ChangelogSection} />
+                            <Route path="/documents" exact component={Documents} />
+                        </Switch>
+                    </HashRouter>
+                </div>
+            );
+        }
+        else {
+            return (
+                <div className="App">
+                    <BrowserRouter >
+                        <Switch>
+                            <Route path={"/"} exact component={ReadmeSection}></Route>
+                            <Route path="/dashboards" exact component={Dashboards} />
+                            <Route path="/getstarted" exact component={GetStarted} />
+                            <Route path="/versions" exact component={VersionsTable} />
+                            <Route path="/changelog" exact component={ChangelogSection} />
+                            <Route path="/documents" exact component={Documents} />
+                        </Switch>
+                    </BrowserRouter>
+                </div>
+            );
+        }
+
     }
 }
 

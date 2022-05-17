@@ -1,30 +1,14 @@
 import React from "react";
-import "./markdown.css";
 import TopNavigationBar from "./TopNavigationBar";
+import MarkdownPage from "./MarkdownPage";
 
-const parse = require('html-react-parser');
-const md = require("markdown-it")();
-
-async function getChangelogContentAsync() {
-    const rawData = await fetch("./data/CHANGELOG.md").then(x=>x.text());
-    const result = md.render(rawData);
-    return result;
-}
 
 class ChangelogSection extends React.Component {
-
-    componentDidMount() {
-        getChangelogContentAsync().then(content => {
-            this.setState({
-                changelogContent: content
-            })
-        })
-    }
 
     render() {
         return (<div>
             <TopNavigationBar></TopNavigationBar>
-            <div className={"ChangelogPanel MarkdownPanel"} style={{textAlign: "left", margin: "10px auto", width: "60%"}}>{parse(this.state && this.state.changelogContent || "")}</div>
+            <MarkdownPage filename={"./data/CHANGELOG.md"}></MarkdownPage>
         </div>)
     }
 }
