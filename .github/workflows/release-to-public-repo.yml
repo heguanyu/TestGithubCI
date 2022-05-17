@@ -46,7 +46,7 @@ jobs:
           fastlane gen_web_ui_to_docs
       - name: Copy doc to destination
         run: |
-          rm -r ${{env.destination_path}}/docs
+          rm -rf ${{env.destination_path}}/docs
           mkdir -p ${{env.destination_path}}/docs
           cp -r main/docs/* ${{env.destination_path}}/docs/
       - name: Goto the dest repo and commit
