@@ -23,7 +23,7 @@ class GetStarted extends React.Component {
     render() {
         return (<div>
             <TopNavigationBar></TopNavigationBar>
-            <div className={"GetStartedPanel MarkdownPanel"} style={{textAlign: "left", margin: "10px auto", width: "60%"}}>{parse(this.state && this.state.getStartedContent || "")}</div>
+            <div markdown={"1"} className={"GetStartedPanel MarkdownPanel"} style={{textAlign: "left", margin: "10px auto", width: "60%"}}>{this.state && this.state.getStartedContent || ""}</div>
         </div>)
     }
 }
