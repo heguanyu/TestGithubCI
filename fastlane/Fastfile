@@ -46,6 +46,9 @@ platform :ios do
       sh("cp CHANGELOG.md webui/public/data")
       sh("cp DragNDropGuide.md webui/public/data/GETSTARTED.md")
       sh("cp -r jazzydocs webui/public/data/")
+      sh("rm -rf webui/public/doc_archives/#{new_release_version}")
+      sh("mkdir -p webui/public/doc_archives/#{new_release_version}")
+      sh("cp -r jazzydocs/* webui/public/doc_archives/#{new_release_version}/")
     end
     Dir.chdir("../webui") do
       sh("npm install")
@@ -127,10 +130,6 @@ platform :ios do
       derived_data_path: "derived_data"
     )
 #    pod_lib_lint
-  end
-
-  lane :someA do |options|
-    puts "Hello world!"
   end
 
   desc "Just build"

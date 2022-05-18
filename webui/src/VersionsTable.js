@@ -4,8 +4,8 @@ import TopNavigationBar from "./TopNavigationBar";
 import {Link} from "react-router-dom";
 
 const statusMap = {
-    0: "Active",
-    1: "Maintenance",
+    0: "Current",
+    1: "Maintaining",
     2: "Deprecated"
 }
 
