@@ -42,7 +42,7 @@ jobs:
         run: |
           rm -rf main/webui/public/doc_archives
           mkdir -p main/webui/public/doc_archives
-          cp ${{env.destination_path}}/doc_archives/* main/webui/public
+          cp -r ${{env.destination_path}}/doc_archives/* main/webui/public/doc_archives
       # Release on self repo. Also generate documentations
       - name: build-and-release-on-main-repo
         env:
