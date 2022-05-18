@@ -31,6 +31,14 @@ Pulls dependencies
 
 Generate tag history from git
 
+### ios p
+
+```sh
+[bundle exec] fastlane ios p
+```
+
+Playground
+
 ### ios gen_web_ui_to_docs
 
 ```sh
@@ -59,14 +67,6 @@ Generate Apple doc
 
 ```sh
 [bundle exec] fastlane ios tests
-```
-
-
-
-### ios someA
-
-```sh
-[bundle exec] fastlane ios someA
 ```
 
 

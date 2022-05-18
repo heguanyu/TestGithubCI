@@ -39,6 +39,7 @@ async function getVersionHistory() {
     return result;
 }
 class VersionsTable extends React.Component{
+
     componentDidMount() {
         getVersionHistory().then(tagHistory => {
             this.setState({
@@ -50,13 +51,16 @@ class VersionsTable extends React.Component{
     render() {
         let versions = this.state && this.state.tagHistory || [];
         let tbodyrows = versions.map(x => {
-            return (<tr>
+            return (<tr key={x.version}>
                 <td>{x.version}</td>
                 <td>{x.date}</td>
                 <td>{statusMap[x.status]}</td>
                 <td>{x.deprecation}</td>
-                <td><a href={"https://github.com/heguanyu/TestPoCIntegration/raw/main/binaries/"+x.version + "/TestXCFramework.xcframework.zip"} target="_blank">Link</a></td>
-                <td><Link to={"/#documents"} target="_blank">Link</Link></td>
+                <td><a href={`https://github.com/heguanyu/TestPoCIntegration/raw/main/binaries/${x.version}/TestXCFramework.xcframework.zip`} target="_blank">Link</a></td>
+                <td><Link to={{
+                    pathname: "/documents",
+                    search: `?v=${x.version}`
+                }}>Link</Link></td>
             </tr>)
         })
         return (<>

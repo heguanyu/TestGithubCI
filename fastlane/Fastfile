@@ -51,6 +51,7 @@ platform :ios do
       sh("cp -r jazzydocs/* webui/public/doc_archives/#{new_release_version}/")
     end
     Dir.chdir("../webui") do
+      sh("sed -i '' '3i\\'$'\n''  \"homepage\": \"https://heguanyu.github.io/TestPoCIntegration\",\n' package.json")
       sh("npm install")
       sh("CI=false npm run build")
     end
@@ -59,6 +60,11 @@ platform :ios do
       sh("mkdir docs")
       sh("cp -r webui/build/* docs/")
     end
+  end
+
+  desc "Playground"
+  lane :p do
+
   end
 
   desc "Generate Apple doc and push to the public repo"

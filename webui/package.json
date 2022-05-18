@@ -1,6 +1,5 @@
 {
   "name": "webui",
-  "homepage": "https://heguanyu.github.io/TestPoCIntegration",
   "version": "0.1.0",
   "private": true,
   "dependencies": {
