@@ -38,7 +38,8 @@ platform :ios do
     Dir.chdir("../webui") do
       stringtags = sh('git for-each-ref --shell --format="{\'version\':%(refname:short),\'date\':%(creatordate:format:%s)}" "refs/tags/*"').gsub("'", '"')
       # Hack to assume there is a new tag to be created
-      tags = '{"version":"'+new_release_version+'","date":"'+Time.now.to_i.to_s+'"},' + "\n" + stringtags.split("\n").join(",\n")
+      # tags = '{"version":"'+new_release_version+'","date":"'+Time.now.to_i.to_s+'"},' + "\n" + stringtags.split("\n").join(",\n")
+      tags = stringtags.split("\n").join(",\n")
       File.write("public/data/tags.json", "{\"tags\":[\n#{tags}\n]}")
     end
     Dir.chdir("..") do
