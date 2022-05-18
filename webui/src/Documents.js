@@ -46,7 +46,7 @@ class Documents extends React.Component {
         urlSegments.push(`${slash}documents?v=${selectedOption.value}`);
         window.location.href = urlSegments.join('/');
         if (this.isProduction) {
-            this.forceUpdate();
+            window.location.reload();
         }
     }
 
