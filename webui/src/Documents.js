@@ -4,6 +4,7 @@ import Select from 'react-select'
 
 class Documents extends React.Component {
 
+    isProduction = (window.location.origin.indexOf("github.io")>=0)
     statusMap = {
         0: "Current",
         1: "Maintaining"
@@ -41,18 +42,18 @@ class Documents extends React.Component {
     handleSelectVersion(selectedOption) {
         let urlSegments = window.location.href.split("/");
         urlSegments.pop();
-        let slash = "";
-        if (window.location.origin.indexOf("github.io")>=0) {
-            slash = "#";
-        }
+        let slash = this.isProduction ?  "#" : "";
         urlSegments.push(`${slash}documents?v=${selectedOption.value}`);
         window.location.href = urlSegments.join('/');
+        if (this.isProduction) {
+            this.forceUpdate();
+        }
     }
 
     componentDidMount() {
         this.getVersionHistory().then(options => {
             let search = window.location.search;
-            if (window.location.origin.indexOf("github.io")>=0) {
+            if (this.isProduction) {
                 let urlSegments = window.location.href.split("?");
                 if (urlSegments.length <= 1) {
                     search = "?"
