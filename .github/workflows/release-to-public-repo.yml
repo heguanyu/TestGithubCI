@@ -32,7 +32,12 @@ jobs:
           path: ${{env.destination_path}}
           token: ${{secrets.RELEASE_TOKEN}}
       - uses: actions/setup-node@v3
-      # Release on self repo
+      - name: Setup the codebase
+        run: |
+          cd main
+          bundle install
+          fastlane build_dependencies
+      # Release on self repo. Also generate documentations
       - name: build-and-release-on-main-repo
         env:
           COCOAPODS_TRUNK_TOKEN: ${{ secrets.COCOAPODS_TRUNK_TOKEN }}
@@ -40,13 +45,6 @@ jobs:
         run: |
           cd main
           fastlane create_release version:${{github.event.inputs.release_version}} shadow_repo:${{env.repo_user}}/${{env.destination_path}}
-
-      # Generate document
-      - name: Create the docs directory from webui
-        run: |
-          cd main
-          bundle install
-          fastlane build_dependencies
           fastlane gen_web_ui_to_docs version:${{github.event.inputs.release_version}}
 
       # Copy docs to the destination repo
