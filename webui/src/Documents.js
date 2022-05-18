@@ -1,7 +1,6 @@
 import React from "react";
 import TopNavigationBar from "./TopNavigationBar";
 import Select from 'react-select'
-import redirect from "react-router-dom/es/Redirect";
 
 class Documents extends React.Component {
 
@@ -40,14 +39,31 @@ class Documents extends React.Component {
     }
 
     handleSelectVersion(selectedOption) {
-        window.location.href = `/documents?v=${selectedOption.value}`
+        let urlSegments = window.location.href.split("/");
+        urlSegments.pop();
+        let slash = "";
+        if (window.location.origin.indexOf("github.io")>=0) {
+            slash = "#";
+        }
+        urlSegments.push(`${slash}documents?v=${selectedOption.value}`);
+        window.location.href = urlSegments.join('/');
     }
 
     componentDidMount() {
         this.getVersionHistory().then(options => {
+            let search = window.location.search;
+            if (window.location.origin.indexOf("github.io")>=0) {
+                let urlSegments = window.location.href.split("?");
+                if (urlSegments.length <= 1) {
+                    search = "?"
+                }
+                else {
+                    search = `?${urlSegments[1]}`
+                }
+            }
             this.setState({
                 selectOptions: options,
-                selectedVersion: new URLSearchParams(window.location.search).get("v")
+                selectedVersion: new URLSearchParams(search).get("v")
             })
         })
     }
