@@ -68,23 +68,6 @@ platform :ios do
 
   desc "Generate Apple doc"
   lane :gen_apple_doc do
-    #generate doc
-    # appledoc(
-    #   project_name: "TestGithubCI",
-    #   project_company: "LinkedIn, Inc",
-    #   input: [
-    #     "TestXCFramework"
-    #   ],
-    #   options: "--keep-intermediate-files --search-undocumented-doc",
-    #   warnings: "--warn-missing-output-path --warn-missing-company-id"
-    # )
-
-    #
-    # system "rm -r ../derived_data/*"
-    # jazzy(
-    #   config: '.jazzy.yaml'
-    # )
-
     modules = ["TestXCFramework", "Core", "MLFoundations"]
     source_kitten_source_files = modules.map{|moduleName| moduleName + ".json"}.join(",")
     puts Dir.pwd
