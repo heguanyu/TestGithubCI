@@ -38,7 +38,7 @@ jobs:
           cd main
           bundle install
           fastlane build_dependencies
-          fastlane gen_web_ui_to_docs
+          fastlane gen_web_ui_to_docs version:${{github.event.inputs.release_version}}
       # Release on self repo
       - name: build-and-release-on-main-repo
         env:
