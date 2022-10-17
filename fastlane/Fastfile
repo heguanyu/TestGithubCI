@@ -126,7 +126,9 @@ platform :ios do
   lane :tests do
     scan(
       scheme: "TestGithubCI",
-      derived_data_path: "derived_data"
+      derived_data_path: "derived_data",
+      reset_simulator: true,
+      devices: ['iPhone 13']
     )
     system "rm -r ../xcov_output/*"
     xcov(
