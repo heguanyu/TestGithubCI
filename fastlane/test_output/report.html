@@ -110,7 +110,9 @@
       </section>
       <section class="right">
         <section id="counters">
-          <h2 id="test-count"><span class="number">2</span> tests</h2>
+          <h2 id="test-count"><span class="number">3</span> tests</h2>
+          
+            <h2 id="fail-count"><span class="number">1</span> failures</h2>
           
         </section>
         <section id="segment-bar">
@@ -121,7 +123,7 @@
     <section id="test-suites">
       
         
-        <section class="test-suite passing" id="TestGithubCITests.TestGithubCITests">
+        <section class="test-suite failing" id="TestGithubCITests.TestGithubCITests">
           <section class="heading" onclick="toggleTests(this);">
             <h3 class="title">TestGithubCITests.TestGithubCITests</h3>
           </section>
@@ -132,7 +134,7 @@
               <tr class="test passing "  onclick="toggleDetails('testExample');">
                 <td>
                   
-                    <h3 class="time">0.003s</h3>
+                    <h3 class="time">0.005s</h3>
                   
                 </td>
                 <td><h3 class="title">testExample</h3></td>
@@ -140,10 +142,36 @@
               
             
               
-              <tr class="test passing odd"  onclick="toggleDetails('testPerformanceExample');">
+              <tr class="test failing odd"  onclick="toggleDetails('testOsVersion');">
                 <td>
                   
-                    <h3 class="time">0.264s</h3>
+                </td>
+                <td><h3 class="title">testOsVersion</h3></td>
+              </tr>
+              
+                <tr class="details failing testOsVersion">
+                  <td></td>
+                  <td>
+                    
+                      <section class="test-detail reason">XCTAssertTrue failed</section>
+                    
+                    
+                      <section class="test-detail snippet">        <span class="nf">print</span><span class="p">(</span><span class="n">systemVersion</span><span class="p">)</span>
+        <span class="kt">XCTAssertTrue</span><span class="p">(</span><span class="n">systemVersion</span><span class="o">.</span><span class="nf">starts</span><span class="p">(</span><span class="nv">with</span><span class="p">:</span> <span class="s">"15"</span><span class="p">))</span>
+    <span class="p">}</span>
+</section>
+                      <section class="test-detail">/Users/ghe/projects/TestGithubCI/TestGithubCITests/TestGithubCITests.swift:42</section>
+                    
+                    
+                  </td>
+                </tr>
+              
+            
+              
+              <tr class="test passing "  onclick="toggleDetails('testPerformanceExample');">
+                <td>
+                  
+                    <h3 class="time">0.263s</h3>
                   
                 </td>
                 <td><h3 class="title">testPerformanceExample</h3></td>

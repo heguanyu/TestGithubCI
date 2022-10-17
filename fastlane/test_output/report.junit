@@ -1,7 +1,10 @@
 <?xml version='1.0' encoding='UTF-8'?>
-<testsuites name='TestGithubCITests.xctest' tests='2' failures='0'>
-  <testsuite name='TestGithubCITests.TestGithubCITests' tests='2' failures='0'>
-    <testcase classname='TestGithubCITests.TestGithubCITests' name='testExample' time='0.003'/>
-    <testcase classname='TestGithubCITests.TestGithubCITests' name='testPerformanceExample' time='0.264'/>
+<testsuites name='TestGithubCITests.xctest' tests='3' failures='1'>
+  <testsuite name='TestGithubCITests.TestGithubCITests' tests='3' failures='1'>
+    <testcase classname='TestGithubCITests.TestGithubCITests' name='testExample' time='0.005'/>
+    <testcase classname='TestGithubCITests.TestGithubCITests' name='testOsVersion'>
+      <failure message='XCTAssertTrue failed'>TestGithubCITests/TestGithubCITests.swift:42</failure>
+    </testcase>
+    <testcase classname='TestGithubCITests.TestGithubCITests' name='testPerformanceExample' time='0.263'/>
   </testsuite>
 </testsuites>
