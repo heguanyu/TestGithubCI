@@ -5,6 +5,6 @@
     <testcase classname='TestGithubCITests.TestGithubCITests' name='testOsVersion'>
       <failure message='XCTAssertTrue failed'>TestGithubCITests/TestGithubCITests.swift:42</failure>
     </testcase>
-    <testcase classname='TestGithubCITests.TestGithubCITests' name='testPerformanceExample' time='0.263'/>
+    <testcase classname='TestGithubCITests.TestGithubCITests' name='testPerformanceExample' time='0.262'/>
   </testsuite>
 </testsuites>
