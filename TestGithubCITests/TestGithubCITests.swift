@@ -35,5 +35,11 @@ class TestGithubCITests: XCTestCase {
             // Put the code you want to measure the time of here.
         }
     }
+    
+    func testOsVersion() throws {
+        var systemVersion = UIDevice.current.systemVersion
+        print(systemVersion)
+        XCTAssertTrue(systemVersion.starts(with: "15"))
+    }
 
 }
