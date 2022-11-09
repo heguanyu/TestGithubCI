@@ -18,7 +18,7 @@ env:
 
 jobs:
   create-doc-and-push-to-another-repo:
-    runs-on: macOS-latest
+    runs-on: macOS-11
     steps:
       # Checkout both repos
       - uses: actions/checkout@v3
@@ -58,7 +58,7 @@ jobs:
         run: |
           rm -rf ${{env.destination_path}}/binaries/${{github.event.inputs.release_version}}
           mkdir -p ${{env.destination_path}}/binaries/${{github.event.inputs.release_version}}
-          cp -r main/build/TestXCFramework-${{github.event.inputs.release_version}}/TestXCFramework.xcframework.zip ${{env.destination_path}}/binaries/${{github.event.inputs.release_version}}
+          cp -r main/build/TestXCFramework-${{github.event.inputs.release_version}}.zip ${{env.destination_path}}/binaries/${{github.event.inputs.release_version}}
           
           rm -rf ${{env.destination_path}}/docs
           mkdir -p ${{env.destination_path}}/docs
@@ -74,7 +74,7 @@ jobs:
           cd ${{env.destination_path}}
           pwd
           git add --force docs
-          git add binaries/${{github.event.inputs.release_version}}/TestXCFramework.xcframework.zip
+          git add binaries/${{github.event.inputs.release_version}}/TestXCFramework-${{github.event.inputs.release_version}}.zip
           git add --force doc_archives/${{github.event.inputs.release_version}}
           git commit -a -m "Update the docs and the framework"
           git push origin main
