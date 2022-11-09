@@ -197,9 +197,13 @@ platform :ios do
       upload_assets: attched_framework,
       description: release_content
     )
-    pod_push(allow_warnings: true)
   end
 
+  desc "Push to cocoapod. Configured via TestGithubCI.podspec"
+  lane :publishToCocoapod do
+    pod_push(allow_warnings: true)
+  end
+  
   desc "Create binary frameworks with the `xcframework` format under the `build/` folder."
   lane :buildDeliverableZip do |options|
     new_release_version = options[:version]

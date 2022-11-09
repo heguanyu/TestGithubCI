@@ -79,3 +79,8 @@ jobs:
           git commit -a -m "Update the docs and the framework"
           git push origin main
 
+      # Send release as attachment is in destination repo
+      - name: Goto main repo and pod push
+        run: |
+          cd main
+          fastlane publishToCocoapod
