@@ -9,14 +9,14 @@ Pod::Spec.new do |spec|
   spec.homepage          = "https://github.com/heguanyu/TestGithubCI"
   spec.documentation_url = "https://github.com/heguanyu/TestGithubCI/blob/main/README.md"
   spec.license           = { :type => "Apache 2.0", :file => "LICENSE" }
-  spec.author            = { "Guanyu He" => "ghe@linkedin.com" }
+  spec.author            = { "Guanyu He" => "heguanyu9037@gmail.com" }
 
   spec.platform              = :ios
-  spec.ios.deployment_target = "13.0"
+  spec.ios.deployment_target = "12.0"
   spec.swift_version         = "5.0"
 
   spec.source            = {
-    :http=> "https://github.com/heguanyu/TestGithubCI/releases/download/#{spec.version}/TestXCFramework.xcframework.zip"
+    :http=> "https://github.com/heguanyu/TestPoCIntegration/raw/main/binaries/#{spec.version}/TestXCFramework-1.3.2.zip"
   }
-  spec.vendored_frameworks =  "TestXCFramework.xcframework"
+  spec.vendored_frameworks =  "TestXCFramework-#{spec.version}/TestXCFramework.xcframework"
 end
