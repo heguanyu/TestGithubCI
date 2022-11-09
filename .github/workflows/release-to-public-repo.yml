@@ -46,7 +46,6 @@ jobs:
       # Release on self repo. Also generate documentations
       - name: build-and-release-on-main-repo
         env:
-          COCOAPODS_TRUNK_TOKEN: ${{ secrets.COCOAPODS_TRUNK_TOKEN }}
           RELEASE_TOKEN: ${{ secrets.RELEASE_TOKEN }}
         run: |
           cd main
@@ -81,6 +80,8 @@ jobs:
 
       # Send release as attachment is in destination repo
       - name: Goto main repo and pod push
+        env:
+          COCOAPODS_TRUNK_TOKEN: ${{ secrets.COCOAPODS_TRUNK_TOKEN }}
         run: |
           cd main
           fastlane publishToCocoapod

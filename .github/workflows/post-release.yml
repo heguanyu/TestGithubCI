@@ -1,4 +1,4 @@
-# This workflow generates document and push to gh-pages
+# This workflow triggers pod push
 
 name: Post Deployment
 
@@ -7,22 +7,15 @@ on:
   workflow_dispatch:
     branches:
       - main
-  push:
-    # Whenever a new tag is created, run this post-release workflow
-    tags:
-      - '*'           # Push events to every tags
 
-  # Normally should be called by another workflow
-#  workflow_call:
 
 jobs:
   post-deployment:
     runs-on: macOS-latest
     steps:
-      - uses: actions/checkout@v2
-      # Generate document
-      - name: Create the doc
+      - uses: actions/checkout@v3
+      # Send release as attachment is in destination repo
+      - name: Goto main repo and pod push
         run: |
-          brew install sourcekitten
-          bundle install
-          fastlane gen_apple_doc
+          cd main
+          fastlane publishToCocoapod
