@@ -16,6 +16,8 @@ end
 target 'MLFoundationsTests' do
 end
 target 'TestXCFramework' do
+#   pod 'ZIPFoundation', '~> 0.9'
+#  pod 'TensorFlowLiteSwift'
 end
 # Development tools
 pod 'SwiftLint'

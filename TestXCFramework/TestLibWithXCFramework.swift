@@ -7,6 +7,7 @@
 
 import MLFoundations
 import CoreML
+//import ZIPFoundation
 
 public class TestLibWithXCFramework {
     public init() {
@@ -17,7 +18,32 @@ public class TestLibWithXCFramework {
       - Returns: A string
     */
     public static func someStaticFunction() -> String {
-        return "Hello IOS CI world!"
+        do {
+            
+            let sdkBundle = Bundle(for: TestLibWithXCFramework.self)
+            guard let mlmodelUrl = sdkBundle.url(forResource: "xgboost_test_mlmodel", withExtension: "") else {
+                return "Unable to load mlmodel"
+            }
+            var mlmodelcUrl = try MLModel.compileModel(at: mlmodelUrl)
+            mlmodelcUrl = mlmodelcUrl.appendingPathComponent("/")
+            print(mlmodelcUrl)
+            let fileManager = FileManager.default
+            
+            var resourceURL = mlmodelUrl
+            resourceURL.deleteLastPathComponent()
+            
+            
+            let destinationURL = resourceURL.appendingPathComponent("something.zip")
+            print(destinationURL)
+            
+            try fileManager.removeItem(at: destinationURL)
+//            try fileManager.zipItem(at: mlmodelcUrl, to: destinationURL)
+            return destinationURL.absoluteString
+        }
+        catch {
+            print(error)
+            return error.localizedDescription
+        }
     }
 
     /**

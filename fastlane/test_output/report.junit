@@ -1,10 +1,19 @@
-<?xml version='1.0' encoding='UTF-8'?>
-<testsuites name='TestGithubCITests.xctest' tests='3' failures='1'>
-  <testsuite name='TestGithubCITests.TestGithubCITests' tests='3' failures='1'>
-    <testcase classname='TestGithubCITests.TestGithubCITests' name='testExample' time='0.005'/>
-    <testcase classname='TestGithubCITests.TestGithubCITests' name='testOsVersion'>
-      <failure message='XCTAssertTrue failed'>TestGithubCITests/TestGithubCITests.swift:42</failure>
-    </testcase>
-    <testcase classname='TestGithubCITests.TestGithubCITests' name='testPerformanceExample' time='0.262'/>
-  </testsuite>
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuites tests="3" failures="0">
+    <testsuite name="TestGithubCITests" tests="2" failures="0" skipped="0" time="0.2949349880218506">
+        <properties>
+          <property name="Configuration" value="Test Scheme Action"/>
+        </properties>
+        <testcase classname="TestGithubCITests" name="testOsVersion()" time="0.0007879734039306641">
+        </testcase>
+        <testcase classname="TestGithubCITests" name="testPerformanceExample()" time="0.2941470146179199">
+        </testcase>
+    </testsuite>
+    <testsuite name="TestXCFrameworkTests" tests="1" failures="0" skipped="0" time="0.26740193367004395">
+        <properties>
+          <property name="Configuration" value="Test Scheme Action"/>
+        </properties>
+        <testcase classname="TestXCFrameworkTests" name="testPerformanceExample()" time="0.26740193367004395">
+        </testcase>
+    </testsuite>
 </testsuites>
