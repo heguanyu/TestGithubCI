@@ -143,7 +143,7 @@ platform :ios do
 
   desc "Just build"
   lane :b do
-    xcframework(version: "0.0.1-alpha", schemes: ["TestXCFramework"])
+    buildDeliverableZip(version: "0.0.1-alpha", schemes: ["TestXCFramework"])
   end
 
   desc "Create a release based on change log"
@@ -159,7 +159,7 @@ platform :ios do
 
     # Prepare the binaries and release note
     set_info_plist_value(path: "./TestGithubCI/Info.plist", key: "SDKVersionNumber", value: new_release_version)
-    attched_framework = xcframework(version: new_release_version, schemes: ["TestXCFramework"])
+    attched_framework = buildDeliverableZip(version: new_release_version, schemes: ["TestXCFramework"])
     release_content = read_changelog(
       section_identifier: '[Unreleased]',	# Specify what section to read
       excluded_markdown_elements: ['-', '###']
@@ -201,30 +201,28 @@ platform :ios do
   end
 
   desc "Create binary frameworks with the `xcframework` format under the `build/` folder."
-  lane :xcframework do |options|
+  lane :buildDeliverableZip do |options|
     new_release_version = options[:version]
     output_path = "build"
-    package_name = "TestGithubCI"
+    package_name = "TestXCFramework"
     schemes = options[:schemes]
 
     FileUtils.rm_rf "../#{output_path}"
 
-    framework_paths = schemes.map { |scheme|
+    file_paths = schemes.map { |scheme|
       build_xcframework(version: new_release_version, scheme: scheme, output: output_path, workspace: "TestGithubCI")
     }
 
-    if schemes.length == 1
-      zipfilePath = "#{framework_paths[0]}.zip"
-    else
-      zipfilePath = "#{package_name}-#{new_release_version}.zip"
-    end
+    zipfilePath = "#{package_name}-#{new_release_version}.zip"
+
     Dir.chdir("../#{output_path}") do
-      sh("zip -r #{zipfilePath} #{framework_paths.join(" ")}")
+      sh("cp ../LICENSE .")
+      file_paths.push("LICENSE")
+      sh("zip -r #{zipfilePath} #{file_paths.join(" ")}")
+      sh("rm LICENSE")
     end
     output = "./#{output_path}/#{zipfilePath}"
 
     output
-    # combile xcarchive
-    # create_xcframework(frameworks: ['build/TestXCFramework-iphoneos.xcarchive', 'build/TestXCFramework-iphonesimulator.xcarchive'])
   end
 end

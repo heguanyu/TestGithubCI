@@ -87,10 +87,10 @@ Just build
 
 Create a release based on change log
 
-### ios xcframework
+### ios buildDeliverableZip
 
 ```sh
-[bundle exec] fastlane ios xcframework
+[bundle exec] fastlane ios buildDeliverableZip
 ```
 
 Create binary frameworks with the `xcframework` format under the `build/` folder.
