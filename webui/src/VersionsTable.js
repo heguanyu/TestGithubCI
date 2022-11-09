@@ -56,7 +56,7 @@ class VersionsTable extends React.Component{
                 <td>{x.date}</td>
                 <td>{statusMap[x.status]}</td>
                 <td>{x.deprecation}</td>
-                <td><a href={`https://github.com/heguanyu/TestPoCIntegration/raw/main/binaries/${x.version}/TestXCFramework.xcframework.zip`} target="_blank">Link</a></td>
+                <td><a href={`https://github.com/heguanyu/TestGithubCIPubicRepo/raw/main/binaries/${x.version}/TestXCFramework-${x.version}.zip`} target="_blank">Link</a></td>
                 <td><Link to={{
                     pathname: "/documents",
                     search: `?v=${x.version}`

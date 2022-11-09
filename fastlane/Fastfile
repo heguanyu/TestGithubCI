@@ -52,7 +52,7 @@ platform :ios do
       sh("cp -r jazzydocs/* webui/public/doc_archives/#{new_release_version}/")
     end
     Dir.chdir("../webui") do
-      sh("sed -i '' '3i\\'$'\n''  \"homepage\": \"https://heguanyu.github.io/TestPoCIntegration\",\n' package.json")
+      sh("sed -i '' '3i\\'$'\n''  \"homepage\": \"https://heguanyu.github.io/TestGithubCIPubicRepo\",\n' package.json")
       sh("npm install --force")
       sh("CI=false npm run build")
     end

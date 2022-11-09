@@ -14,7 +14,7 @@ on:
 
 env:
   repo_user: heguanyu
-  destination_path: TestPoCIntegration
+  destination_path: TestGithubCIPubicRepo
 
 jobs:
   create-doc-and-push-to-another-repo:
