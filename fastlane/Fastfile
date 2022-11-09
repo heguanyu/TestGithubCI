@@ -186,6 +186,7 @@ platform :ios do
       allow_nothing_to_commit: true
     )
     push_to_git_remote
+    sh("git push --delete origin #{new_release_version}")
     add_git_tag(tag: new_release_version)
     push_git_tags
 
@@ -203,7 +204,7 @@ platform :ios do
   lane :publishToCocoapod do
     pod_push(allow_warnings: true)
   end
-  
+
   desc "Create binary frameworks with the `xcframework` format under the `build/` folder."
   lane :buildDeliverableZip do |options|
     new_release_version = options[:version]

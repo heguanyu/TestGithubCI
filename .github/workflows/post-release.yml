@@ -17,5 +17,4 @@ jobs:
       # Send release as attachment is in destination repo
       - name: Goto main repo and pod push
         run: |
-          cd main
           fastlane publishToCocoapod
