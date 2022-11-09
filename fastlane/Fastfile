@@ -53,7 +53,7 @@ platform :ios do
     end
     Dir.chdir("../webui") do
       sh("sed -i '' '3i\\'$'\n''  \"homepage\": \"https://heguanyu.github.io/TestPoCIntegration\",\n' package.json")
-      sh("npm install")
+      sh("npm install --force")
       sh("CI=false npm run build")
     end
     Dir.chdir("..") do
@@ -64,7 +64,7 @@ platform :ios do
   end
 
   desc "Playground"
-  lane :p do
+  lane :pg do
 
   end
 
