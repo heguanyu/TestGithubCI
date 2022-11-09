@@ -186,9 +186,15 @@ platform :ios do
       allow_nothing_to_commit: true
     )
     push_to_git_remote
-    sh("git push --delete origin #{new_release_version}")
-    add_git_tag(tag: new_release_version)
-    push_git_tags
+    
+    begin
+      sh("git push --delete origin #{new_release_version}")
+    rescue => ex
+      puts "No existing tag, safe"
+    ensure
+      add_git_tag(tag: new_release_version)
+      push_git_tags
+    end
 
     set_github_release(
       repository_name: "heguanyu/TestGithubCI",
