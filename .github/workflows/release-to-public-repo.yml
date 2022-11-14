@@ -18,9 +18,12 @@ env:
 
 jobs:
   create-doc-and-push-to-another-repo:
-    runs-on: macOS-latest
+    runs-on: macos-12
     steps:
       # Checkout both repos
+      - uses: maxim-lobanov/setup-xcode@v1
+        with:
+          xcode-version: '13.2.1'
       - uses: actions/checkout@v3
         with:
           path: main
