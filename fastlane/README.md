@@ -31,10 +31,10 @@ Pulls dependencies
 
 Generate tag history from git
 
-### ios p
+### ios pg
 
 ```sh
-[bundle exec] fastlane ios p
+[bundle exec] fastlane ios pg
 ```
 
 Playground
@@ -86,6 +86,14 @@ Just build
 ```
 
 Create a release based on change log
+
+### ios publishToCocoapod
+
+```sh
+[bundle exec] fastlane ios publishToCocoapod
+```
+
+Push to cocoapod. Configured via TestGithubCI.podspec
 
 ### ios buildDeliverableZip
 

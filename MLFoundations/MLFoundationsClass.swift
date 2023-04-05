@@ -7,11 +7,12 @@
 
 import Foundation
 import Core
+import TensorFlowLite
 
 public class MLFoundationsClass {
 
     public init (){
-
+        let options = Interpreter.Options()
     }
 
     public func multiply(A:Int32, B:Int32) -> Int32 {

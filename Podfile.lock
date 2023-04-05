@@ -1,16 +1,28 @@
 PODS:
   - SwiftLint (0.46.2)
+  - TensorFlowLiteC (2.10.0):
+    - TensorFlowLiteC/Core (= 2.10.0)
+  - TensorFlowLiteC/Core (2.10.0)
+  - TensorFlowLiteSwift (2.10.0):
+    - TensorFlowLiteSwift/Core (= 2.10.0)
+  - TensorFlowLiteSwift/Core (2.10.0):
+    - TensorFlowLiteC (= 2.10.0)
 
 DEPENDENCIES:
   - SwiftLint
+  - TensorFlowLiteSwift (= 2.10)
 
 SPEC REPOS:
   trunk:
     - SwiftLint
+    - TensorFlowLiteC
+    - TensorFlowLiteSwift
 
 SPEC CHECKSUMS:
   SwiftLint: 6bc52a21f0fd44cab9aa2dc8e534fb9f5e3ec507
+  TensorFlowLiteC: edf19548f50a1552e43dbd6906f5618a478bd038
+  TensorFlowLiteSwift: fc26e0e9d63c8a98ff61187457635e660d787561
 
-PODFILE CHECKSUM: b04da557883de7a09ca231d8f4a25f582c05acb0
+PODFILE CHECKSUM: f4b328371756939332d9e552172a192fafa46044
 
 COCOAPODS: 1.11.3
